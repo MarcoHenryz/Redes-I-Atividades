@@ -49,10 +49,9 @@ def run_origem():
                 else:
                     client_socket.sendto(pacote, (ip_destino, porta_destino))
 
-                ack_data = client_socket.recv(2)
-                ack_id = string.from_bytes(ack_data, byteorder="big")
-
-                if ack_id == "ack":
+                ack_data = client_socket.recv(3)
+                print(f"data ack recebido: {ack_data}")
+                if ack_data == b"ack":
                     ack_recebido = True
                     acks_recebidos += 1
             except socket.timeout:

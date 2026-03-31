@@ -38,7 +38,7 @@ def run_destino():
                 if checksum_recebido == checksum_calculado:
                     pacotes_recebidos.add(id_pacote)
                 
-                ack_packet = "ack".to_bytes(2, byteorder='big')
+                ack_packet = f"ack{id_pacote}".encode("utf-8")[:3]
                 if protocolo == "TCP":
                     conn.sendall(ack_packet)
                 else:
