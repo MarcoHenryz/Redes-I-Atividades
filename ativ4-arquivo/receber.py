@@ -23,15 +23,48 @@ def calcular_hash_arquivo(caminho):
     return sha.hexdigest()
 
 
+# ===================== TCP helpers =====================
+# Mesmo framing do enviar.py:
+#   [4 bytes: tamanho do payload] [payload]
+
+
+def tcp_enviar(sock, payload):
+    header = struct.pack(">I", len(payload))
+    sock.sendall(header + payload)
+
+
+def tcp_receber(sock):
+    header = _receber_exato(sock, 4)
+    if not header:
+        return None
+    tamanho = struct.unpack(">I", header)[0]
+    return _receber_exato(sock, tamanho)
+
+
+def _receber_exato(sock, n):
+    partes = []
+    recebido = 0
+    while recebido < n:
+        parte = sock.recv(n - recebido)
+        if not parte:
+            return None
+        partes.append(parte)
+        recebido += len(parte)
+    return b"".join(partes)
+
+
+# ==============================================================
+
+
 def receber_metadados(sock, protocolo):
 
     if protocolo == "TCP":
-        data = sock.recv(4096)
+        data = tcp_receber(sock)
         addr = None
     else:
         data, addr = sock.recvfrom(4096)
 
-    if len(data) < 9:
+    if not data or len(data) < 9:
         print("Pacote de metadados muito curto.")
         return None, None, None, addr
 
@@ -55,7 +88,7 @@ def receber_metadados(sock, protocolo):
 
     # Enviar ACK
     if protocolo == "TCP":
-        sock.sendall(b"ack")
+        tcp_enviar(sock, b"ack")
     else:
         sock.sendto(b"ack", addr)
 
@@ -64,26 +97,19 @@ def receber_metadados(sock, protocolo):
 
 def receber_pacote_tcp(conn):
 
-    # Ler os 4 bytes do tamanho
-    raw_tam = receber_exato(conn, 4)
-    if not raw_tam:
-        return -1, None
-    tamanho_payload = struct.unpack(">I", raw_tam)[0]
-
-    # Ler o payload completo
-    payload = receber_exato(conn, tamanho_payload)
-    if not payload:
+    data = tcp_receber(conn)
+    if not data:
         return -1, None
 
     # Separar checksum
-    corpo = payload[:-8]
-    checksum_recebido = payload[-8:]
+    corpo = data[:-8]
+    checksum_recebido = data[-8:]
 
     # Verificar se é sinalização de FIM
     if corpo == b"__FIM__":
         checksum_calculado = hashlib.sha256(corpo).digest()[:8]
         if checksum_recebido == checksum_calculado:
-            conn.sendall(b"ack")
+            tcp_enviar(conn, b"ack")
             return None, None
         else:
             return -1, None
@@ -99,22 +125,9 @@ def receber_pacote_tcp(conn):
     dados = corpo[4:]
 
     # Enviar ACK
-    conn.sendall(b"ack")
+    tcp_enviar(conn, b"ack")
 
     return chunk_number, dados
-
-
-def receber_exato(conn, n):
-
-    partes = []
-    recebido = 0
-    while recebido < n:
-        parte = conn.recv(n - recebido)
-        if not parte:
-            return None
-        partes.append(parte)
-        recebido += len(parte)
-    return b"".join(partes)
 
 
 def receber_pacote_udp(sock):
@@ -339,3 +352,4 @@ def run_destino():
 
 if __name__ == "__main__":
     run_destino()
+

@@ -12,7 +12,7 @@ acks_recebidos = 0
 pacotes_perdidos = 0
 
 TIMEOUT = 2.0
-MAX_TENTATIVAS = 5
+MAX_TENTATIVAS = 10
 
 
 def calcular_hash_arquivo(caminho):
@@ -27,11 +27,44 @@ def calcular_hash_arquivo(caminho):
     return sha.hexdigest()
 
 
+# ===================== TCP helpers =====================
+# Todas as mensagens TCP (metadados, pacotes, FIM, ACKs)
+# usam o mesmo formato: [4 bytes tamanho][payload]
+# Isso impede que o stream TCP "grude" mensagens diferentes.
+
+
+def tcp_enviar(sock, payload):
+    header = struct.pack(">I", len(payload))
+    sock.sendall(header + payload)
+
+
+def tcp_receber(sock):
+    header = _receber_exato(sock, 4)
+    if not header:
+        return None
+    tamanho = struct.unpack(">I", header)[0]
+    return _receber_exato(sock, tamanho)
+
+
+def _receber_exato(sock, n):
+    partes = []
+    recebido = 0
+    while recebido < n:
+        parte = sock.recv(n - recebido)
+        if not parte:
+            return None
+        partes.append(parte)
+        recebido += len(parte)
+    return b"".join(partes)
+
+
+# ==============================================================
+
+
 def enviar_metadados(nome_arquivo, tamanho, hash_arquivo, sock, protocolo, destino):
 
     dado = f"{nome_arquivo}@{tamanho}@{hash_arquivo}"
     payload = dado.encode("utf-8")
-    # Adiciona checksum ao pacote de metadados
     checksum = hashlib.sha256(payload).digest()[:8]
     payload = payload + checksum
 
@@ -41,12 +74,16 @@ def enviar_metadados(nome_arquivo, tamanho, hash_arquivo, sock, protocolo, desti
     while not ack_recebido:
         try:
             if protocolo == "TCP":
-                sock.sendall(payload)
+                tcp_enviar(sock, payload)
             else:
                 sock.sendto(payload, destino)
 
             sock.settimeout(TIMEOUT)
-            ack_data = sock.recv(1024)
+
+            if protocolo == "TCP":
+                ack_data = tcp_receber(sock)
+            else:
+                ack_data, _ = sock.recvfrom(1024)
 
             if ack_data == b"ack":
                 ack_recebido = True
@@ -81,16 +118,18 @@ def enviar_pacote(chunk, chunk_number, sock, protocolo, destino):
     while not ack_recebido:
         try:
             if protocolo == "TCP":
-                # Envia tamanho do payload primeiro (4 bytes) + payload
-                tamanho_payload = struct.pack(">I", len(payload))
-                sock.sendall(tamanho_payload + payload)
+                tcp_enviar(sock, payload)
             else:
                 sock.sendto(payload, destino)
 
             pacotes_enviados += 1
 
             sock.settimeout(TIMEOUT)
-            ack_data = sock.recv(1024)
+
+            if protocolo == "TCP":
+                ack_data = tcp_receber(sock)
+            else:
+                ack_data, _ = sock.recvfrom(1024)
 
             if ack_data == b"ack":
                 ack_recebido = True
@@ -100,7 +139,7 @@ def enviar_pacote(chunk, chunk_number, sock, protocolo, destino):
             retransmissoes += 1
             tentativas += 1
             print(
-                f"  [PKT {chunk_number}] Timeout — retransmitindo (tentativa {tentativas})..."
+                f"  [PKT {chunk_number}] Timeout — retransmitindo (tentativa {tentativas})"
             )
             if tentativas > MAX_TENTATIVAS:
                 pacotes_perdidos += 1
@@ -127,7 +166,6 @@ def enviar_arquivo(caminho, chunk_size, sock, protocolo, destino):
                 break
             enviar_pacote(chunk, chunk_number, sock, protocolo, destino)
             chunk_number += 1
-            # Progresso
             if chunk_number % 50 == 0:
                 print(f"{chunk_number} pacotes enviados")
 
@@ -146,13 +184,16 @@ def enviar_fim(sock, protocolo, destino):
     while not ack_recebido:
         try:
             if protocolo == "TCP":
-                tamanho_payload = struct.pack(">I", len(payload))
-                sock.sendall(tamanho_payload + payload)
+                tcp_enviar(sock, payload)
             else:
                 sock.sendto(payload, destino)
 
             sock.settimeout(TIMEOUT)
-            ack_data = sock.recv(1024)
+
+            if protocolo == "TCP":
+                ack_data = tcp_receber(sock)
+            else:
+                ack_data, _ = sock.recvfrom(1024)
 
             if ack_data == b"ack":
                 ack_recebido = True
@@ -177,7 +218,7 @@ def formatar_numero(valor, decimais=2):
         parte_inteira = int(valor)
         parte_decimal = round(valor - parte_inteira, decimais)
         inteiro_fmt = f"{parte_inteira:,}".replace(",", ".")
-        decimal_fmt = f"{parte_decimal:.{decimais}f}"[2:]  # tira o "0."
+        decimal_fmt = f"{parte_decimal:.{decimais}f}"[2:]
         return f"{inteiro_fmt},{decimal_fmt}"
 
 
@@ -204,7 +245,6 @@ def exibir_relatorio(
 def run_origem():
     global pacotes_enviados, retransmissoes, acks_recebidos, pacotes_perdidos
 
-    # Reset estatísticas
     pacotes_enviados = 0
     retransmissoes = 0
     acks_recebidos = 0
@@ -240,7 +280,6 @@ def run_origem():
     hash_arquivo = calcular_hash_arquivo(arquivo)
     print(f"Hash: {hash_arquivo}")
 
-    # Criar socket
     if protocolo == "TCP":
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         sock.connect(destino)
@@ -258,7 +297,6 @@ def run_origem():
 
     total_pacotes = enviar_arquivo(arquivo, chunk_size, sock, protocolo, destino_param)
 
-    # Sinalizar fim
     enviar_fim(sock, protocolo, destino_param)
 
     tempo_total = time.time() - inicio
