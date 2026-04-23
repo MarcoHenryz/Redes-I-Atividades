@@ -1,0 +1,155 @@
+
+%Fonte e encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}          % Times New Roman
+
+%Configuração da página
+\usepackage[left=3cm,right=2cm,top=3cm,bottom=2cm]{geometry}
+
+% Língua
+\usepackage[brazilian]{babel}
+
+% Cores
+\usepackage{xcolor}
+\definecolor{uelgreen}{HTML}{1A5C00}
+\definecolor{uelbrightgreen}{HTML}{3CB043}
+
+% Gráficos
+\usepackage{graphicx}
+
+%Tabelas
+\usepackage{array}
+\usepackage{booktabs}
+
+%Matemática latex
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+%URL e links
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+
+%espaçamento
+\usepackage{setspace}
+\onehalfspacing                %espaçamento de 1.5
+
+% identação
+\usepackage{indentfirst}       % identar primeiro parágrafo da section
+\setlength{\parindent}{3cm}
+
+%configuração de hífen
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\sloppy
+
+%Formatação do título da section
+\usepackage{titlesec}
+\setcounter{secnumdepth}{5}
+
+%Level 1
+\titleformat{\section}
+  {\normalfont\bfseries}
+  {\thesection\space}{0pt}
+  {\MakeUppercase}
+\titlespacing*{\section}{0pt}{2\baselineskip}{2\baselineskip}
+
+%Level 2
+\titleformat{\subsection}
+  {\normalfont\scshape}
+  {\thesubsection\space}{0pt}{}
+\titlespacing*{\subsection}{0pt}{2\baselineskip}{2\baselineskip}
+
+%Level 3
+\titleformat{\subsubsection}
+  {\normalfont}
+  {\thesubsubsection\space}{0pt}{}
+\titlespacing*{\subsubsection}{0pt}{2\baselineskip}{2\baselineskip}
+
+%Level 4
+\titleformat{\paragraph}
+  {\normalfont}
+  {\theparagraph\space}{0pt}{}
+\titlespacing*{\paragraph}{0pt}{2\baselineskip}{2\baselineskip}
+
+%level 5
+\titleformat{\subparagraph}
+  {\normalfont\itshape}
+  {\thesubparagraph\space}{0pt}{}
+\titlespacing*{\subparagraph}{0pt}{2\baselineskip}{2\baselineskip}
+
+%Listas
+\usepackage{tocloft}
+\setcounter{tocdepth}{5}
+
+\renewcommand{\cfttoctitlefont}{\hfill\normalfont\bfseries}
+\renewcommand{\cftaftertoctitle}{\hfill\vspace{2\baselineskip}}
+\renewcommand{\cftbeforetoctitleskip}{0pt}
+
+%Lista de figuras config
+\renewcommand{\cftloftitlefont}{\hfill\normalfont\bfseries}
+\renewcommand{\cftafterloftitle}{\hfill\vspace{2\baselineskip}}
+\renewcommand{\cftbeforeloftitleskip}{0pt}
+
+%lista de tabelas config
+\renewcommand{\cftlottitlefont}{\hfill\normalfont\bfseries}
+\renewcommand{\cftafterlottitle}{\hfill\vspace{2\baselineskip}}
+\renewcommand{\cftbeforelottitleskip}{0pt}
+
+\renewcommand{\cftsecfont}{\bfseries}
+\renewcommand{\cftsecpagefont}{\bfseries}
+\renewcommand{\cftsubsecfont}{\scshape}
+\renewcommand{\cftsubsubsecfont}{\normalfont}
+\renewcommand{\cftparafont}{\normalfont}
+\renewcommand{\cftsubparafont}{\itshape}
+
+\setlength{\cftbeforesecskip}{6pt}
+\setlength{\cftbeforesubsecskip}{0pt}
+
+
+\renewcommand{\cftfigfont}{\bfseries}
+\renewcommand{\cfttabfont}{\bfseries}
+
+\renewcommand{\contentsname}{SUMÁRIO}
+\renewcommand{\listfigurename}{LISTA DE ILUSTRAÇÕES}
+\renewcommand{\listtablename}{LISTA DE TABELAS}
+
+\usepackage{caption}
+\captionsetup[figure]{justification=centering,
+  labelfont=bf,
+  labelsep=endash,
+  name=Figura,
+  position=below
+}
+\captionsetup[table]{justification=centering,
+  labelfont=bf,
+  labelsep=endash,
+  name=Tabela,
+  position=above
+}
+
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+
+% Citações
+\usepackage[numbers,square,sort&compress]{natbib}
+\usepackage{csquotes}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+\fancypagestyle{maintext}{%
+  \fancyhf{}%
+  \fancyhead[R]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+
+\usepackage{lipsum}
+
+\newcommand{\uelrule}{%
+  \noindent{\color{uelgreen}\rule{\textwidth}{3pt}}%
+}

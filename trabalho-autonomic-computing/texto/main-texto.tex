@@ -1,0 +1,38 @@
+\documentclass[12pt,a4paper]{article}
+\input{preambulo}
+
+\begin{document}
+
+\pagenumbering{arabic} %Contar a numeração a partir da capa, mas só aparece a partir da introdução
+\pagestyle{empty}
+
+% Capa
+\input{title}
+\clearpage
+
+% Resumo
+\input{resumo}
+\clearpage
+
+% Abstract
+\input{abstract-en}
+\clearpage
+
+% Listas + Sumário
+\input{listas}
+
+%  Textuais: numeração visível (número real da página)
+\pagestyle{maintext}
+
+\input{introducao}
+\newpage
+\input{trabalho}
+\newpage
+
+%Referencias
+\addcontentsline{toc}{section}{\protect\MakeUppercase{referências}}
+\renewcommand{\refname}{\centering REFERÊNCIAS}
+\bibliographystyle{unsrtnat}
+\bibliography{refs}
+
+\end{document}

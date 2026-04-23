@@ -1,0 +1,58 @@
+% Modelo de Section
+\section{Capítulo formato e fontes}
+\label{sec:desenvolvimento}
+
+\lipsum[3]
+
+% Subsec 2
+\subsection{Título Nível 2}
+\label{subsec:nivel2}
+
+\lipsum[4]
+
+%Subsec 3
+\subsubsection{Título Nível 3 (Primeiras Letras em Maiúsculo)}
+\label{subsubsec:nivel3}
+
+\lipsum[5]
+
+%Subsec 4
+\paragraph{Título nível 4 (somente a 1ª letra da 1ª palavra em maiusculo)}
+\label{par:nivel4}
+
+\lipsum[6]
+
+%Subparagrafo
+\subparagraph{Título nível 5 (todo em itálico -- somente a 1ª letra da
+1ª palavra em maiusculo)}
+\label{subpar:nivel5}
+
+\lipsum[7]
+
+%Seção de figuras
+\subsection{Exemplo de seção com figura}
+\label{subsec:exemplo-figura}
+
+\lipsum[8]
+
+A figura \ref{fig:exemplo} ilustra um exemplo de figura referenciada
+no texto. Todas as figuras devem ser referenciadas e explicadas ao
+longo do texto. A numeração das figuras segue o número do capítulo:
+Figura 2.1, 2.2, \ldots, 3.1, 3.2, \ldots
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.3\textwidth]{image1.png}
+  \caption{Exemplo de legenda de figura}
+  \label{fig:exemplo}
+\end{figure}
+
+\lipsum[9]
+
+%  CONCLUSÃO
+\newpage
+\section*{Conclusão}
+\addcontentsline{toc}{section}{\protect\MakeUppercase{conclusão}}
+\label{sec:conclusao}
+
+\lipsum[10-11]
