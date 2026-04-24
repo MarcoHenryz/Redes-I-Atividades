@@ -1,0 +1,103 @@
+\section{Histórico e Desenvolvimento da Computação Autônoma}
+\label{sec:historico}
+
+A necessidade de sistemas auto-gerenciáveis não é um fenômeno exclusivo da computação moderna. Um paralelo histórico instrutivo pode ser traçado com a indústria telefônica da década de 1920. Naquele período, o crescimento exponencial no uso do telefone exigia um número cada vez maior de operadores humanos para gerenciar as centrais de comutação manuais. As preocupações com a possível escassez de operadores qualificados para atender à demanda eram sérias. A solução foi o desenvolvimento das centrais automáticas de comutação, que eliminaram a necessidade de intervenção humana nessa tarefa \cite{W1999392360}. A computação autônoma representa, em essência, uma resposta análoga ao mesmo problema estrutural, agora na escala e complexidade dos sistemas de informação contemporâneos.
+
+O termo \textit{autonomic computing} foi criado pela IBM em 2001. A palavra ``autônomo'' tem origem na biologia: no corpo humano, o sistema nervoso autônomo regula funções inconscientes como o tamanho da pupila, as funções digestivas, a frequência respiratória e a dilatação dos vasos sanguíneos, sem que a mente consciente precise intervir \cite{W1999392360}. A computação autônoma busca intervir nos sistemas computacionais de maneira análoga, reduzindo o envolvimento humano na administração cotidiana. Embora o termo tenha sido formalizado pela IBM, os conceitos subjacentes ao auto-gerenciamento já vinham sendo explorados em diferentes contextos ao longo dos anos anteriores.
+
+\subsection{Projetos Precursores}
+\label{subsec:projetos-precursores}
+
+O campo da computação autônoma foi moldado por uma série de projetos independentes que, sem coordenação explícita, convergiram para os mesmos princípios de auto-gestão \cite{W1999392360}.
+
+O primeiro projeto notável foi o \textbf{Situational Awareness System (SAS)}, iniciado em 1997 pela agência de defesa norte-americana DARPA, como parte do programa \textit{Small Units Operations} (SUO). Seu objetivo era criar dispositivos pessoais de comunicação e localização para soldados em campo de batalha. O sistema deveria propagar autonomamente informações de status entre os dispositivos, adaptar-se às mudanças de topologia da rede e ajustar frequências e largura de banda de acordo com as condições ambientais --- inclusive com equipamentos de interferência inimiga em operação. O projeto pioneirou o roteamento ad-hoc descentralizado e adaptativo como forma de auto-gerenciamento em ambientes adversos, lidando com redes que podiam chegar a 10.000 nós móveis \cite{W1999392360}.
+
+Em 2000, a DARPA lançou o programa \textbf{DASADA} (\textit{Dynamic Assembly for Systems Adaptability, Dependability, and Assurance}), cujo objetivo era desenvolver tecnologia para sistemas críticos com alta confiabilidade e adaptabilidade. Este projeto introduziu a abordagem orientada a arquitetura para o auto-gerenciamento, com a noção de \textit{probes} e \textit{gauges} para monitorar o sistema e um mecanismo de adaptação para disparar mudanças com base nos dados coletados \cite{W1999392360}. Essa abordagem viria a influenciar diretamente a arquitetura MAPE-K, descrita na Seção \ref{sec:mapek}.
+
+Em outubro de 2001, a IBM formalizou o conceito com seu manifesto de computação autônoma \cite{ibm2001}. A proposta central era que sistemas computacionais complexos deveriam possuir propriedades autônomas, ou seja, deveriam ser capazes de gerenciar independentemente as tarefas regulares de manutenção e otimização, reduzindo assim a carga de trabalho dos administradores. Além de cunhar o termo, a IBM sistematizou as quatro propriedades centrais de um sistema auto-gerenciável, discutidas na Seção \ref{sec:propriedades}.
+
+Em 2003, a DARPA iniciou o programa \textbf{Self-Regenerative Systems (SPS)}, com foco em sistemas de computação militares capazes de manter funcionalidades críticas mesmo diante de erros não intencionais ou ataques. A abordagem incluía a geração de múltiplas versões funcionalmente equivalentes do software, tornando qualquer ataque incapaz de comprometer simultaneamente uma fração significativa das versões do programa. Um modelo de confiança era utilizado para afastar a computação de recursos propensos a causar dano, e uma arquitetura de replicação tolerante a intrusões de larga escala era desenvolvida em paralelo \cite{W1999392360}.
+
+Por fim, em 2005, a NASA iniciou o projeto \textbf{Autonomous NanoTechnology Swarm (ANTS)}, cujo objetivo era explorar o cinturão de asteroides com um enxame de mil pequenas espaçonaves. Dado que entre 60\% e 70\% das naves eram esperadas a ser perdidas ao entrar no cinturão, as sobreviventes deveriam colaborar autonomamente para completar a missão. O projeto foi motivado também pelo longo atraso de comunicação entre sondas em espaço profundo e o controle em Terra, tornando o gerenciamento manual impraticável. A NASA já havia utilizado comportamentos autônomos nas missões DS1 (\textit{Deep Space 1}) e Mars Pathfinder, e o projeto ANTS representou um passo além nessa direção \cite{W1999392360}.
+
+A Tabela \ref{tab:cronologia} apresenta uma síntese cronológica desses projetos e suas contribuições para o campo.
+
+\begin{table}[H]
+\caption{Cronologia de projetos influentes em auto-gerenciamento}
+\label{tab:cronologia}
+\centering
+\begin{tabular}{lclp{7cm}}
+\toprule
+\textbf{Projeto} & \textbf{Ano} & \textbf{Origem} & \textbf{Contribuição principal} \\
+\midrule
+SAS   & 1997 & DARPA & Roteamento ad-hoc descentralizado e adaptativo \\
+DASADA & 2000 & DARPA & Probes e gauges para monitoramento arquitetural \\
+Computação Autônoma & 2001 & IBM & Formalização do termo e das quatro propriedades Self-X \\
+SPS   & 2003 & DARPA & Sistemas auto-regenerativos resistentes a ataques \\
+ANTS  & 2005 & NASA  & Enxame autônomo para exploração espacial \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Propriedades de Auto-Gerenciamento}
+\label{sec:propriedades}
+
+As quatro propriedades fundamentais de um sistema autônomo, conforme sistematizadas pela IBM, são conhecidas como propriedades \textit{Self-X}. Cada uma aborda uma dimensão distinta do auto-gerenciamento \cite{kephart2003, W1999392360}.
+
+\textbf{Auto-configuração (\textit{Self-Configuration}):} Um sistema autônomo configura-se de acordo com objetivos de alto nível. Isso significa que o administrador especifica \textit{o que} é desejado, não \textit{como} alcançá-lo. O sistema instala-se e ajusta-se automaticamente de acordo com as necessidades da plataforma e dos usuários \cite{W1999392360}.
+
+\textbf{Auto-otimização (\textit{Self-Optimization}):} O sistema otimiza proativamente o uso de seus recursos, podendo decidir por iniciativa própria realizar mudanças para melhorar o desempenho ou a qualidade do serviço. Essa propriedade distingue-se pelo seu caráter \textit{pró-ativo}: o sistema não aguarda uma solicitação externa para agir, ele antecipa a necessidade \cite{W1999392360}.
+
+\textbf{Auto-cura (\textit{Self-Healing}):} O sistema detecta e diagnostica problemas, que podem variar de erros de baixo nível em chips de memória a falhas de software em serviços de diretório. Sempre que possível, o sistema tenta corrigir o problema --- por exemplo, alternando para um componente redundante ou instalando atualizações de software --- garantindo que o processo de correção não introduza novos problemas \cite{W1999392360}. A tolerância a falhas é um aspecto central: o sistema deve ser \textit{reativo} a falhas ou a seus primeiros sinais.
+
+\textbf{Auto-proteção (\textit{Self-Protection}):} O sistema protege-se tanto de ataques maliciosos quanto de usuários que inadvertidamente realizam alterações prejudiciais. O sistema ajusta-se autonomamente para alcançar segurança, privacidade e proteção de dados \cite{W1999392360}. Além de reagir a ameaças, o sistema deve ser capaz de antecipar brechas de segurança e impedir que ocorram, exibindo características \textit{proativas}.
+
+Essas propriedades guardam estreita relação com as características de agentes de software identificadas por Wooldridge e Jennings, que incluem: (i) \textit{autonomia}, operar sem intervenção humana direta mantendo controle sobre suas ações e estado interno; (ii) \textit{habilidade social}, interagir com outros agentes por meio de algum tipo de linguagem de comunicação; (iii) \textit{reatividade}, perceber o ambiente e responder a mudanças em tempo hábil; e (iv) \textit{pró-atividade}, tomar iniciativa para atingir objetivos de forma dirigida por metas \cite{W1999392360}.
+
+\section{O Laço de Controle Autônomo MAPE-K}
+\label{sec:mapek}
+
+Para operacionalizar as propriedades Self-X, a IBM propôs um modelo de referência para laços de controle autônomos denominado MAPE-K --- sigla para \textit{Monitor, Analyse, Plan, Execute over Knowledge} \cite{W1999392360, lalanda2013}. Este modelo descreve o ciclo funcional de um \textit{Elemento Autônomo}, composto por um \textit{Gerenciador Autônomo} acoplado a um \textit{Elemento Gerenciado}.
+
+O \textit{Elemento Gerenciado} pode ser qualquer recurso de software ou hardware ao qual se deseja conferir comportamento autônomo: um servidor web, um banco de dados, um sistema operacional, um cluster de máquinas, uma rede com ou sem fio, uma CPU, etc. \cite{W1999392360}. A interação entre o gerenciador e o elemento gerenciado ocorre por meio de dois tipos de componentes de interface:
+
+\begin{itemize}
+    \item \textbf{Sensores (\textit{Sensors}/\textit{Probes}/\textit{Gauges}):} Coletam informações sobre o elemento gerenciado. Para um servidor web, isso pode incluir tempo de resposta a requisições de clientes, uso de rede, disco, CPU e memória \cite{W1999392360}. Os \textit{gauges} podem filtrar, agregar e processar os dados brutos coletados pelos \textit{probes} antes de reportá-los ao gerenciador, e podem residir em máquinas distintas do elemento gerenciado.
+
+    \item \textbf{Efetores (\textit{Effectors}):} Implementam mudanças no elemento gerenciado. Mudanças podem ser de granularidade grossa --- como adicionar ou remover servidores de um cluster de servidores web --- ou de granularidade fina --- como alterar parâmetros de configuração individuais em um servidor \cite{W1999392360}.
+\end{itemize}
+
+\subsection{Monitoramento}
+\label{subsec:monitoramento}
+
+O monitoramento envolve a captura de propriedades do ambiente que são relevantes para as propriedades Self-X do sistema. São identificados dois tipos de monitoramento em sistemas autônomos \cite{W1999392360}:
+
+\textbf{Monitoramento passivo:} Realizado sem modificar o sistema monitorado. No Linux, por exemplo, comandos como \texttt{top} retornam informações sobre a utilização de CPU por cada processo, enquanto \texttt{vmstat} fornece estatísticas de memória e CPU. O diretório \texttt{/proc} é um sistema de arquivos virtual que contém informações de tempo de execução como memória do sistema, informações de CPU, configuração de hardware, entre outros. Ferramentas similares existem para outros sistemas operacionais.
+
+\textbf{Monitoramento ativo:} Envolve a instrumentação do software --- a modificação ou adição de código à implementação da aplicação ou do sistema operacional para capturar chamadas de função ou de sistema. Ferramentas especializadas como o ProbeMeister são capazes de inserir probes diretamente no bytecode Java compilado, automatizando esse processo.
+
+\subsection{Planejamento e Adaptação}
+\label{subsec:planejamento}
+
+O Gerenciador Autônomo utiliza os dados coletados pelos sensores e o conhecimento interno do sistema para analisar o estado do elemento gerenciado, planejar as ações necessárias e executá-las por meio dos efetores \cite{W1999392360}. Os objetivos do gerenciador são normalmente expressos por meio de políticas, que podem assumir três formas principais:
+
+\textbf{Políticas ECA (\textit{Event-Condition-Action}):} Definem ações diretas a serem tomadas quando um evento ocorre e uma condição é satisfeita. Por exemplo: ``quando 95\% dos servidores web apresentar tempo de resposta superior a 2 segundos e houver recursos disponíveis, aumentar o número de servidores ativos'' \cite{W1999392360}. Sua simplicidade é sua maior vantagem. Contudo, quando múltiplas políticas são especificadas, podem surgir conflitos entre regras que são difíceis de detectar antecipadamente e que só se manifestam em tempo de execução.
+
+\textbf{Políticas de objetivo (\textit{Goal Policies}):} Especificam critérios que caracterizam estados desejáveis do sistema, deixando ao próprio sistema a tarefa de determinar como atingi-los. São mais expressivas que as políticas ECA, mas exigem maior capacidade de raciocínio e planejamento por parte do gerenciador \cite{W1999392360}.
+
+\textbf{Funções de utilidade (\textit{Utility Functions}):} Definem quantitativamente o grau de desejabilidade de cada estado do sistema, atribuindo um valor numérico a cada combinação de parâmetros observáveis. Permitem ao gerenciador tomar decisões otimizadas mesmo quando o estado ideal não pode ser alcançado, identificando o estado menos indesejável entre as opções disponíveis \cite{W1999392360}.
+
+Uma abordagem mais sofisticada de planejamento é o \textit{modelo arquitetural dirigido}, no qual o gerenciador mantém um modelo da arquitetura do sistema gerenciado. Este modelo é atualizado continuamente pelos dados dos sensores e utilizado para planejar adaptações. A vantagem central dessa abordagem é a possibilidade de verificar, antes da execução, se a mudança planejada preserva a integridade do sistema \cite{W1999392360}.
+
+\subsection{Base de Conhecimento}
+\label{subsec:conhecimento}
+
+O componente de \textit{Conhecimento} fundamenta todas as fases do laço MAPE-K. Ele pode ser tão simples quanto um conjunto de regras estáticas definidas por especialistas humanos, ou tão sofisticado quanto modelos preditivos construídos a partir de técnicas de aprendizado de máquina \cite{W1999392360, lalanda2013}. Entre as abordagens mais relevantes, destacam-se:
+
+\textbf{Aprendizado por reforço:} Aprende políticas de gerenciamento a partir da observação de ações em diferentes estados do sistema, avaliando as consequências de cada ação. Sua principal vantagem é não exigir um modelo explícito do sistema gerenciado, sendo adequado para ambientes altamente dinâmicos. A escalabilidade em espaços de estados grandes, no entanto, é um desafio reconhecido \cite{W1999392360}.
+
+\textbf{Redes Bayesianas:} Utilizadas para a seleção probabilística de algoritmos e para a classificação sensível a custo de estados do sistema, auxiliando o gerenciador na tomada de decisões sob incerteza \cite{W1999392360}.
+
+\textbf{Modelos arquiteturais:} Representações estruturais do sistema gerenciado, usadas para planejar adaptações e verificar a validade das mudanças antes de sua execução no sistema real, conforme descrito na seção anterior \cite{W1999392360, lalanda2013}.
+
+A distinção entre o componente de planejamento e o de conhecimento é frequentemente tênue na prática: o conhecimento acumulado sobre o estado e o histórico do sistema gerenciado é o que torna possível ao gerenciador construir planos de adaptação confiáveis \cite{W1999392360}.

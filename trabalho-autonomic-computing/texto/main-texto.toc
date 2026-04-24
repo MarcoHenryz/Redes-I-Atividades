@@ -1,10 +1,17 @@
 \babel@toc {brazilian}{}\relax 
 \contentsline {section}{\numberline {1}Introdução}{7}{section.1}%
-\contentsline {section}{\numberline {2}Capítulo formato e fontes}{10}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Título Nível 2}{10}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Título Nível 3 (Primeiras Letras em Maiúsculo)}{10}{subsubsection.2.1.1}%
-\contentsline {paragraph}{\numberline {2.1.1.1}Título nível 4 (somente a 1ª letra da 1ª palavra em maiusculo)}{11}{paragraph.2.1.1.1}%
-\contentsline {subparagraph}{\numberline {2.1.1.1.1}Título nível 5 (todo em itálico -- somente a 1ª letra da 1ª palavra em maiusculo)}{11}{subparagraph.2.1.1.1.1}%
-\contentsline {subsection}{\numberline {2.2}Exemplo de seção com figura}{11}{subsection.2.2}%
-\contentsline {section}{\MakeUppercase {conclusão}}{13}{figure.caption.1}%
-\contentsline {section}{\MakeUppercase {referências}}{14}{figure.caption.1}%
+\contentsline {section}{\numberline {2}Histórico e Desenvolvimento da Computação Autônoma}{10}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Projetos Precursores}{10}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Propriedades de Auto-Gerenciamento}{12}{section.3}%
+\contentsline {section}{\numberline {4}O Laço de Controle Autônomo MAPE-K}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Monitoramento}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Planejamento e Adaptação}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Base de Conhecimento}{15}{subsection.4.3}%
+\contentsline {section}{\numberline {5}Capítulo formato e fontes}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Título Nível 2}{16}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Título Nível 3 (Primeiras Letras em Maiúsculo)}{16}{subsubsection.5.1.1}%
+\contentsline {paragraph}{\numberline {5.1.1.1}Título nível 4 (somente a 1ª letra da 1ª palavra em maiusculo)}{17}{paragraph.5.1.1.1}%
+\contentsline {subparagraph}{\numberline {5.1.1.1.1}Título nível 5 (todo em itálico -- somente a 1ª letra da 1ª palavra em maiusculo)}{17}{subparagraph.5.1.1.1.1}%
+\contentsline {subsection}{\numberline {5.2}Exemplo de seção com figura}{17}{subsection.5.2}%
+\contentsline {section}{\MakeUppercase {conclusão}}{19}{figure.caption.2}%
+\contentsline {section}{\MakeUppercase {referências}}{20}{figure.caption.2}%

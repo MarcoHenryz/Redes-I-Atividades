@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -29,7 +29,11 @@ Roy Sterritt.
 
 \bibitem[Corr{\^e}a and Cerqueira(2007)]{correa2007}
 Sand Corr{\^e}a and Renato Cerqueira.
-\newblock Computa{\c{c}}{\~a}o aut{\^o}noma: Conceitos, infra-estruturas e solu{\c{c}}{\~o}es em sistemas distribu{\'\i}dos.
+\newblock Computa{\c{c}}{\~a}o aut{\^o}noma: Conceitos, infra-estruturas e solu {\c{c}}{\~o}es em sistemas distribu{\'\i}dos.
 \newblock In \emph{Sistemas Distribu{\'\i}dos: Redes de Computadores e Sistemas Distribu{\'\i}dos}, chapter~4. SBC, 2007.
+
+\bibitem[Markus C.~Huebscher(2008)]{W1999392360}
+Julie A.~McCann Markus C.~Huebscher.
+\newblock A survey of autonomic computing—degrees, models, and applications, 2008.
 
 \end{thebibliography}
