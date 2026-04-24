@@ -1,17 +1,32 @@
 \section{Introdução}
 \label{sec:introducao}
 
-\lipsum[1-2]
+A trajetória da computação moderna é marcada por uma transição contínua da simplicidade para a hiper-complexidade. Se nas décadas de 1960 e 1970 a computação era dominada por mainframes isolados e tarefas de processamento em lote, a virada do milênio consolidou uma realidade drasticamente distinta. A convergência da Lei de Moore, que permitiu um aumento exponencial no poder de processamento, com a onipresença da conectividade de rede, transformou os sistemas computacionais em infraestruturas globais. Hoje, as aplicações não residem mais em uma única máquina, mas em arquiteturas distribuídas que abrangem servidores em nuvem, dispositivos de borda e uma miríade de componentes heterogêneos que precisam interagir em tempo real \cite{lalanda2013}.
 
-Entre as principais conquistas tecnológicas do século XX estão as do
-campo da comunicação: a instalação das redes de telefonia em escala
-mundial, a invenção do rádio e da televisão, o nascimento e
-crescimento da indústria de computadores, o lançamento dos satélites
-de comunicação \cite{comer2001}.
+Essa evolução, embora tenha possibilitado inovações disruptivas em todos os setores da sociedade, gerou um efeito colateral crítico: a "crise da complexidade". À medida que os sistemas se tornaram mais interconectados, o número de variáveis envolvidas em sua configuração, manutenção e otimização cresceu de forma não linear. Ambientes corporativos contemporâneos frequentemente integram hardware de múltiplos fornecedores, diferentes sistemas operacionais, middleware complexo e aplicações legadas \cite{kephart2003}. Gerenciar essa tapeçaria tecnológica exige profissionais altamente qualificados, cujas tarefas diárias são consumidas por atividades repetitivas de instalação, ajuste de desempenho, segurança e recuperação de falhas \cite{ibm2001}.
 
-Segundo Vehel et al. \cite{vehel1997} todas as referencias podem e
-devem ser trabalhadas ao longo do texto como forma de valorizar o seu
-trabalho.
+O problema central reside no fato de que o gerenciamento desses sistemas ainda é, em grande parte, manual e dependente da intervenção humana. Estudos indicam que o custo de manutenção e administração de sistemas de TI pode representar até 80\% do custo total de propriedade (TCO), superando largamente o investimento inicial em hardware e software \cite{sterritt2005}. Além disso, a falibilidade humana torna-se o elo mais fraco da corrente: a maioria das interrupções de serviço em grandes centros de dados é causada por erros de configuração cometidos por administradores sobrecarregados \cite{correa2007}. Estamos atingindo um limiar onde a complexidade das interações entre os componentes de software ultrapassa a capacidade cognitiva humana de prever comportamentos e mitigar riscos em tempo hábil \cite{kephart2003}.
+
+Diante desse cenário de insustentabilidade, a IBM lançou em outubro de 2001 um manifesto intitulado \textit{"Autonomic Computing: It’s Time Systems Take Care of Themselves"} \cite{ibm2001}. Este documento foi um divisor de águas, argumentando que a solução para a crise de complexidade não residia em ferramentas de gerenciamento mais potentes, mas sim em uma mudança na natureza dos próprios sistemas. A proposta central da Computação Autônoma é inspirada no Sistema Nervoso Autônomo (SNA) do corpo humano. O SNA regula funções vitais como os batimentos cardíacos, a respiração e a temperatura corporal sem que a mente consciente precise intervir \cite{sterritt2005}. Se um indivíduo precisar correr, o SNA aumenta a frequência cardíaca automaticamente; se a temperatura externa cai, ele induz o tremor para gerar calor.
+
+A Computação Autônoma busca mimetizar essa biologia, criando sistemas capazes de gerenciar a si mesmos de acordo com diretrizes de alto nível estabelecidas pelos administradores \cite{correa2007}. Em vez de configurar manualmente cada parâmetro de um banco de dados, o administrador define apenas os objetivos de negócio (como tempos de resposta ou níveis de disponibilidade), e o sistema se encarrega de ajustar sua infraestrutura interna para atingir tais metas. Esse modelo propõe a liberação dos profissionais de TI das tarefas rotineiras e de baixo nível, permitindo que eles se concentrem em decisões estratégicas e de alto valor agregado \cite{kephart2003}.
+
+Para operacionalizar essa visão, o modelo autônomo é sustentado por quatro pilares fundamentais, conhecidos como propriedades \textit{Self-CH} \cite{ibm2001, sterritt2005}:
+
+\begin{itemize}
+	\item \textbf{Auto-configuração (Self-configuration):} Refere-se à capacidade do sistema de se instalar e configurar automaticamente seguindo políticas definidas. Componentes novos devem ser integrados de forma transparente, ajustando-se dinamicamente ao ambiente existente sem necessidade de reinicializações manuais ou ajustes finos exaustivos \cite{kephart2003}.
+	\item \textbf{Auto-cura (Self-healing):} O sistema deve ser capaz de detectar, diagnosticar e isolar falhas de software e hardware. Após a detecção, ele deve iniciar ações corretivas, minimizando o tempo de inatividade e garantindo a continuidade do serviço \cite{correa2007}.
+	\item \textbf{Auto-otimização (Self-optimization):} Consiste na busca contínua pela eficiência máxima. O sistema monitora constantemente seu desempenho e uso de recursos, redistribuindo cargas de trabalho para garantir que os níveis de serviço contratados (SLAs) sejam atendidos de forma econômica \cite{sterritt2005}.
+	\item \textbf{Auto-proteção (Self-protection):} O sistema deve defender-se proativamente contra ataques maliciosos ou falhas em cascata, detectando padrões de intrusão e antecipando problemas antes que comprometam a integridade dos dados \cite{ibm2001}.
+\end{itemize}
+
+A implementação técnica dessas propriedades geralmente se baseia no ciclo de controle conhecido como MAPE-K (\textit{Monitor, Analyze, Plan, Execute over Knowledge}). Este loop de feedback contínuo permite que o sistema observe seu próprio estado e o do ambiente, analise discrepâncias, planeje as mudanças e as execute \cite{lalanda2013}. Tudo isso é suportado por uma base de conhecimento que contém modelos do sistema, históricos de comportamento e políticas de gerenciamento.
+
+Apesar da clareza teórica do manifesto da IBM, a implementação plena da Computação Autônoma enfrenta desafios significativos. O primeiro é de ordem técnica: como garantir que um sistema que se auto-ajusta não entre em estados instáveis ou oscilatórios? \cite{correa2007}. A criação de algoritmos de controle robustos para ambientes distribuídos é uma tarefa complexa que exige rigor formal. Além disso, a falta de padrões de interoperabilidade entre fornecedores dificulta a criação de orquestradores universais \cite{kephart2003}.
+
+Outro obstáculo crítico é a confiança. Administradores hesitam em delegar decisões críticas a algoritmos automáticos, especialmente em sistemas onde falhas resultam em perdas financeiras ou riscos à segurança \cite{kephart2003}. A transição é, portanto, gradual; começa com recomendações para humanos e evolui para a automação total com o amadurecimento tecnológico \cite{correa2007}.
+
+Em suma, a Computação Autônoma não é apenas uma conveniência técnica, mas uma necessidade imperativa para a sobrevivência da infraestrutura digital moderna. Ao transferir a carga administrativa do humano para a máquina, ela promete viabilizar a próxima era da computação, onde a complexidade será gerida pela inteligência intrínseca do próprio sistema \cite{ibm2001, sterritt2005}.
 
 Este trabalho está dividido da seguinte forma: no Capítulo 2 serão
 apresentados os conceitos referentes ao tema principal, no Capítulo 3
