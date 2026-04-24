@@ -18,22 +18,18 @@ Jeffrey~O. Kephart and David~M. Chess.
 
 \bibitem[IBM(2001)]{ibm2001}
 IBM.
-\newblock Autonomic computing: Ibm's perspective on the state of information
-  technology.
+\newblock Autonomic computing: Ibm's perspective on the state of information technology.
 \newblock Technical report, IBM Corporation, Armonk, NY, October 2001.
 \newblock URL \url{http://www.ibm.com/research/autonomic}.
 
 \bibitem[Sterritt(2005)]{sterritt2005}
 Roy Sterritt.
 \newblock Autonomic computing.
-\newblock \emph{Innovations in Systems and Software Engineering}, 1\penalty0
-  (1):\penalty0 79--88, 2005.
+\newblock \emph{Innovations in Systems and Software Engineering}, 1\penalty0 (1):\penalty0 79--88, 2005.
 
 \bibitem[Corr{\^e}a and Cerqueira(2007)]{correa2007}
 Sand Corr{\^e}a and Renato Cerqueira.
-\newblock Computa{\c{c}}{\~a}o aut{\^o}noma: Conceitos, infra-estruturas e
-  solu{\c{c}}{\~o}es em sistemas distribu{\'\i}dos.
-\newblock In \emph{Sistemas Distribu{\'\i}dos: Redes de Computadores e Sistemas
-  Distribu{\'\i}dos}, chapter~4. SBC, 2007.
+\newblock Computa{\c{c}}{\~a}o aut{\^o}noma: Conceitos, infra-estruturas e solu{\c{c}}{\~o}es em sistemas distribu{\'\i}dos.
+\newblock In \emph{Sistemas Distribu{\'\i}dos: Redes de Computadores e Sistemas Distribu{\'\i}dos}, chapter~4. SBC, 2007.
 
 \end{thebibliography}
