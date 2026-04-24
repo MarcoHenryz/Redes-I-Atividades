@@ -1,0 +1,10 @@
+\babel@toc {brazilian}{}\relax 
+\contentsline {section}{\numberline {1}Introdução}{7}{section.1}%
+\contentsline {section}{\numberline {2}Capítulo formato e fontes}{10}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Título Nível 2}{10}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Título Nível 3 (Primeiras Letras em Maiúsculo)}{10}{subsubsection.2.1.1}%
+\contentsline {paragraph}{\numberline {2.1.1.1}Título nível 4 (somente a 1ª letra da 1ª palavra em maiusculo)}{11}{paragraph.2.1.1.1}%
+\contentsline {subparagraph}{\numberline {2.1.1.1.1}Título nível 5 (todo em itálico -- somente a 1ª letra da 1ª palavra em maiusculo)}{11}{subparagraph.2.1.1.1.1}%
+\contentsline {subsection}{\numberline {2.2}Exemplo de seção com figura}{11}{subsection.2.2}%
+\contentsline {section}{\MakeUppercase {conclusão}}{13}{figure.caption.1}%
+\contentsline {section}{\MakeUppercase {referências}}{14}{figure.caption.1}%
