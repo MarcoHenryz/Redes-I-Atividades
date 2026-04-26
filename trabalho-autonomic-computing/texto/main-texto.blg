@@ -4,46 +4,46 @@ The top-level auxiliary file: main-texto.aux
 The style file: unsrtnat.bst
 Database file #1: refs.bib
 Warning--entry type for "W1999392360" isn't style-file defined
---line 70 of file refs.bib
-You've used 6 entries,
+--line 93 of file refs.bib
+You've used 8 entries,
             2481 wiz_defined-function locations,
-            594 strings with 5426 characters,
-and the built_in function-call counts, 1943 in all, are:
-= -- 173
-> -- 72
-< -- 6
-+ -- 32
-- -- 20
-* -- 126
-:= -- 317
-add.period$ -- 21
-call.type$ -- 6
-change.case$ -- 12
-chr.to.int$ -- 6
-cite$ -- 6
-duplicate$ -- 109
-empty$ -- 193
-format.name$ -- 30
-if$ -- 414
+            609 strings with 5764 characters,
+and the built_in function-call counts, 2751 in all, are:
+= -- 246
+> -- 114
+< -- 7
++ -- 48
+- -- 32
+* -- 195
+:= -- 447
+add.period$ -- 29
+call.type$ -- 8
+change.case$ -- 16
+chr.to.int$ -- 8
+cite$ -- 8
+duplicate$ -- 147
+empty$ -- 264
+format.name$ -- 46
+if$ -- 583
 int.to.chr$ -- 1
-int.to.str$ -- 7
-missing$ -- 5
-newline$ -- 39
-num.names$ -- 18
-pop$ -- 52
+int.to.str$ -- 9
+missing$ -- 7
+newline$ -- 51
+num.names$ -- 24
+pop$ -- 64
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 8
 quote$ -- 0
-skip$ -- 64
+skip$ -- 86
 stack$ -- 0
-substring$ -- 50
-swap$ -- 13
+substring$ -- 89
+swap$ -- 17
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 39
+type$ -- 53
 warning$ -- 0
-while$ -- 16
+while$ -- 24
 width$ -- 0
-write$ -- 88
+write$ -- 118
 (There was 1 warning)
