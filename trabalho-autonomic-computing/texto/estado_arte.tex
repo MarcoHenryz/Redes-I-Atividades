@@ -1,0 +1,30 @@
+\section{Estado da Arte: Avanços, Metodologias e Desafios}
+
+Desde a formulação do manifesto original da IBM \cite{ibm2001}, a Computação Autônoma (AC) transitou de uma visão teórica ambiciosa para um campo de pesquisa e desenvolvimento ativo, impulsionado pela necessidade de gerenciar ecossistemas de software cada vez mais complexos. O estado da arte atual não se concentra mais em provar a necessidade da autonomia, mas sim em refinar as metodologias subjacentes ao ciclo MAPE-K (\textit{Monitor, Analyze, Plan, Execute over Knowledge}) e em resolver as limitações estruturais que impedem a adoção de sistemas totalmente independentes de intervenção humana.
+
+\subsection{Principais Descobertas e Metodologias}
+
+A principal mudança metodológica na última década foi a transição da \textit{automação reativa} baseada em regras estáticas para a \textit{autonomia preditiva} impulsionada por Inteligência Artificial (IA) e Aprendizado de Máquina (\textit{Machine Learning} - ML). Historicamente, os gerentes autônomos dependiam de limiares pré-configurados (por exemplo, políticas do tipo \textit{se-então}) para tomar decisões \cite{correa2007}. Embora eficazes em cenários previsíveis, essas abordagens falhavam em ambientes altamente dinâmicos e não-lineares.
+
+Atualmente, a principal metodologia utilizada nas fases de Análise e Planejamento do ciclo MAPE-K envolve algoritmos de Aprendizado por Reforço (\textit{Reinforcement Learning}) e redes neurais profundas. O sistema não recebe regras estáticas; em vez disso, o gerente autônomo aprende por tentativa e erro em ambientes simulados ou explora dados históricos para descobrir as melhores políticas de otimização de recursos \cite{lalanda2013}. 
+
+Do ponto de vista aplicado, as principais descobertas consolidaram-se em dois grandes paradigmas da indústria:
+\begin{itemize}
+	\item \textbf{AIOps (\textit{Artificial Intelligence for IT Operations}):} Representa o estado da arte na auto-cura e auto-otimização de \textit{data centers}. Ferramentas de AIOps ingerem terabytes de métricas e \textit{logs} em tempo real, utilizando modelos preditivos para antecipar falhas de hardware ou picos de tráfego horas antes de ocorrerem, permitindo que o sistema atue preventivamente.
+	\item \textbf{Orquestração Nativa da Nuvem e Malha de Serviços (\textit{Service Mesh}):} A arquitetura de microsserviços adotou os princípios \textit{Self-CH} de forma nativa. O uso integrado de orquestradores como Kubernetes com mallas de serviço permite a auto-configuração (descoberta automática de serviços) e auto-cura em nível de rede (redirecionamento de tráfego automático em caso de falha de um contêiner), operando na escala de milissegundos.
+\end{itemize}
+
+\subsection{Lacunas e Desafios em Aberto}
+
+Apesar dos avanços substanciais, a literatura aponta lacunas críticas que ainda separam o estado atual da visão de uma autonomia plena e universal \cite{kephart2003, sterritt2005}.
+
+\begin{itemize}
+	\item[1] Verificação Formal e Garantia de Estabilidade:
+	A introdução de algoritmos de ML no controle de infraestruturas críticas gerou o problema da "caixa-preta". Administradores hesitam em delegar o controle total ao sistema porque é difícil prever matematicamente como um modelo heurístico se comportará em situações anômalas. Atualmente, há uma lacuna significativa na aplicação de métodos formais que possam provar a corretude e a estabilidade das decisões autônomas. Pesquisas recentes buscam modelar o comportamento autônomo através de autômatos, cálculo de processos ou Redes de Petri para realizar a verificação formal das propriedades do sistema. O desafio é garantir que as ações de adaptação do gerente autônomo nunca levem o sistema a estados inseguros ou inconsistentes, um requisito mandatório para a adoção em sistemas de tempo real, como redes elétricas inteligentes ou veículos autônomos \cite{lalanda2013}.
+	\item[2] Interoperabilidade e Sistemas Multi-agente:
+	A maioria das soluções atuais de computação autônoma atua em silos tecnológicos, desenvolvidos por um único provedor para um ambiente específico (como as bases de dados autônomas ou os balanceadores de carga proprietários). Quando ecossistemas heterogêneos precisam interagir, a falta de protocolos padronizados de comunicação para a troca de conhecimento (\textit{Knowledge}) entre diferentes gerentes autônomos torna-se um gargalo \cite{correa2007}. A negociação e coordenação entre múltiplos elementos autônomos — para evitar que as otimizações locais de um gerente degradem o desempenho global do sistema — continua sendo um problema complexo de teoria dos jogos e sistemas multi-agente ainda não resolvido de forma definitiva.
+	\item[3] Tradução de Políticas de Alto Nível:
+	Outra lacuna prática reside na interface entre o administrador humano e o sistema autônomo. O objetivo da Computação Autônoma é permitir que humanos estabeleçam apenas as metas de negócios e SLAs. Contudo, a tradução semântica de um objetivo de alto nível (por exemplo, "maximizar o lucro minimizando a latência") para ações operacionais de baixo nível de configuração de rede e alocação de CPU continua exigindo, em grande medida, o conhecimento especializado do engenheiro \cite{kephart2003}.
+	\end{itemize}
+
+Em suma, enquanto a capacidade de adaptação em tempo real atingiu maturidade comercial, o estado da arte acadêmico concentra-se em resolver a crise de confiança. A fronteira da pesquisa reside em tornar o comportamento autônomo não apenas inteligente, mas formalmente verificável, interpretável e interoperável.

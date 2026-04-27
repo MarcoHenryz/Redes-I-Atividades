@@ -12,5 +12,8 @@
 \contentsline {subsection}{\numberline {5.2}IBM \textit {Project eLiza}: Servidores Auto-Gerenciáveis}{18}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Gerenciamento de Infraestruturas de Cloud Computing}{19}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Sistemas Pervasivos e Internet das Coisas (IoT)}{20}{subsection.5.4}%
-\contentsline {section}{\numberline {6}Conclusão}{21}{section.6}%
-\contentsline {section}{\MakeUppercase {referências}}{22}{section.6}%
+\contentsline {section}{\numberline {6}Estado da Arte: Avanços, Metodologias e Desafios}{21}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Principais Descobertas e Metodologias}{21}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Lacunas e Desafios em Aberto}{22}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Conclusão}{24}{section.7}%
+\contentsline {section}{\MakeUppercase {referências}}{25}{section.7}%

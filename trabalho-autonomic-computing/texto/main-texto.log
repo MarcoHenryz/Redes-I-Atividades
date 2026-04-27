@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.11)  26 APR 2026 19:14
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.4.11)  27 APR 2026 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -915,7 +915,7 @@ Package hyperref Info: Link coloring OFF on input line 4.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./title.tex
-<image1.png, id=66, 419.31656pt x 106.89937pt>
+<image1.png, id=78, 419.31656pt x 106.89937pt>
 File: image1.png Graphic file (type png)
 <use image1.png>
 Package pdftex.def Info: image1.png  used on input line 5.
@@ -1142,29 +1142,53 @@ LaTeX Font Warning: Font shape `T1/ptm/m/scit' undefined
 
 [19]))
 
-[20] (./conclusao.tex)
-Underfull \hbox (badness 6063) in paragraph at lines 9--34
+[20] (./estado_arte.tex
+Underfull \hbox (badness 1210) in paragraph at lines 7--8
+\T1/ptm/m/n/12 por In-te-li-gên-cia Ar-ti-fi-cial (IA) e Apren-di-zado de Má-qu
+ina (\T1/ptm/m/it/12 Ma-chine Le-ar-ning \T1/ptm/m/n/12 - ML).
+ []
+
+
+Underfull \hbox (badness 3746) in paragraph at lines 9--10
+[]\T1/ptm/m/n/12 Atualmente, a prin-ci-pal me-to-do-lo-gia uti-li-zada nas fa-s
+es de Aná-lise
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 9--10
+\T1/ptm/m/n/12 e Pla-ne-ja-mento do ci-clo MAPE-K en-volve al-go-rit-mos de Apr
+en-di-zado por Re-forço
+ []
+
+
+
+[21])
+
+[22]
+
+[23] (./conclusao.tex)
+Underfull \hbox (badness 6063) in paragraph at lines 9--36
 []\T1/ptm/m/n/12 Em con-clu-são, a Com-pu-ta-ção Au-tô-noma re-pre-senta uma mu
 -dança
  []
 
 
 
-[21] (./main-texto.bbl)
+[24] (./main-texto.bbl)
 
-[22] (./main-texto.aux)
+[25] (./main-texto.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-03-26>
  ***********
 Package rerunfilecheck Info: File `main-texto.out' has not changed.
-(rerunfilecheck)             Checksum: 615EB796A9B8A5D99CF3CBF0C03C19B8;3043.
+(rerunfilecheck)             Checksum: 275519D08D9125899CAEBB377DB9B660;3810.
  ) 
 Here is how much of TeX's memory you used:
- 27011 strings out of 469626
- 498259 string characters out of 5475183
- 985938 words of memory out of 5000000
- 53290 multiletter control sequences out of 15000+600000
+ 27037 strings out of 469626
+ 498648 string characters out of 5475183
+ 985941 words of memory out of 5000000
+ 53307 multiletter control sequences out of 15000+600000
  656947 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  89i,11n,109p,1126b,731s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1173,10 +1197,10 @@ ive/2025/texmf-dist/fonts/type1/urw/times/utmb8a.pfb><c:/texlive/2025/texmf-dis
 t/fonts/type1/urw/times/utmbi8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw
 /times/utmr8a.pfb><c:/texlive/2025/texmf-dist/fonts/type1/urw/times/utmri8a.pfb
 >
-Output written on main-texto.pdf (23 pages, 149520 bytes).
+Output written on main-texto.pdf (26 pages, 157384 bytes).
 PDF statistics:
- 320 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 47 named destinations out of 1000 (max. 500000)
- 138 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 358 PDF objects out of 1000 (max. 8388607)
+ 315 compressed objects within 4 object streams
+ 53 named destinations out of 1000 (max. 500000)
+ 162 words of extra memory for PDF output out of 10000 (max. 10000000)
 
