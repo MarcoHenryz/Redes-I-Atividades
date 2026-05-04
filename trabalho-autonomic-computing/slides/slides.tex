@@ -135,6 +135,7 @@
 
   \begin{frame}
     \frametitle{O Elemento Autônomo}
+    \footnotesize
     \begin{itemize}
       \item \textbf{Elemento Autônomo} = Gerenciador Autônomo + Elemento Gerenciado
       \item \textbf{Elemento Gerenciado:} qualquer recurso de SW/HW --- servidor web, banco de dados, SO, cluster, rede, CPU
@@ -142,16 +143,15 @@
       \item \textbf{Efetores:} implementam mudanças --- granularidade grossa (adicionar servidor ao cluster) ou fina (alterar parâmetro de SO)
       \item Admin configura via \textbf{metas de alto nível} --- sistema decide como atingi-las
     \end{itemize}
-    \vspace{0.2cm}
-    \begin{block}{Elemento Gerenciado pode ser qualquer coisa}
-      Servidor web, BD, SO, cluster de máquinas, rede com ou sem fio, CPU --- qualquer recurso ao qual se deseja conferir comportamento autônomo
+    \begin{block}{Unidade de composição autônoma}
+      \footnotesize Elemento Autônomo é a unidade atômica de arquiteturas autônomas maiores --- múltiplos elementos cooperam para auto-gestão de sistemas complexos
     \end{block}
   \end{frame}
 
   \begin{frame}
     \frametitle{Graus de Autonomicidade: Modelo IBM}
-    \small
-    \begin{tabular}{cp{2cm}p{5.5cm}}
+    \footnotesize
+    \begin{tabular}{cp{1.8cm}p{5.8cm}}
       \toprule
       \textbf{Nível} & \textbf{Nome} & \textbf{Descrição} \\
       \midrule
@@ -174,7 +174,7 @@
       \item IBM estima: maioria dos sistemas de TI em \textbf{nível 1--2} (Básico/Gerenciado)
       \item Transição incremental: sysadmin precisa aprender a \textbf{confiar} nos gerenciadores autônomos
       \item Em situações críticas (falha de HW, upgrade maior) intervenção humana ainda necessária
-      \item O survey propõe 4 \textbf{elementos de autonomicidade} como alternativa aos 5 níveis IBM:
+      \item O survey (Huebscher \& McCann, 2008) propõe 4 \textbf{elementos de autonomicidade} como alternativa aos 5 níveis IBM:
       \begin{itemize}
         \item \textbf{Support:} autonomia melhora um componente específico da arquitetura
         \item \textbf{Core:} auto-gestão é o núcleo da aplicação fim a fim
