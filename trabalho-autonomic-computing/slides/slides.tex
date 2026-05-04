@@ -300,6 +300,40 @@
     \end{alertblock}
   \end{frame}
 
+  \begin{frame}
+    \frametitle{Gestão de Energia em Data Centers}
+    \begin{columns}
+      \column{0.55\textwidth}
+      \begin{itemize}
+        \item \textbf{63\%} do TCO da infraestrutura física de data center = energia + resfriamento + eletricidade
+        \item Motivação: autonomia não serve só para desempenho --- serve para \textbf{sobrevivência econômica}
+        \item Desafio: otimizar não só CPU/memória, mas \textbf{consumo de potência} como função de custo
+        \item Modelos de energia incluem: memória, rede e E/S além do processador
+      \end{itemize}
+      \column{0.45\textwidth}
+      \begin{alertblock}{Gestão de Calor}
+        \footnotesize
+        Calor gerado por servidores concentrados afeta diretamente o custo de resfriamento e a vida útil do hardware --- mapeamento térmico \textit{online} e preditivo é necessário
+      \end{alertblock}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Gestão de Energia: Resultados e Técnicas}
+    \begin{itemize}
+      \item \textbf{72\%} de economia no consumo de energia com gestão autônoma (Khargharia et al., 2006)
+      \item \textbf{Técnicas de auto-otimização energética:}
+      \begin{itemize}
+        \item Consolidação de cargas de trabalho em menos servidores
+        \item Desligamento automático de recursos ociosos
+        \item Migração de VMs para servidores mais eficientes energeticamente
+        \item Mapeamento térmico \textit{online} e preditivo do data center
+      \end{itemize}
+      \item \textbf{Trade-off:} eficiência energética vs.\ desempenho --- SLA determina quanto recurso pode ser desligado
+      \item Auto-otimização energética é \textbf{complemento}, não substituto, da auto-otimização de desempenho
+    \end{itemize}
+  \end{frame}
+
   % --- a partir daqui: slides do Murilo ---
 
   \begin{frame}
