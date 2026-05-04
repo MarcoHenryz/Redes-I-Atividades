@@ -5,8 +5,8 @@
 \contentsline {section}{\numberline {3}Propriedades de Auto-Gerenciamento}{12}{section.3}%
 \contentsline {section}{\numberline {4}O Laço de Controle Autônomo MAPE-K}{13}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Monitoramento}{14}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Planejamento e Adaptação}{14}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Base de Conhecimento}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.2}Planejamento e Adaptação}{15}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Base de Conhecimento}{16}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Aplicações}{17}{section.5}%
 \contentsline {subsection}{\numberline {5.1}NASA \textit {Autonomous NanoTechnology Swarm} (ANTS)}{17}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}IBM \textit {Project eLiza}: Servidores Auto-Gerenciáveis}{18}{subsection.5.2}%

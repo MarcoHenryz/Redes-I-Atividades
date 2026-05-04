@@ -1,93 +1,427 @@
 \documentclass{beamer}
-%\usepackage{bookman} % importa a bookman family font para
-%ser usado na apresentação
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}
+\usepackage{graphicx}
+\usepackage{booktabs}
 
-\title{Titulo}
-\subtitle{Algum subtítulo}
-\author[Marco, DKM]{Marco Henry\inst{1} \and Danilo Kotaka\inst{2}}
-\institute[UEL]{Universidade Estadual De Londrina}
-\date{\today}
+\title{Computação Autônoma}
+\subtitle{Redes de Computadores I}
+\author[Marco Henry, Murilo Neves]{Marco Antônio Cottorello Henry \and Murilo de Souza Neves}
+\institute[UEL]{Universidade Estadual de Londrina}
+\date{2026}
 
 \AtBeginSection[]
 {
   \begin{frame}
     \frametitle{Sumário}
-    \tableofcontents
+    \tableofcontents[currentsection]
   \end{frame}
 }
 
 \usetheme{Szeged}
-%\usecolortheme{}
-%\usefonttheme{structuresmallcapsserif}
 
 \begin{document}
 
   \frame{\titlepage}
 
   \begin{frame}
-    \frametitle{Titulo Slide}
-    This is some text in the first slide. This is some text in the first slide. 
-    This is some text in the first slide.
+    \frametitle{Sumário}
+    \tableofcontents
   \end{frame}
 
-  \begin{frame} % frame com animacao de aparecer, um item aparece por slide
-    \frametitle{Titulo Slide 2} 
-    This is a text in second frame.
-    For the sake of showing an example.
+  % ===== SEÇÃO 1: HISTÓRICO E DESENVOLVIMENTO =====
+  \section{Histórico e Desenvolvimento}
 
+  \begin{frame}
+    \frametitle{Motivação: A Crise da Complexidade}
+    \begin{columns}
+      \column{0.55\textwidth}
+      \begin{itemize}
+        \item Sistemas modernos: distribuídos, heterogêneos, em nuvem --- componentes de múltiplos fornecedores interagindo em tempo real
+        \item \textbf{TCO}: até 80\% do custo de TI em manutenção, não em hardware
+        \item \textbf{Erros humanos}: principal causa de falhas em data centers --- complexidade \alert{ultrapassa a capacidade cognitiva humana}
+      \end{itemize}
+
+      \column{0.45\textwidth}
+      \begin{block}{Manifesto IBM (2001)}
+        \textit{``It's Time Systems Take Care of Themselves''}\\[0.3cm]
+        Admin define \textbf{o quê} --- sistema decide \textbf{como}\\[0.2cm]
+        Inspiração: \textbf{Sistema Nervoso Autônomo (SNA)}
+      \end{block}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Projetos Precursores}
+    \small
+    \begin{tabular}{llp{4.8cm}}
+      \toprule
+      \textbf{Projeto} & \textbf{Ano / Origem} & \textbf{Contribuição principal} \\
+      \midrule
+      SAS    & 1997 --- DARPA & Roteamento ad-hoc adaptativo em 10.000 nós \\
+      DASADA & 2000 --- DARPA & Probes e gauges; precursor direto do MAPE-K \\
+      IBM AC & 2001 --- IBM   & Formalização do termo e das 4 propriedades Self-X \\
+      SPS    & 2003 --- DARPA & Sistemas auto-regenerativos resistentes a ataques \\
+      ANTS   & 2005 --- NASA  & Enxame autônomo para exploração do espaço profundo \\
+      \bottomrule
+    \end{tabular}
+    \vspace{0.3cm}
+    \begin{block}{}
+      Projetos independentes que convergiram para os mesmos princípios de auto-gestão sem coordenação explícita
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Propriedades Self-X}
     \begin{itemize}
-      \item<1-> Text visible on slide 1
-      \item<2-> Text visible on slide 2
-      \item<3> Text visible on slide 3
-      \item<4-> Text visible on slide 4
-      
+      \item<1-> \textbf{Auto-configuração:} sistema se instala e ajusta automaticamente de acordo com a plataforma e usuários --- administrador define metas, não os passos de como alcançá-las
+      \item<2-> \textbf{Auto-cura:} detecta, diagnostica e corrige falhas de hardware e software; tolera falhas e reage aos seus primeiros sinais para garantir continuidade do serviço
+      \item<3-> \textbf{Auto-otimização:} busca contínua e \textit{proativa} da eficiência máxima; redistribui cargas de trabalho sem aguardar solicitação externa para cumprir SLAs
+      \item<4-> \textbf{Auto-proteção:} defende contra ataques maliciosos e mudanças prejudiciais; comportamento \textit{proativo} (antecipa brechas) e \textit{reativo} (responde a ameaças) para garantir integridade
     \end{itemize}
   \end{frame}
 
   \begin{frame}
-    \frametitle{Teste do pause}
-    In this slide \pause
-
-    the text will be partially visible \pause
-
-    And finally everything will be there
-  \end{frame}
-
-  \begin{frame}
-    \frametitle{Teste de highlighting}
-
-    In this slide, some important text will be \alert{highlighted} because it's important.
-    Please, don't abuse it.
-
-    \begin{block}{Remark}
-      Some text 
-    \end{block}
-
-    \begin{alertblock}{Important theorem}
-     Some text in red box 
-    \end{alertblock}
-
-    \begin{examples}
-      Alguns textos em caixe verde. O titulo da caixa é examples 
-    \end{examples}
-    
-  \end{frame}
-
-  \begin{frame}
-    \frametitle{Slide com 2 colunas}
+    \frametitle{O Laço de Controle MAPE-K}
     \begin{columns}
-      \column{0.5\textwidth}
-      This is a text in the first column
-      \begin{itemize}
-        \item First item
-        \item Second Item
-      \end{itemize}
+      \column{0.45\textwidth}
+      \includegraphics[width=\textwidth]{../texto/mape-k.png}
 
-      \column{0.5\textwidth}
-      This text will be in the second column
-      and on a second thoughts, this is a nice looking layout in some cases
+      \column{0.55\textwidth}
+      \begin{itemize}
+        \item \textbf{Monitor:} coleta dados via sensores/probes --- passivo (top, vmstat, /proc) ou ativo (instrumentação de bytecode)
+        \item \textbf{Analyse:} analisa estado do sistema vs.\ metas; identifica discrepâncias e anomalias
+      \end{itemize}
+      \vspace{0.3cm}
+      \begin{block}{Knowledge}
+        Base que sustenta \textit{todas} as fases: regras, histórico e modelos do sistema
+      \end{block}
     \end{columns}
-    
   \end{frame}
-  
+
+  \begin{frame}
+    \frametitle{O Laço de Controle MAPE-K (cont.)}
+    \begin{itemize}
+      \item \textbf{Plan:} define ações corretivas com base nas políticas do administrador --- ECA, objetivos ou funções de utilidade
+      \item \textbf{Execute:} aplica mudanças via efetores de granularidade grossa (adicionar servidor) ou fina (ajustar parâmetro de SO)
+    \end{itemize}
+    \vspace{0.3cm}
+    \begin{block}{Ciclo completo}
+      Monitor $\rightarrow$ Analyse $\rightarrow$ Plan $\rightarrow$ Execute, sustentado pela base de Knowledge compartilhada
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Planejamento: Tipos de Políticas}
+    \begin{itemize}
+      \item \textbf{ECA} (Evento-Condição-Ação): diretas e simples; risco de conflito entre múltiplas regras detectável apenas em runtime
+      \item \textbf{Objetivo:} define estado desejado; sistema planeja \textit{como} atingi-lo --- mais expressivo, exige maior raciocínio
+      \item \textbf{Função de Utilidade:} valor numérico por estado; otimiza mesmo quando o estado ideal é inatingível
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Base de Conhecimento}
+    \begin{itemize}
+      \item \textbf{Aprendizado por Reforço:} aprende por tentativa e erro; não exige modelo explícito do sistema gerenciado
+      \item \textbf{Redes Bayesianas:} decisão probabilística sob incerteza; seleção de algoritmos sensível a custo
+      \item \textbf{Modelos Arquiteturais:} verifica validade das mudanças \textit{antes} de executar no sistema real
+    \end{itemize}
+  \end{frame}
+
+  % ===== SEÇÃO 2: ARQUITETURA E GRAUS DE AUTONOMIA =====
+  \section{Arquitetura e Graus de Autonomia}
+
+  \begin{frame}
+    \frametitle{O Elemento Autônomo}
+    \begin{itemize}
+      \item \textbf{Elemento Autônomo} = Gerenciador Autônomo + Elemento Gerenciado
+      \item \textbf{Elemento Gerenciado:} qualquer recurso de SW/HW --- servidor web, banco de dados, SO, cluster, rede, CPU
+      \item \textbf{Sensores/Probes/Gauges:} coletam dados do elemento gerenciado, filtram e agregam antes de reportar ao gerenciador
+      \item \textbf{Efetores:} implementam mudanças --- granularidade grossa (adicionar servidor ao cluster) ou fina (alterar parâmetro de SO)
+      \item Admin configura via \textbf{metas de alto nível} --- sistema decide como atingi-las
+    \end{itemize}
+    \vspace{0.2cm}
+    \begin{block}{Elemento Gerenciado pode ser qualquer coisa}
+      Servidor web, BD, SO, cluster de máquinas, rede com ou sem fio, CPU --- qualquer recurso ao qual se deseja conferir comportamento autônomo
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Graus de Autonomicidade: Modelo IBM}
+    \small
+    \begin{tabular}{cp{2cm}p{5.5cm}}
+      \toprule
+      \textbf{Nível} & \textbf{Nome} & \textbf{Descrição} \\
+      \midrule
+      1 & Básico     & Staff qualificado gerencia manualmente com ferramentas de monitoramento \\
+      2 & Gerenciado & Ferramentas coletam informações de forma inteligente, reduzem carga administrativa \\
+      3 & Preditivo  & Monitoramento reconhece padrões de comportamento e \textit{sugere} ações ao staff \\
+      4 & Adaptativo & Sistema age com intervenção humana mínima; ajusta para cumprir SLAs \\
+      5 & Autônomo   & Componentes gerenciados dinamicamente por regras de negócio --- plena autonomia \\
+      \bottomrule
+    \end{tabular}
+    \vspace{0.2cm}
+    \begin{block}{}
+      IBM estima que a maioria dos sistemas de TI atuais está nos níveis 1--2
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Onde Estamos Hoje?}
+    \begin{itemize}
+      \item IBM estima: maioria dos sistemas de TI em \textbf{nível 1--2} (Básico/Gerenciado)
+      \item Transição incremental: sysadmin precisa aprender a \textbf{confiar} nos gerenciadores autônomos
+      \item Em situações críticas (falha de HW, upgrade maior) intervenção humana ainda necessária
+      \item O survey propõe 4 \textbf{elementos de autonomicidade} como alternativa aos 5 níveis IBM:
+      \begin{itemize}
+        \item \textbf{Support:} autonomia melhora um componente específico da arquitetura
+        \item \textbf{Core:} auto-gestão é o núcleo da aplicação fim a fim
+        \item \textbf{Autonomous:} solução fim a fim com inteligência emergente e agentes
+        \item \textbf{Autonomic:} arquitetura completa com metas de alto nível (SLAs, objetivos de negócio)
+      \end{itemize}
+    \end{itemize}
+  \end{frame}
+
+  % ===== SEÇÃO 3: APLICAÇÕES =====
+  \section{Aplicações}
+
+  \begin{frame}
+    \frametitle{Aplicação Clássica: NASA ANTS --- Contexto}
+    \begin{itemize}
+      \item 1.000 nanoespaçonaves (\textless{}1 kg) no cinturão de asteróides
+      \item 60--70\% de perda esperada ao entrar no cinturão
+      \item Atraso de comunicação com Terra inviabiliza controle humano em tempo real
+      \item Papéis distribuídos: trabalhadores, coordenadores, mensageiros
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Aplicação Clássica: NASA ANTS --- Self-X}
+    \begin{itemize}
+      \item \textbf{Auto-cura:} sobreviventes redistribuem papéis das naves perdidas automaticamente
+      \item \textbf{Auto-config.:} cada nave determina posição na frota e rotas com vizinhos disponíveis
+      \item \textbf{Auto-otimiz.:} prioriza asteróides com base nos dados já coletados
+      \item \textbf{Auto-proteção:} evita colisões; gerencia consumo de energia das velas solares
+    \end{itemize}
+    \vspace{0.3cm}
+    \begin{block}{}
+      MAPE-K distribuído: cada nave executa ciclo local; comportamento global coerente emerge do enxame
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Aplicação Clássica: IBM \textit{Project eLiza}}
+    \begin{itemize}
+      \item Maior foco individual de investimento da divisão de servidores IBM --- linha \textit{eServer} (zSeries, pSeries, iSeries, xSeries)
+      \item Espinha dorsal de operações bancárias, de telecomunicações e governamentais globais
+      \item \textbf{Auto-config.:} hardware e middleware se reconfiguram na inicialização e em runtime sem intervenção do operador
+      \item \textbf{Auto-otimização:} \textit{Intelligent Resource Director} (IRD) redistribui cargas entre partições lógicas (LPARs) para maximizar throughput e cumprir SLAs
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Aplicação Clássica: IBM \textit{Project eLiza} (cont.)}
+    \begin{itemize}
+      \item \textbf{Auto-cura:} \textit{System Automation for OS/390} detecta falhas em aplicações e aciona recuperação automática --- inicia, para, monitora e recupera serviços sem humano
+      \item \textbf{Auto-proteção:} detecção de intrusão e isolamento de falhas integrados diretamente ao SO
+    \end{itemize}
+    \vspace{0.4cm}
+    \begin{alertblock}{}
+      Provou que Self-X é viável em sistemas de missão crítica em produção real
+    \end{alertblock}
+  \end{frame}
+
+  % --- a partir daqui: slides do Murilo ---
+
+  \begin{frame}
+    \frametitle{Orquestração e Auto-scaling em Nuvem}
+    \begin{columns}
+      \column{1\textwidth}
+      A Computação Autônoma atua como o motor de orquestração essencial para manter a viabilidade econômica dos provedores modernos.
+      \begin{itemize}
+        \item{\textbf{Auto-otimização:}}Provisionamento dinâmico (auto-scaling) baseado em métricas de CPU e latência em tempo real. Economizando energia e custo.
+        \item{\textbf{Eficiência Energética:}} Consolidação de cargas de trabalho e desligamento de recursos ociosos.
+        \item{\textbf{Resiliência:}}Detecção de degradação e migração automática de VMs sem interrupção de serviço. Por meio de migração automática de VMs e reconfiguração de balanceadores.
+      \end{itemize}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Orquestração e Auto-scaling em Nuvem}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=0.3]{./images/orquestracao_nuvem.png}
+      \caption{Funcionamento da orquestração em nuvem}
+    \end{figure}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Sistemas Pervasivos e IoT}
+    \begin{itemize}
+      \item Desafio: heterogeneidade + volatilidade + recursos limitados.
+      \item Auto-configuração: dispositivos plug-and-play em Smart Cities e Smart Grids. Descobrem vizinhos e registram serviços automaticamente.
+      \item Auto-proteção: detecção de tráfego anômalo (DDoS, intrusões) e quarentena automática de dispositivos comprometidos.
+      \item Sem autonomia, o custo de configurar milhões de sensores seria proibitivo.
+    \end{itemize}
+  \end{frame}
+
+  % ===== SEÇÃO 4: ESTADO DA ARTE =====
+  \section{Estado da Arte}
+
+  \begin{frame}
+    \frametitle{Estado da Arte: Mudança de Paradigma}
+    A pesquisa não busca mais justificar a autonomia, mas refinar o MAPE-K e resolver suas limitações.
+
+    Principal mudança no método foi sair de regras estáticas para a autonomia preditiva com IA/ML.
+    \begin{itemize}
+      \item Aprendizado por Reforço e Redes Neurais Profundas substituem políticas estáticas se-então.
+      \item O sistema aprende políticas ótimas por tentativa e erro ou via dados históricos.
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Paradigmas Industriais Consolidados}
+    AIOps (Artificial Intelligence for IT Operations)
+    \begin{itemize}
+      \item Estado da arte em auto-cura e auto-otimização de data centers.
+      \item Ingere terabytes de logs/métricas e antecipa falhas horas antes de ocorrerem.
+    \end{itemize}
+    Orquestração Cloud-Native \& Service Mesh
+    \begin{itemize}
+      \item Microsserviços adotam Self-X de forma nativa.
+      \item Kubernetes + Service Mesh $\rightarrow$ auto-configuração e auto-cura em milissegundos.
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Lacunas e Desafios em Aberto}
+    \begin{enumerate}
+      \item Verificação Formal e Estabilidade\\
+      Problema da ``caixa-preta'' do ML $\rightarrow$ necessidade de provar matematicamente a corretude.
+
+      \item Interoperabilidade \& Sistemas Multi-agente\\
+      Soluções atuais vivem em silos; falta padronização para troca de conhecimento entre gerentes autônomos.
+
+      \item Tradução de Políticas de Alto Nível\\
+      Converter metas de negócio (``maximizar lucro minimizando latência'') em ações operacionais ainda exige especialista humano.
+    \end{enumerate}
+
+    Fronteira atual: tornar a autonomia verificável, interpretável e interoperável.
+  \end{frame}
+
+  % ===== SEÇÃO 5: CONCLUSÃO =====
+  \section{Conclusão}
+
+  \begin{frame}
+    \frametitle{Conclusão}
+    \begin{itemize}
+      \item A escalabilidade da TI moderna não pode mais ser dissociada da automação de sua gestão.
+      \item A capacidade cognitiva humana é o principal limitador das infraestruturas contemporâneas.
+      \item A ``crise da complexidade'' é o desafio central. A Computação Autônoma é a resposta.
+      \item As propriedades Self-X, sustentadas pelo MAPE-K, viabilizam Cloud, IoT e sistemas pervasivos não apenas tecnicamente, mas economicamente (redução de TCO + cumprimento de SLAs).
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Conclusão}
+    A transição de sistemas que auxiliam decisões $\rightarrow$ para sistemas que agem sozinhos ainda esbarra em:
+    \begin{itemize}
+      \item Interoperabilidade entre fornecedores
+      \item Confiança dos administradores
+      \item Estabilidade formal dos algoritmos
+    \end{itemize}
+
+    Em uma era de trilhões de dispositivos, autonomia deixa de ser diferencial e passa a ser requisito mandatório.
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Referências Principais}
+    \begin{itemize}
+      \item IBM (2001). \textit{Autonomic Computing: An Architectural Blueprint}
+      \item Kephart \& Chess (2003). \textit{The Vision of Autonomic Computing}. IEEE Computer
+      \item Sterritt (2005). \textit{Autonomic Computing}. Innovations in Systems and Software Engineering
+      \item Lalanda et al.\ (2013). \textit{Autonomic Computing: Principles, Design and Implementation}
+      \item Ganek \& Corbi (2003). \textit{The dawning of the autonomic computing era}. IBM Systems Journal
+      \item Truszkowski et al.\ (2004). \textit{Autonomous and Autonomic Systems}
+    \end{itemize}
+    \vspace{0.4cm}
+    \centering
+    \Large \textbf{Obrigado!}
+  \end{frame}
+
+  % ===== PERGUNTAS E RESPOSTAS =====
+  \section*{Perguntas e Respostas}
+
+  \begin{frame}
+    \frametitle{P\&R 1: O que motivou a Computação Autônoma?}
+    \begin{alertblock}{Pergunta}
+      Qual foi a principal motivação para o surgimento da Computação Autônoma e qual foi o papel da IBM?
+    \end{alertblock}
+    \begin{block}{Resposta}
+      A ``crise da complexidade'': TCO com até 80\% em manutenção e erros humanos como principal causa de falhas em data centers. Em 2001, a IBM publicou manifesto propondo sistemas auto-gerenciáveis inspirados no Sistema Nervoso Autônomo (SNA) --- administrador define metas de alto nível, sistema decide como atingi-las.
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{P\&R 2: Quais são as propriedades Self-X?}
+    \begin{alertblock}{Pergunta}
+      Quais são as 4 propriedades Self-X e como elas se complementam?
+    \end{alertblock}
+    \begin{block}{Resposta}
+      \begin{itemize}
+        \item \textbf{Auto-config.:} sistema se instala e ajusta sem passos manuais --- admin define metas, não passos
+        \item \textbf{Auto-cura:} detecta, diagnostica e corrige falhas de HW/SW automaticamente
+        \item \textbf{Auto-otimização:} redistribui recursos \textit{proativamente} para cumprir SLAs sem solicitação externa
+        \item \textbf{Auto-proteção:} defende contra ataques e mudanças prejudiciais --- proativa e reativa
+      \end{itemize}
+      Juntas cobrem o ciclo completo: instalar $\rightarrow$ corrigir $\rightarrow$ otimizar $\rightarrow$ proteger.
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{P\&R 3: Como funciona o ciclo MAPE-K?}
+    \begin{alertblock}{Pergunta}
+      Descreva o ciclo MAPE-K e o papel da base de Conhecimento.
+    \end{alertblock}
+    \begin{block}{Resposta}
+      \textbf{Monitor} coleta dados via sensores/probes $\rightarrow$ \textbf{Analyse} identifica discrepâncias vs.\ metas $\rightarrow$ \textbf{Plan} define ações corretivas com base nas políticas $\rightarrow$ \textbf{Execute} aplica mudanças via efetores.\\[0.3cm]
+      A base de \textbf{Knowledge} sustenta \textit{todas} as fases: regras estáticas, histórico de comportamento e modelos arquiteturais --- permite planejar mudanças e verificar validade antes de executar no sistema real.
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{P\&R 4: Computação Autônoma em Cloud e IoT}
+    \begin{alertblock}{Pergunta}
+      Como a Computação Autônoma se manifesta em Cloud Computing e IoT?
+    \end{alertblock}
+    \begin{block}{Resposta}
+      \textbf{Cloud:}
+      \begin{itemize}
+        \item Auto-otimização: MAPE-K dispara \textit{auto-scaling} ao atingir limiar de carga, sem humano
+        \item Auto-cura: falha de nó → migração automática de VMs, transparente ao usuário final
+      \end{itemize}
+      \textbf{IoT:}
+      \begin{itemize}
+        \item Auto-config.: novos sensores se integram à rede automaticamente (\textit{plug-and-play})
+        \item Auto-proteção: IA isola dispositivos comprometidos em quarentena antes de alerta humano
+      \end{itemize}
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{P\&R 5: Desafios para Adoção Plena}
+    \begin{alertblock}{Pergunta}
+      Quais são os principais desafios que impedem a adoção plena da Computação Autônoma?
+    \end{alertblock}
+    \begin{block}{Resposta}
+      \begin{enumerate}
+        \item \textbf{Verificação Formal e Estabilidade:} algoritmos de ML são ``caixa-preta'' --- difícil provar corretude matematicamente; pesquisa usa autômatos, Redes de Petri e cálculo de processos
+        \item \textbf{Interoperabilidade:} soluções em silos por fornecedor; falta protocolo padrão para troca de \textit{Knowledge} entre gerentes autônomos distintos
+        \item \textbf{Tradução de Políticas de Alto Nível:} objetivos de negócio ainda exigem engenheiro especialista para converter em configurações operacionais de baixo nível
+      \end{enumerate}
+    \end{block}
+  \end{frame}
+
 \end{document}
