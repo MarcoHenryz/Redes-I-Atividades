@@ -1,5 +1,6 @@
 \babel@toc {brazil}{}\relax 
 \beamer@sectionintoc {1}{Histórico e Desenvolvimento}{3}{0}{1}
-\beamer@sectionintoc {2}{Aplicações}{12}{0}{2}
-\beamer@sectionintoc {3}{Estado da Arte}{17}{0}{3}
-\beamer@sectionintoc {4}{Conclusão}{20}{0}{4}
+\beamer@sectionintoc {2}{Sistemas Multitier e Graus de Autonomia}{23}{0}{2}
+\beamer@sectionintoc {3}{Aplicações}{26}{0}{3}
+\beamer@sectionintoc {4}{Estado da Arte}{36}{0}{4}
+\beamer@sectionintoc {5}{Conclusão}{40}{0}{5}

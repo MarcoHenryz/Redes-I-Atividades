@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.21)  28 APR 2026 09:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.4.21)  4 MAY 2026 20:08
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -739,15 +739,54 @@ Dictionary: translator-months-dictionary, Language: English
 Dictionary: translator-numbers-dictionary, Language: English 
 ) (/usr/share/texmf-dist/tex/latex/translator/translator-theorem-dictionary-English.dict
 Dictionary: translator-theorem-dictionary, Language: English 
-) (./slides.nav) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+) (./slides.nav)
+Overfull \hbox (60.15149pt too wide) detected at line 24
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
 
-] (./slides.toc) [2
 
-] (./slides.toc) [3
+Overfull \hbox (60.15149pt too wide) detected at line 26
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 
 ]
+Overfull \hbox (60.15149pt too wide) detected at line 31
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+(./slides.toc)
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[2
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 34
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+(./slides.toc)
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[3
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 53
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
 LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
- (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
@@ -757,104 +796,559 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 53.
  (/usr/share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
-) [4
+)
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[4
 
 ]
+Overfull \hbox (60.15149pt too wide) detected at line 73
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
 Underfull \hbox (badness 1043) in paragraph at lines 73--73
 []\T1/cmss/m/n/10 Roteamento ad-hoc adap-ta-tivo
  []
 
+
+Underfull \hbox (badness 2689) in paragraph at lines 73--73
+\T1/cmss/m/n/10 ra-mento; pre-cur-sor di-reto do
+ []
+
+
+Overfull \vbox (2.04155pt too high) detected at line 73
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
 [5
 
-] [6
+]
+Overfull \hbox (60.15149pt too wide) detected at line 94
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
 
-] [7
 
-] [8
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
 
-] [9
+[6
 
 ]
-<../texto/mape-k.png, id=776, 578.16pt x 449.68pt>
-File: ../texto/mape-k.png Graphic file (type png)
-<use ../texto/mape-k.png>
-Package pdftex.def Info: ../texto/mape-k.png  used on input line 100.
-(pdftex.def)             Requested size: 138.2795pt x 107.548pt.
+Overfull \hbox (60.15149pt too wide) detected at line 114
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
 
-Overfull \vbox (50.36787pt too high) detected at line 100
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[7
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 138
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[8
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 149
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[9
+
+]
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
  []
 
 [10
 
- <../texto/mape-k.png>]
-Overfull \vbox (27.27382pt too high) detected at line 121
+]
+Overfull \hbox (60.15149pt too wide) detected at line 160
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
  []
 
 [11
 
-] (./slides.toc) [12
+]
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[12
 
 ]
-Overfull \vbox (43.07945pt too high) detected at line 151
+Overfull \hbox (60.15149pt too wide) detected at line 167
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+<../texto/mape-k.png, id=1631, 578.16pt x 449.68pt>
+File: ../texto/mape-k.png Graphic file (type png)
+<use ../texto/mape-k.png>
+Package pdftex.def Info: ../texto/mape-k.png  used on input line 167.
+(pdftex.def)             Requested size: 230.46739pt x 179.25127pt.
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
  []
 
 [13
 
-]
-Overfull \vbox (43.27985pt too high) detected at line 166
+ <../texto/mape-k.png>]
+Overfull \hbox (60.15149pt too wide) detected at line 178
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
  []
 
 [14
 
 ]
-Overfull \vbox (29.67984pt too high) detected at line 179
+Overfull \hbox (60.15149pt too wide) detected at line 191
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
  []
 
 [15
 
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [16
+]
+Overfull \hbox (60.15149pt too wide) detected at line 200
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
 
-] (./slides.toc) [17
 
-] [18
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[16
 
 ]
-Overfull \vbox (27.44858pt too high) detected at line 223
+Overfull \hbox (60.15149pt too wide) detected at line 231
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[17
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 262
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[18
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 285
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
  []
 
 [19
 
-] (./slides.toc) [20
+]
+Overfull \hbox (60.15149pt too wide) detected at line 310
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[20
 
 ]
-Overfull \vbox (24.10306pt too high) detected at line 241
+Overfull \hbox (60.15149pt too wide) detected at line 324
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
  []
 
 [21
 
-] [22
+]
+Overfull \hbox (60.15149pt too wide) detected at line 334
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
 
-] [23
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[22
 
 ]
-Overfull \vbox (13.32869pt too high) detected at line 285
+Overfull \hbox (60.15149pt too wide) detected at line 336
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+(./slides.toc)
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[23
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 361
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
  []
 
 [24
 
-] [25
+]
+Overfull \hbox (60.15149pt too wide) detected at line 382
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Underfull \hbox (badness 2181) in paragraph at lines 382--382
+[]\T1/cmss/m/n/9 Staff qua-li-fi-cado ge-ren-cia ma-nu-al-mente
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[25
 
 ]
-Overfull \vbox (29.9287pt too high) detected at line 315
+Overfull \hbox (60.15149pt too wide) detected at line 386
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+(./slides.toc)
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
  []
 
 [26
 
 ]
-Overfull \vbox (10.32869pt too high) detected at line 329
+Overfull \hbox (60.15149pt too wide) detected at line 400
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
  []
 
 [27
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 428
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[28
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 438
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[29
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 452
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[30
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 462
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[31
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 474
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[32
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 488
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[33
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 497
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+<./images/orquestracao_nuvem.png, id=4315, 997.7275pt x 493.845pt>
+File: ./images/orquestracao_nuvem.png Graphic file (type png)
+<use ./images/orquestracao_nuvem.png>
+Package pdftex.def Info: ./images/orquestracao_nuvem.png  used on input line 497.
+(pdftex.def)             Requested size: 299.32056pt x 148.15463pt.
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[34
+
+ <./images/orquestracao_nuvem.png>]
+Overfull \hbox (60.15149pt too wide) detected at line 507
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[35
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 510
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+(./slides.toc)
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[36
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 521
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[37
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 535
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[38
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 551
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[39
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 554
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+(./slides.toc)
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[40
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 564
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[41
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 576
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[42
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 591
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[43
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 604
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[44
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 620
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[45
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 632
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[46
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 644
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[47
+
+]
+Overfull \hbox (60.15149pt too wide) detected at line 659
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+
+Overfull \hbox (60.15149pt too wide) has occurred while \output is active
+  [] [][][][][][][][][][][][][][][][][][][] [][][][] [][][][][][][][][][][] [][][][][] [][][][][] [][][][][][]  
+ []
+
+[48
 
 ]
 \tf@nav=\write6
@@ -872,21 +1366,21 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `slides.out' has not changed.
-(rerunfilecheck)             Checksum: 4ABFC0EE680055BDA677F8617E7CFA0A;650.
+(rerunfilecheck)             Checksum: 9D4D68389460A69ED094E34D9530A3DD;903.
  ) 
 Here is how much of TeX's memory you used:
- 23292 strings out of 468336
- 443072 string characters out of 5442630
- 860274 words of memory out of 5000000
- 51599 multiletter control sequences out of 15000+600000
- 648887 words of font info for 91 fonts, out of 8000000 for 9000
+ 23414 strings out of 468336
+ 444150 string characters out of 5442630
+ 888978 words of memory out of 5000000
+ 51668 multiletter control sequences out of 15000+600000
+ 653992 words of font info for 102 fonts, out of 8000000 for 9000
  624 hyphenation exceptions out of 8191
  128i,19n,123p,408b,792s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsi1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb>
-Output written on slides.pdf (27 pages, 319148 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsi0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsi1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsi1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss0600.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1200.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx1440.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on slides.pdf (48 pages, 983622 bytes).
 PDF statistics:
- 2295 PDF objects out of 2487 (max. 8388607)
- 1515 compressed objects within 16 object streams
- 60 named destinations out of 1000 (max. 500000)
- 88 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6286 PDF objects out of 7423 (max. 8388607)
+ 3754 compressed objects within 38 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

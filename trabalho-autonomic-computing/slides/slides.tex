@@ -60,7 +60,7 @@
       \textbf{Projeto} & \textbf{Ano / Origem} & \textbf{Contribuição principal} \\
       \midrule
       SAS    & 1997 --- DARPA & Roteamento ad-hoc adaptativo em 10.000 nós \\
-      DASADA & 2000 --- DARPA & Probes e gauges; precursor direto do MAPE-K \\
+      DASADA & 2000 --- DARPA & Probes e gauges para monitoramento; precursor direto do MAPE-K \\
       IBM AC & 2001 --- IBM   & Formalização do termo e das 4 propriedades Self-X \\
       SPS    & 2003 --- DARPA & Sistemas auto-regenerativos resistentes a ataques \\
       ANTS   & 2005 --- NASA  & Enxame autônomo para exploração do espaço profundo \\
@@ -73,81 +73,294 @@
   \end{frame}
 
   \begin{frame}
-    \frametitle{Propriedades Self-X}
-    \begin{itemize}
-      \item<1-> \textbf{Auto-configuração:} sistema se instala e ajusta automaticamente de acordo com a plataforma e usuários --- administrador define metas, não os passos de como alcançá-las
-      \item<2-> \textbf{Auto-cura:} detecta, diagnostica e corrige falhas de hardware e software; tolera falhas e reage aos seus primeiros sinais para garantir continuidade do serviço
-      \item<3-> \textbf{Auto-otimização:} busca contínua e \textit{proativa} da eficiência máxima; redistribui cargas de trabalho sem aguardar solicitação externa para cumprir SLAs
-      \item<4-> \textbf{Auto-proteção:} defende contra ataques maliciosos e mudanças prejudiciais; comportamento \textit{proativo} (antecipa brechas) e \textit{reativo} (responde a ameaças) para garantir integridade
-    \end{itemize}
+    \frametitle{SAS --- Sistema de Consciência Situacional (DARPA, 1997)}
+    \begin{columns}
+      \column{0.57\textwidth}
+      \textbf{Objetivos}
+      \begin{itemize}
+        \footnotesize
+        \item Dispositivos pessoais de comunicação e localização para soldados no campo de batalha
+        \item Disseminar relatórios de status autonomamente para até \textbf{10.000} soldados
+        \item Latência abaixo de \textbf{200 ms} mesmo sob interferência inimiga
+        \item Banda ampla: 20--2.500 MHz, 10 bps a 4 Mbps
+      \end{itemize}
+      \column{0.43\textwidth}
+      \begin{block}{\footnotesize Contribuição para AC}
+        \footnotesize
+        Primeiro sistema em larga escala de \textbf{roteamento ad-hoc adaptativo} multihop peer-to-peer; demonstrou \textbf{auto-configuração de topologia} dinâmica sob condições adversas
+      \end{block}
+    \end{columns}
+    \vspace{0.15cm}
   \end{frame}
 
   \begin{frame}
-    \frametitle{O Laço de Controle MAPE-K}
+    \frametitle{DASADA --- Montagem Dinâmica para Adaptabilidade (DARPA, 2000)}
     \begin{columns}
-      \column{0.45\textwidth}
-      \includegraphics[width=\textwidth]{../texto/mape-k.png}
-
-      \column{0.55\textwidth}
+      \column{0.57\textwidth}
+      \textbf{Objetivos}
       \begin{itemize}
-        \item \textbf{Monitor:} coleta dados via sensores/probes --- passivo (top, vmstat, /proc) ou ativo (instrumentação de bytecode)
-        \item \textbf{Analyse:} analisa estado do sistema vs.\ metas; identifica discrepâncias e anomalias
+        \footnotesize
+        \item Pesquisar e desenvolver tecnologia para sistemas de missão crítica com alta \textbf{confiabilidade, dependabilidade e adaptabilidade}
+        \item Tratar a complexidade de sistemas de software distribuídos de grande escala
+        \item Objetivo similar ao da iniciativa de Computação Autônoma da IBM
       \end{itemize}
-      \vspace{0.3cm}
-      \begin{block}{Knowledge}
-        Base que sustenta \textit{todas} as fases: regras, histórico e modelos do sistema
+      \column{0.43\textwidth}
+      \begin{block}{\footnotesize Contribuição para AC}
+        \footnotesize
+        Pioneiro na abordagem \textbf{arquitetural} para auto-gestão; introduziu \textbf{probes e gauges} para monitoramento e motor de adaptação baseado em dados --- \alert{precursor direto do MAPE-K}
       \end{block}
+    \end{columns}
+    \vspace{0.15cm}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{SPS --- Sistemas Auto-Regenerativos (DARPA, 2003)}
+    \footnotesize
+    \textbf{Objetivo:} ``desenvolver tecnologia para sistemas computacionais militares que forneçam funcionalidade crítica em qualquer momento, em face de danos por erros ou ataques'' 
+    \vspace{0.15cm}
+    \begin{columns}
+      \column{0.57\textwidth}
+      \textbf{4 aspectos técnicos:}
+      \begin{enumerate}
+        \footnotesize
+        \item Múltiplas versões funcionalmente equivalentes, implementadas diferentemente --- ataque não afeta fração substancial do sistema
+        \item Modificações binárias dinâmicas (blocos aleatórios na pilha, endereços de branch variáveis)
+        \item Arquitetura de replicação tolerante a intrusões em larga escala
+        \item Estimativa de probabilidade de operador malicioso (\textit{insider threat})
+      \end{enumerate}
+      \column{0.43\textwidth}
+      \begin{alertblock}{\footnotesize Contribuição para AC}
+        \footnotesize
+        Formalizou \textbf{auto-proteção} e \textbf{auto-cura} em sistemas militares; base para sistemas tolerantes a ataques com \textbf{diversidade de implementação}
+      \end{alertblock}
+    \end{columns}
+    \vspace{0.1cm}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Propriedades Self-X}
+    \begin{enumerate}
+
+      \item<1-> \textbf{Auto-configuração:} Sistema se instala e ajusta automaticamente segundo metas de alto nível. Um admin especifica o que deseja (ex: servidor web com tempo de resposta < 2s)e não como atingir. Adapta-se a
+  plataformas e usuários sem passos manuais.
+
+      \item<2-> \textbf{Auto-cura:} detecta, diagnostica e corrige falhas de hardware e software; tolera falhas e reage aos seus primeiros sinais para garantir continuidade do serviço. Importante corrigir sem prejudicar o sistema.
+    \end{enumerate}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Propriedades Self-X (cont.)}
+    \begin{enumerate}
+      \setcounter{enumi}{2}
+       \item<1-> \textbf{Auto-otimização:} busca contínua e \textit{proativa} da eficiência máxima; Redistribui cargas para melhorar o desempenho ou então a \textit{QoS}.
+      \item<2-> \textbf{Auto-proteção:} defende contra ataques maliciosos e mudanças prejudiciais; comportamento \textit{proativo} (antecipa brechas) e \textit{reativo} (responde a ameaças) para garantir integridade do sistema.    
+      
+    \end{enumerate}
+    
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{O Laço de Controle MAPE-K - Imagem}
+      \begin{center}
+        \includegraphics[width=0.75\textwidth]{../texto/mape-k.png}
+      \end{center}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Componentes da Arquitetura MAPE-K}
+    \begin{itemize}
+      \item \textbf{Managed Element:} recurso gerenciado (servidor, rede, aplicação). expõe interface de monitoramento e controle
+      \item \textbf{Sensors:} coletam dados do Managed Element e os entregam ao Autonomic Manager 
+      \item \textbf{Effectors:} atuadores que aplicam as decisões do Autonomic Manager sobre o Managed Element.
+      \item \textbf{Autonomic Manager:} componente central que executa o laço MAPE-K consumindo dados dos sensores e emitindo comandos pelos efetores.
+    \end{itemize}
+    \vspace{0.2cm}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Autonomic Manager}
+    \begin{itemize}
+
+      \item Software configurável via metas de alto nível pelo administrador
+      \item Usa dados dos sensores + conhecimento interno para planejar e executar as ações necessárias
+      \item O conhecimento interno é
+  tipicamente um modelo arquitetural do elemento gerenciado
+      
+    \end{itemize}
+    
+  \end{frame}
+
+  \begin{frame}
+      \frametitle{Planejamento: Tipos de Políticas}
+      \begin{itemize}
+        \item \textbf{ECA} (Evento-Condição-Ação)("Se o evento ocorrer, e passar na codição, então faça isso"): diretas e simples; risco de conflito entre múltiplas regras detectável apenas em runtime como conflito por recurso.
+        \item \textbf{Objetivo:} define estado desejado; sistema planeja \textit{como} atingi-lo. Mais expressivo, exige maior raciocínio. Quando o estado desejado não é possível ser atingido, sistema não sabe como selecionar o melhor estado indesejado para ficar.
+        \item \textbf{Função de Utilidade:} valor numérico por estado; otimiza mesmo quando o estado ideal é inatingível
+      \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Monitor: Sensores --- Probes e Gauges}
+    \begin{columns}
+      \column{0.52\textwidth}
+      \textbf{Probes}
+      \begin{itemize}
+        \footnotesize
+        \item Sensores específicos do sistema gerenciado
+        \item Extraem dados brutos do \textit{Managed Element}
+        \item Especializados na implementação: Java/J2EE, C++, .NET
+      \end{itemize}
+      \vspace{0.15cm}
+      \textbf{Gauges}
+      \begin{itemize}
+        \footnotesize
+        \item Filtram, agregam e processam dados dos probes
+        \item Reportam ao Autonomic Manager para planejamento
+        \item Especializados no \textbf{problema autônomo} (ex: otimizar disponibilidade de cluster web)
+      \end{itemize}
+      \column{0.48\textwidth}
+      \begin{block}{Correlação Causal}
+        \footnotesize
+        Gauges determinam \textbf{causa-raiz} correlacionando o instante em que diferentes probes dispararam e fazendo \textit{pattern-matching} nos atributos --- identificam sequência de causalidade da falha
+      \end{block}
+      \begin{alertblock}{\footnotesize Sensor Distribuído}
+        \footnotesize
+        Probes e gauges podem estar em \textbf{máquinas diferentes} do elemento gerenciado --- requerem comunicação em rede entre si
+      \end{alertblock}
     \end{columns}
   \end{frame}
 
   \begin{frame}
-    \frametitle{O Laço de Controle MAPE-K (cont.)}
-    \begin{itemize}
-      \item \textbf{Plan:} define ações corretivas com base nas políticas do administrador --- ECA, objetivos ou funções de utilidade
-      \item \textbf{Execute:} aplica mudanças via efetores de granularidade grossa (adicionar servidor) ou fina (ajustar parâmetro de SO)
-    \end{itemize}
+    \frametitle{Monitor: Monitoramento Passivo e Ativo}
+    \begin{columns}
+      \column{0.55\textwidth}
+      \textbf{Passivo} --- sem instrumentação
+      \begin{itemize}
+        \footnotesize
+        \item \texttt{top}, \texttt{vmstat}: CPU e memória por processo
+        \item \texttt{/proc}: pseudo-FS com estado de runtime (Linux)
+        \item Equivalentes no Windows 2000/XP
+      \end{itemize}
+      \vspace{0.2cm}
+      \textbf{Ativo} --- com instrumentação
+      \begin{itemize}
+        \footnotesize
+        \item Modificar/adicionar código ao SO ou à aplicação
+        \item Capturar chamadas de função ou de sistema
+        \item \textbf{ProbeMeister}: insere probes no bytecode Java compilado automaticamente
+      \end{itemize}
+      \column{0.45\textwidth}
+      \begin{block}{QMON (Agarwala et al., 2006)}
+        \footnotesize
+        Monitor \textbf{autônomo} que adapta sua própria frequência e volume de dados para \textit{minimizar overhead} de monitoramento contínuo e \textit{maximizar utilidade} dos dados coletados
+      \end{block}
+      \begin{alertblock}{\footnotesize Seleção de Métricas}
+        \footnotesize
+        Pequeno subconjunto de métricas fornece \textbf{90\% de acurácia} na classificação do estado (Zhang \& Figueiredo, 2006)
+      \end{alertblock}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Analyse: \textit{Stateless} vs \textit{Stateful}}
+    \begin{columns}
+      \column{0.5\textwidth}
+      \begin{alertblock}{Análise \textit{Stateless}}
+        \footnotesize
+        Decisão baseada \textbf{apenas} nos dados atuais dos sensores --- sem memória de estado anterior\\[0.2cm]
+        Limitação: gestor não reconhece padrões temporais nem tendências --- reage, nunca antecipa
+      \end{alertblock}
+      \column{0.5\textwidth}
+      \begin{block}{Análise \textit{Stateful}}
+        \footnotesize
+        Autonomic Manager mantém estado do elemento gerenciado, atualizado progressivamente pelos sensores\\[0.2cm]
+        Permite \textbf{raciocinar} sobre histórico, detectar anomalias e planejar com contexto completo
+      \end{block}
+    \end{columns}
     \vspace{0.3cm}
-    \begin{block}{Ciclo completo}
-      Monitor $\rightarrow$ Analyse $\rightarrow$ Plan $\rightarrow$ Execute, sustentado pela base de Knowledge compartilhada
+    \begin{block}{}
+      \footnotesize
+      Abordagem \textit{stateful} requer \textbf{modelo interno} do sistema --- base para a abordagem por modelo arquitetural (\textit{architectural model-driven approach})
     \end{block}
   \end{frame}
 
   \begin{frame}
-    \frametitle{Planejamento: Tipos de Políticas}
-    \begin{itemize}
-      \item \textbf{ECA} (Evento-Condição-Ação): diretas e simples; risco de conflito entre múltiplas regras detectável apenas em runtime
-      \item \textbf{Objetivo:} define estado desejado; sistema planeja \textit{como} atingi-lo --- mais expressivo, exige maior raciocínio
-      \item \textbf{Função de Utilidade:} valor numérico por estado; otimiza mesmo quando o estado ideal é inatingível
-    \end{itemize}
+    \frametitle{Analyse: Modelo Arquitetural}
+    \footnotesize
+    \begin{columns}
+      \column{0.55\textwidth}
+      \begin{itemize}
+        \item Autonomic Manager cria e mantém modelo do elemento gerenciado: \textbf{comportamento, requisitos, metas e ambiente operacional}
+        \item Modelo atualizado continuamente por dados dos sensores
+        \item Adaptações planejadas no modelo \textbf{primeiro} --- sistema real só é alterado se novo estado for válido
+        \item Garante \textit{integridade do sistema} após adaptação sem reinicialização
+      \end{itemize}
+      \column{0.45\textwidth}
+      \begin{block}{Componentes e Conectores}
+        \footnotesize
+        Componentes = tarefas computacionais concorrentes\\
+        Conectores = canais de comunicação\\[0.15cm]
+        Sem restrição de granularidade: de um servidor Web completo a um único componente de aplicação
+      \end{block}
+      \begin{alertblock}{Problema: Defasagem}
+        \footnotesize
+        Delay entre mudança real e atualização do modelo $\rightarrow$ plano executado com base em estado desatualizado
+      \end{alertblock}
+    \end{columns}
   \end{frame}
 
   \begin{frame}
+    \frametitle{Ciclo MAPE-K: Visão Geral}
+    \begin{block}{Ciclo completo}
+      \textbf{Monitor} $\rightarrow$ \textbf{Analyse} $\rightarrow$ \textbf{Plan} $\rightarrow$ \textbf{Execute}, sustentado pela base de \textbf{Knowledge} compartilhada entre todas as fases
+    \end{block}
+    \vspace{0.2cm}
+    \begin{itemize}
+      \item Monitor coleta via probes/gauges
+      \item Analyse raciocina sobre estado atual vs.\ metas --- stateful com modelo arquitetural
+      \item Plan define ações: ECA, objetivos ou função de utilidade
+      \item Execute aplica via efetores (granularidade fina ou grossa)
+    \end{itemize}
+  \end{frame}
+
+  
+  \begin{frame}
     \frametitle{Base de Conhecimento}
     \begin{itemize}
-      \item \textbf{Aprendizado por Reforço:} aprende por tentativa e erro; não exige modelo explícito do sistema gerenciado
+      \item \textbf{Aprendizado por Reforço:} aprende políticas por tentativa e erro, vendo as consequências das ações; não exige modelo explícito do sistema gerenciado. 
       \item \textbf{Redes Bayesianas:} decisão probabilística sob incerteza; seleção de algoritmos sensível a custo
       \item \textbf{Modelos Arquiteturais:} verifica validade das mudanças \textit{antes} de executar no sistema real
     \end{itemize}
   \end{frame}
 
-  % ===== SEÇÃO 2: ARQUITETURA E GRAUS DE AUTONOMIA =====
-  \section{Arquitetura e Graus de Autonomia}
+  \section{Sistemas Multitier e Graus de Autonomia}
 
   \begin{frame}
-    \frametitle{O Elemento Autônomo}
-    \footnotesize
-    \begin{itemize}
-      \item \textbf{Elemento Autônomo} = Gerenciador Autônomo + Elemento Gerenciado
-      \item \textbf{Elemento Gerenciado:} qualquer recurso de SW/HW --- servidor web, banco de dados, SO, cluster, rede, CPU
-      \item \textbf{Sensores/Probes/Gauges:} coletam dados do elemento gerenciado, filtram e agregam antes de reportar ao gerenciador
-      \item \textbf{Efetores:} implementam mudanças --- granularidade grossa (adicionar servidor ao cluster) ou fina (alterar parâmetro de SO)
-      \item Admin configura via \textbf{metas de alto nível} --- sistema decide como atingi-las
-    \end{itemize}
-    \begin{block}{Unidade de composição autônoma}
-      \footnotesize Elemento Autônomo é a unidade atômica de arquiteturas autônomas maiores --- múltiplos elementos cooperam para auto-gestão de sistemas complexos
-    \end{block}
+      \frametitle{Sistemas Multitier Autônomos}
+      \begin{columns}
+        \column{0.52\textwidth}
+        \begin{itemize}
+          \item E-commerce típico: 3 tiers independentes
+          \begin{itemize}
+            \item Tier web: Apache
+            \item Tier aplicação: J2EE
+            \item Tier banco de dados: DB2/Oracle
+          \end{itemize}
+          \item Cada tier implementa \textbf{seu próprio MAPE-K}
+          \item Problema: alocação entre tiers é \textit{acoplada} --- BD não pode ser replicado sob demanda
+        \end{itemize}
+        \column{0.48\textwidth}
+        \begin{block}{Solução}
+          Gerenciadores autônomos precisam estar cientes do ambiente, incluindo \textbf{outros elementos autônomos} na rede
+        \end{block}
+        \vspace{0.3cm}
+        \begin{alertblock}{Resultado}
+          Redistribuição dinâmica de recursos entre tiers mantém desempenho total mesmo sob carga variável
+        \end{alertblock}
+      \end{columns}
   \end{frame}
 
+  
   \begin{frame}
     \frametitle{Graus de Autonomicidade: Modelo IBM}
     \footnotesize
@@ -158,7 +371,7 @@
       1 & Básico     & Staff qualificado gerencia manualmente com ferramentas de monitoramento \\
       2 & Gerenciado & Ferramentas coletam informações de forma inteligente, reduzem carga administrativa \\
       3 & Preditivo  & Monitoramento reconhece padrões de comportamento e \textit{sugere} ações ao staff \\
-      4 & Adaptativo & Sistema age com intervenção humana mínima; ajusta para cumprir SLAs \\
+      4 & Adaptativo & Sistema age com intervenção humana mínima; ajusta para cumprir os acordos em níveis de serviço \\
       5 & Autônomo   & Componentes gerenciados dinamicamente por regras de negócio --- plena autonomia \\
       \bottomrule
     \end{tabular}
@@ -168,46 +381,9 @@
     \end{block}
   \end{frame}
 
-  \begin{frame}
-    \frametitle{Onde Estamos Hoje?}
-    \begin{itemize}
-      \item IBM estima: maioria dos sistemas de TI em \textbf{nível 1--2} (Básico/Gerenciado)
-      \item Transição incremental: sysadmin precisa aprender a \textbf{confiar} nos gerenciadores autônomos
-      \item Em situações críticas (falha de HW, upgrade maior) intervenção humana ainda necessária
-      \item O survey (Huebscher \& McCann, 2008) propõe 4 \textbf{elementos de autonomicidade} como alternativa aos 5 níveis IBM:
-      \begin{itemize}
-        \item \textbf{Support:} autonomia melhora um componente específico da arquitetura
-        \item \textbf{Core:} auto-gestão é o núcleo da aplicação fim a fim
-        \item \textbf{Autonomous:} solução fim a fim com inteligência emergente e agentes
-        \item \textbf{Autonomic:} arquitetura completa com metas de alto nível (SLAs, objetivos de negócio)
-      \end{itemize}
-    \end{itemize}
-  \end{frame}
 
-  \begin{frame}
-    \frametitle{Sistemas Multitier Autônomos}
-    \begin{columns}
-      \column{0.52\textwidth}
-      \begin{itemize}
-        \item E-commerce típico: 3 tiers independentes
-        \begin{itemize}
-          \item Tier web: Apache
-          \item Tier aplicação: J2EE
-          \item Tier banco de dados: DB2/Oracle
-        \end{itemize}
-        \item Cada tier implementa \textbf{seu próprio MAPE-K}
-        \item Problema: alocação entre tiers é \textit{acoplada} --- BD não pode ser replicado sob demanda
-      \end{itemize}
-      \column{0.48\textwidth}
-      \begin{block}{Solução}
-        Gerenciadores autônomos precisam estar cientes do ambiente, incluindo \textbf{outros elementos autônomos} na rede
-      \end{block}
-      \vspace{0.3cm}
-      \begin{alertblock}{Resultado}
-        Redistribuição dinâmica de recursos entre tiers mantém desempenho total mesmo sob carga variável
-      \end{alertblock}
-    \end{columns}
-  \end{frame}
+  % ===== SEÇÃO 3: APLICAÇÕES =====
+  \section{Aplicações}
 
   \begin{frame}
     \frametitle{Cooperação entre Gerenciadores Autônomos}
@@ -250,9 +426,6 @@
       \end{alertblock}
     \end{columns}
   \end{frame}
-
-  % ===== SEÇÃO 3: APLICAÇÕES =====
-  \section{Aplicações}
 
   \begin{frame}
     \frametitle{Aplicação Clássica: NASA ANTS --- Contexto}
@@ -300,41 +473,6 @@
     \end{alertblock}
   \end{frame}
 
-  \begin{frame}
-    \frametitle{Gestão de Energia em Data Centers}
-    \begin{columns}
-      \column{0.55\textwidth}
-      \begin{itemize}\small
-        \item \textbf{63\%} do TCO da infraestrutura física de data center = energia + resfriamento + eletricidade (Huebscher \& McCann, 2008)
-        \item Motivação: autonomia não serve só para desempenho --- serve para \textbf{sobrevivência econômica}
-        \item Desafio: otimizar não só CPU/memória, mas \textbf{consumo de potência} como função de custo
-        \item Modelos de energia incluem: memória, rede e E/S além do processador
-      \end{itemize}
-      \column{0.45\textwidth}
-      \begin{alertblock}{Gestão de Calor}
-        \footnotesize
-        Calor gerado por servidores concentrados afeta diretamente o custo de resfriamento e a vida útil do hardware --- mapeamento térmico \textit{online} e preditivo é necessário
-      \end{alertblock}
-    \end{columns}
-  \end{frame}
-
-  \begin{frame}
-    \frametitle{Gestão de Energia: Resultados e Técnicas}
-    \begin{itemize}
-      \item \textbf{72\%} de economia no consumo de energia com gestão autônoma (Khargharia et al., 2006)
-      \item \textbf{Técnicas de auto-otimização energética:}
-      \begin{itemize}
-        \item Consolidação de cargas de trabalho em menos servidores
-        \item Desligamento automático de recursos ociosos
-        \item Migração de VMs para servidores mais eficientes energeticamente
-        \item Mapeamento térmico \textit{online} e preditivo do data center
-      \end{itemize}
-      \item \textbf{Trade-off:} eficiência energética vs.\ desempenho --- SLA determina quanto recurso pode ser desligado
-      \item Auto-otimização energética é \textbf{complemento}, não substituto, da auto-otimização de desempenho
-    \end{itemize}
-  \end{frame}
-
-  % --- a partir daqui: slides do Murilo ---
 
   \begin{frame}
     \frametitle{Orquestração e Auto-scaling em Nuvem}
@@ -471,13 +609,13 @@
       Quais são as 4 propriedades Self-X e como elas se complementam?
     \end{alertblock}
     \begin{block}{Resposta}
+      \footnotesize
       \begin{itemize}
-        \item \textbf{Auto-config.:} sistema se instala e ajusta sem passos manuais --- admin define metas, não passos
-        \item \textbf{Auto-cura:} detecta, diagnostica e corrige falhas de HW/SW automaticamente
-        \item \textbf{Auto-otimização:} redistribui recursos \textit{proativamente} para cumprir SLAs sem solicitação externa
-        \item \textbf{Auto-proteção:} defende contra ataques e mudanças prejudiciais --- proativa e reativa
+        \item \textbf{Auto-config.:} sistema se instala e ajusta sem passos manuais
+        \item \textbf{Auto-cura:} detecta, diagnostica e corrige falhas de HW/SW
+        \item \textbf{Auto-otimização:} redistribui recursos \textit{proativamente} para cumprir SLAs
+        \item \textbf{Auto-proteção:} defende contra ataques --- proativa e reativa
       \end{itemize}
-      Juntas cobrem o ciclo completo: instalar $\rightarrow$ corrigir $\rightarrow$ otimizar $\rightarrow$ proteger.
     \end{block}
   \end{frame}
 
@@ -487,8 +625,9 @@
       Descreva o ciclo MAPE-K e o papel da base de Conhecimento.
     \end{alertblock}
     \begin{block}{Resposta}
-      \textbf{Monitor} coleta dados via sensores/probes $\rightarrow$ \textbf{Analyse} identifica discrepâncias vs.\ metas $\rightarrow$ \textbf{Plan} define ações corretivas com base nas políticas $\rightarrow$ \textbf{Execute} aplica mudanças via efetores.\\[0.3cm]
-      A base de \textbf{Knowledge} sustenta \textit{todas} as fases: regras estáticas, histórico de comportamento e modelos arquiteturais --- permite planejar mudanças e verificar validade antes de executar no sistema real.
+      \footnotesize
+      \textbf{Monitor} coleta $\rightarrow$ \textbf{Analyse} identifica desvios vs.\ metas $\rightarrow$ \textbf{Plan} define ações $\rightarrow$ \textbf{Execute} aplica via efetores.\\[0.2cm]
+      \textbf{Knowledge} sustenta todas as fases: políticas, histórico e modelos arquiteturais --- valida mudanças antes de executar no sistema real.
     \end{block}
   \end{frame}
 
@@ -498,16 +637,9 @@
       Como a Computação Autônoma se manifesta em Cloud Computing e IoT?
     \end{alertblock}
     \begin{block}{Resposta}
-      \textbf{Cloud:}
-      \begin{itemize}
-        \item Auto-otimização: MAPE-K dispara \textit{auto-scaling} ao atingir limiar de carga, sem humano
-        \item Auto-cura: falha de nó $\rightarrow$ migração automática de VMs, transparente ao usuário final
-      \end{itemize}
-      \textbf{IoT:}
-      \begin{itemize}
-        \item Auto-config.: novos sensores se integram à rede automaticamente (\textit{plug-and-play})
-        \item Auto-proteção: IA isola dispositivos comprometidos em quarentena antes de alerta humano
-      \end{itemize}
+      \footnotesize
+      \textbf{Cloud:} auto-scaling por MAPE-K; falha de nó $\rightarrow$ migração automática de VMs.\\[0.15cm]
+      \textbf{IoT:} sensores com \textit{plug-and-play}; dispositivos comprometidos isolados em quarentena automaticamente.
     \end{block}
   \end{frame}
 
@@ -517,10 +649,11 @@
       Quais são os principais desafios que impedem a adoção plena da Computação Autônoma?
     \end{alertblock}
     \begin{block}{Resposta}
+      \footnotesize
       \begin{enumerate}
-        \item \textbf{Verificação Formal e Estabilidade:} algoritmos de ML são ``caixa-preta'' --- difícil provar corretude matematicamente; pesquisa usa autômatos, Redes de Petri e cálculo de processos
-        \item \textbf{Interoperabilidade:} soluções em silos por fornecedor; falta protocolo padrão para troca de \textit{Knowledge} entre gerentes autônomos distintos
-        \item \textbf{Tradução de Políticas de Alto Nível:} objetivos de negócio ainda exigem engenheiro especialista para converter em configurações operacionais de baixo nível
+        \item \textbf{Verificação Formal:} ML é ``caixa-preta'' --- difícil provar corretude matematicamente
+        \item \textbf{Interoperabilidade:} soluções em silos; falta protocolo para troca de Knowledge entre gerentes
+        \item \textbf{Tradução de Políticas:} metas de negócio ainda exigem especialista para mapear em config.\ operacional
       \end{enumerate}
     \end{block}
   \end{frame}
