@@ -184,6 +184,70 @@
     \end{itemize}
   \end{frame}
 
+  \begin{frame}
+    \frametitle{Sistemas Multitier Autônomos}
+    \begin{columns}
+      \column{0.52\textwidth}
+      \begin{itemize}
+        \item E-commerce típico: 3 tiers independentes
+        \begin{itemize}
+          \item Tier web: Apache
+          \item Tier aplicação: J2EE
+          \item Tier banco de dados: DB2/Oracle
+        \end{itemize}
+        \item Cada tier implementa \textbf{seu próprio MAPE-K}
+        \item Problema: alocação entre tiers é \textit{acoplada} --- BD não pode ser replicado sob demanda
+      \end{itemize}
+      \column{0.48\textwidth}
+      \begin{block}{Solução}
+        Gerenciadores autônomos precisam estar cientes do ambiente, incluindo \textbf{outros elementos autônomos} na rede
+      \end{block}
+      \vspace{0.3cm}
+      \begin{alertblock}{Resultado}
+        Redistribuição dinâmica de recursos entre tiers mantém desempenho total mesmo sob carga variável
+      \end{alertblock}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Cooperação entre Gerenciadores Autônomos}
+    \begin{itemize}
+      \item Elementos autônomos podem \textbf{cooperar} para atingir objetivo comum (ex: minimizar tempo de resposta total do cluster)
+      \item \textbf{Abordagem multi-agente:} cada gerenciador é um agente; comportamento global \textit{emerge} da interação local
+      \item \textbf{Abordagem hierárquica:} estruturação em níveis de abstração --- alternativa à cooperação peer-to-peer
+      \item Desafio central: garantir que objetivos locais de cada agente resultem no \textbf{objetivo global} sendo atingido
+    \end{itemize}
+    \vspace{0.2cm}
+    \begin{block}{Emergência Engenheirada}
+      Design proposital de protocolos de interação para que resultado desejável e previsível \textit{emerge} em nível superior sem coordenação central explícita
+    \end{block}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Emergência Engenheirada}
+    \begin{columns}
+      \column{0.55\textwidth}
+      \begin{itemize}
+        \item \textbf{Definição:} ``design proposital de protocolos de interação de modo que resultado previsível e desejável é alcançado em nível superior'' (Anthony, 2006)
+        \item Inspiração: colônias de insetos --- regras locais simples geram comportamento global complexo e robusto
+        \item Cada nó opera com \textbf{informação local limitada}; nenhum nó conhece o estado global
+        \item Contraste com algoritmo distribuído clássico: sem ACKs obrigatórios, sem ordenação rígida de eventos
+      \end{itemize}
+      \column{0.45\textwidth}
+      \begin{block}{Características}
+        \begin{itemize}
+          \item Escala
+          \item Robustez
+          \item Estabilidade
+          \item Sem ponto único de falha
+        \end{itemize}
+      \end{block}
+      \begin{alertblock}{Desafio}
+        Garantir que o comportamento emergente seja o \textit{desejado} --- sistemas naturais não garantem isso
+      \end{alertblock}
+    \end{columns}
+  \end{frame}
+
   % ===== SEÇÃO 3: APLICAÇÕES =====
   \section{Aplicações}
 
