@@ -1,0 +1,14 @@
+01) Descreva e compare as ferramentas Speedtest.net (Ookla) e Fast.com (Netflix). Capture pacotes com wireshark da execução de cada uma delas e compare.
+
+Speedtest.net:
+É um site feito pela empresa Ookla que permite que usuários testem suas conexões com a internet ou conexões móveis. Ao executar o teste, o aplicativo mostra em tempo real a velocidade  de download, de upload e a latência do teste. Bem como outras informações sobre a conexão, como o servidor e o cliente de onde você está executando o teste.
+ent
+Além do teste por si só, a empresa trabalha com os dados dos testes de seus usuários. Os dados são aplicados nos testes para garantir que nenhum teste apresente comportamentos anômalos na rede.
+
+Fast.com 
+É um site similiar ao speedtest, no quesito que seu objetivo também é testar a velocidade de conexão do usuário. Ao entrar no site, o teste já começa automaticamente mostrando na tela a velocidade atual do teste, ao final, são mostradas as informações de velocidade de download, de upload, a latência, o cliente e o servidor.
+
+O principal diferencial dos dois é a utilização de dados e a descrição das aplicações. O speedtest deixa claro em seções do site como os dados são utilizados, como os testes são feitos e em quais dispositivos podem ser feitos. Já no site da Netflix, nenhuma dessas informações são mostradas.
+
+A principal diferença entre as duas abordagens reside no objetivo da medição e no encapsulamento dos dados. O Speedtest utiliza predominantemente o protocolo HTTP com tráfego em texto claro para minimizar o peso de processamento e focar na transferência bruta de bits, medindo a capacidade máxima teórica da sua conexão com um provedor local. Em contrapartida, o Fast.com emprega TLS para criptografar todo o fluxo de dados, simulando de forma idêntica o comportamento de um streaming de vídeo da Netflix, ela impede que os provedores de internet identifiquem e manipulem o tráfego do teste, garantindo que o resultado reflita a velocidade real que o usuário terá ao assistir a um filme no serviço.
+
