@@ -151,6 +151,7 @@ def _receiver_tcp(port):
 
     while True:
         dados = conn.recv(65536)
+        print(f"recv retornou {len(dados)} bytes")
         if not dados:
             break
         if inicio is None:

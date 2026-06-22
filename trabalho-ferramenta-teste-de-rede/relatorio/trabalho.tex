@@ -1,0 +1,71 @@
+\section{Resultados testes de rede}
+
+\begin{table}[htbp]
+\centering
+\caption{Desempenho da transmissão em rede sem fio (WiFi).}
+\label{tab:wifi}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccrrrrr}
+\toprule
+\textbf{Protocolo} & \textbf{Sentido} & \textbf{Rep.} & \textbf{Duração (s)} &
+\textbf{Enviados} & \textbf{Recebidos} & \textbf{Perda (\%)} &
+\textbf{Vazão (pps)} & \textbf{Vazão (Mbit/s)} \\
+\midrule
+TCP & A $\to$ B & 1 & 23,34 & 33.578  & 33.578  & 0,00  & 1.438 & 5,75  \\
+TCP & A $\to$ B & 2 & 20,87 & 73.366  & 73.366  & 0,00  & 3.515 & 14,06 \\
+TCP & B $\to$ A & 1 & 23,52 & 74.278  & 74.278  & 0,00  & 3.157 & 12,63 \\
+TCP & B $\to$ A & 2 & 20,69 & 104.976 & 104.976 & 0,00  & 5.073 & 20,29 \\
+\midrule
+UDP & A $\to$ B & 1 & 20,07 & 578.365 & 67.046 & 88,41 & 3.341 & 13,36 \\
+UDP & A $\to$ B & 2 & 16,04 & 170.551 & 28.589 & 83,24 & 1.782 & 7,13  \\
+UDP & B $\to$ A & 1 & 20,39 & 342.747 & 32.031 & 90,65 & 1.571 & 6,28  \\
+UDP & B $\to$ A & 2 & 19,99 & 367.798 & 33.731 & 90,83 & 1.687 & 6,75  \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+
+\begin{table}[htbp]
+\centering
+\caption{Desempenho da transmissão em conexão cabeada direta (Ethernet).}
+\label{tab:cabeada}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccrrrrr}
+\toprule
+\textbf{Protocolo} & \textbf{Sentido} & \textbf{Rep.} & \textbf{Duração (s)} &
+\textbf{Enviados} & \textbf{Recebidos} & \textbf{Perda (\%)} &
+\textbf{Vazão (pps)} & \textbf{Vazão (Mbit/s)} \\
+\midrule
+TCP & A $\to$ B & 1 & 20,02 & 1.517.584 & 1.517.584 & 0,00 & 75.821 & 303,28 \\
+TCP & A $\to$ B & 2 & 20,02 & 1.520.100 & 1.520.100 & 0,00 & 75.932 & 303,73 \\
+TCP & B $\to$ A & 1 & 20,03 & 1.814.209 & 1.814.209 & 0,00 & 90.584 & 362,34 \\
+TCP & B $\to$ A & 2 & 20,03 & 1.817.261 & 1.817.261 & 0,00 & 90.747 & 362,99 \\
+\midrule
+UDP & A $\to$ B & 1 & 20,02 & 1.040.332 & 1.030.231 & 0,97 & 51.453 & 205,82 \\
+UDP & A $\to$ B & 2 & 20,03 & 1.038.157 & 1.028.054 & 0,97 & 51.337 & 205,35 \\
+UDP & B $\to$ A & 1 & 20,00 & 1.779.466 & 1.779.466 & 0,00 & 88.957 & 355,83 \\
+UDP & B $\to$ A & 2 & 20,00 & 1.783.060 & 1.783.060 & 0,00 & 89.135 & 356,54 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{Síntese dos resultados: vazão e perda médias por cenário.}
+\label{tab:sintese}
+\small
+\begin{tabular}{lrrrr}
+\toprule
+\textbf{Cenário} & \textbf{Vazão méd. A $\to$ B} & \textbf{Vazão méd. B $\to$ A}
+& \textbf{Perda méd. A $\to$ B} & \textbf{Perda méd. B $\to$ A} \\
+ & \textbf{(Mbit/s)} & \textbf{(Mbit/s)} & \textbf{(\%)} & \textbf{(\%)} \\
+\midrule
+WiFi · TCP     & 9,91   & 16,46  & 0,00  & 0,00  \\
+WiFi · UDP     & 10,25  & 6,52   & 85,83 & 90,74 \\
+Cabeada · TCP  & 303,51 & 362,67 & 0,00  & 0,00  \\
+Cabeada · UDP  & 205,59 & 356,19 & 0,97  & 0,00  \\
+\bottomrule
+\end{tabular}
+\end{table}
