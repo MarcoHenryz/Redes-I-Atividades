@@ -8,29 +8,35 @@ DURACAO = 20
 DEFAULT_PORT = 5555
 
 FIN_TRANSMISSAO = b"FIN"
-TIMEOUT = 3.0
+TIMEOUT = 4.0
 
 
 def montar_pacote(seq: int) -> bytes:
 
-    cabecalho = f"{seq:010d}|{STRING_BASE}|".encode("utf-8")
-    enchimento = b"X" * (TAMANHO_PAYLOAD - len(cabecalho))
+    cabecalho = f"{seq:010d}|{STRING_BASE}|".encode(
+        "utf-8"
+    )  # Adiciona zeros antes do valor de sequencia do pacote.
+    enchimento = b"X" * (
+        TAMANHO_PAYLOAD - len(cabecalho)
+    )  # completa com os bytes restantes para dar 500 com X
     return cabecalho + enchimento
 
 
 def montar_fin(total: int) -> bytes:
 
-    cabecalho = f"FIN|{total:010d}|".encode("utf-8")
-    enchimento = b"X" * (TAMANHO_PAYLOAD - len(cabecalho))
+    cabecalho = f"FIN|{total:010d}|".encode("utf-8")  # para enviar fim de transmissão
+    enchimento = b"X" * (TAMANHO_PAYLOAD - len(cabecalho))  # completa o pacote
     return cabecalho + enchimento
 
 
 def eh_fin(pacote: bytes) -> bool:
-    return pacote[:3] == FIN_TRANSMISSAO
+    return (
+        pacote[:3] == FIN_TRANSMISSAO
+    )  # função auxiliar para verificar fim de transmissão
 
 
 def extrair_total_fin(pacote: bytes) -> int:
-    return int(pacote.split(b"|")[1])
+    return int(pacote.split(b"|")[1])  # pegar total de pacotes
 
 
 def extrair_seq(pacote: bytes) -> int:
@@ -38,9 +44,10 @@ def extrair_seq(pacote: bytes) -> int:
 
 
 def fmt_milhar(n: int) -> str:
-    return f"{n:,}".replace(",", ".")
+    return f"{n:,}".replace(",", ".")  # colocar o ponto como separador de milhar.
 
 
+# Recebe total em bits por segundo -> retorna a velocidade em {Gbit/s,Mbit/s,Kbit/s ou bit/s}
 def fmt_bitrate(bits_por_seg: float) -> str:
 
     if bits_por_seg >= 1e9:
@@ -55,6 +62,8 @@ def fmt_bitrate(bits_por_seg: float) -> str:
     return f"{bits_por_seg:.2f} bit/s"
 
 
+# Recebe: Protocolo, total de pacotes enviados, total de pacotes recebitos, total de bytes trafegados na transmissão e o tempo decorrido
+# Printa: Os dados do relatorio
 def imprimir_relatorio(proto, enviados, recebidos, bytes_traf, decorrido):
 
     perdidos = max(enviados - recebidos, 0)
@@ -73,6 +82,14 @@ def imprimir_relatorio(proto, enviados, recebidos, bytes_traf, decorrido):
     print(f" Vazao (rede): {fmt_bitrate(bps)}")
 
 
+# Lógica do sender
+
+
+# Recebe: protocolo, host, porta, duracao da linha de comando.
+# Funcionalidades:
+# 1 - executa socket correto TCP ou UDP e realiza conexão com o destino
+# 2 - inicia o temporizador da origem, e fica enviando pacotes até o fim dos 20 segundos
+# 3 - envia o FIN ACK para aviso de fim de transmissão
 def executar_sender(proto, host, port, duracao):
     if proto == "tcp":
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -104,6 +121,8 @@ def executar_sender(proto, host, port, duracao):
         seq += 1
     decorrido = time.monotonic() - inicio
 
+    # após o término dos 20 segundos envia-se o aviso de término
+
     fin = montar_fin(seq)
 
     if proto == "tcp":
@@ -111,11 +130,11 @@ def executar_sender(proto, host, port, duracao):
         sock.shutdown(socket.SHUT_WR)
         time.sleep(0.2)
     else:
-        for _ in range(5):
+        for _ in range(5):  # tenta enviar o aviso 5 vezes
             sock.sendto(fin, destino)
             time.sleep(0.05)
 
-    sock.close()
+    sock.close()  # fecha o socket
     pps = seq / decorrido if decorrido else 0
 
     print(
@@ -123,9 +142,10 @@ def executar_sender(proto, host, port, duracao):
     )
 
 
-# Receptor
+# Lógica do receptor
 
 
+# Funcionalidade: confere protocolo e chama callback correspondente
 def executar_receiver(proto, port, duracao):
     if proto == "tcp":
         _receiver_tcp(port)
@@ -134,6 +154,9 @@ def executar_receiver(proto, port, duracao):
 
 
 def _receiver_tcp(port):
+
+    # Inicia socket e aguarda conexão do sender
+
     srv = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     srv.bind(("0.0.0.0", port))
@@ -142,6 +165,7 @@ def _receiver_tcp(port):
     conn, addr = srv.accept()
     print(f"[TCP] conectado por {addr[0]}:{addr[1]}")
 
+    # inicializa variáveis de controle para relatório
     recebidos = 0
     bytes_traf = 0
     enviados_reportado = None
@@ -151,22 +175,22 @@ def _receiver_tcp(port):
 
     while True:
         dados = conn.recv(65536)
-        print(f"recv retornou {len(dados)} bytes")
         if not dados:
             break
         if inicio is None:
-            inicio = time.monotonic()
+            inicio = time.monotonic()  # incializa o timer
         buffer += dados
         terminou = False
+
         # TCP e um fluxo de bytes: refatiamos em quadros de 500 bytes
         while len(buffer) >= TAMANHO_PAYLOAD:
-            quadro = buffer[:TAMANHO_PAYLOAD]
+            quadro = buffer[:TAMANHO_PAYLOAD]  # peca um pacote do buffer
             buffer = buffer[TAMANHO_PAYLOAD:]
-            if eh_fin(quadro):
+            if eh_fin(quadro):  # verifica se é um pacote final
                 enviados_reportado = extrair_total_fin(quadro)
                 terminou = True
                 break
-            recebidos += 1
+            recebidos += 1  # faz a lógica de quantidades de pacotes recebidos
             bytes_traf += TAMANHO_PAYLOAD
             ultimo = time.monotonic()
         if terminou:
@@ -180,6 +204,8 @@ def _receiver_tcp(port):
 
 
 def _receiver_udp(port):
+
+    # inicia lógica do receptor UDP
     srv = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     srv.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     srv.setsockopt(socket.SOL_SOCKET, socket.SO_RCVBUF, 1 << 21)

@@ -61,7 +61,7 @@ def receive():
         nicknames.append(nickname)
         clients.append(client)
 
-        print(f"Nickname of client is {nickname}")
+        print(f"Nome do cliente é {nickname}")
         broadcast(f"{nickname} joined the chat".encode(FORMAT))
         client.send("Connected to the server".encode(FORMAT))
 
@@ -69,5 +69,5 @@ def receive():
         thread.start()
 
 
-print("[STARTING] server is listening...")
+print("[STARTING] servidor está rodando")
 receive()
