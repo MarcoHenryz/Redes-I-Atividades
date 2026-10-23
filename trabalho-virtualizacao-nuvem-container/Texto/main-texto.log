@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.30)  15 SEP 2026 09:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.30)  23 OCT 2026 15:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -750,7 +750,7 @@ Package hyperref Info: Link coloring OFF on input line 4.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./title.tex
-<image1.png, id=14, 419.31656pt x 106.89937pt>
+<image1.png, id=23, 419.31656pt x 106.89937pt>
 File: image1.png Graphic file (type png)
 <use image1.png>
 Package pdftex.def Info: image1.png  used on input line 5.
@@ -782,71 +782,423 @@ Underfull \hbox (badness 6944) in paragraph at lines 1--5
 
  [3
 
-] (./main-texto.lot)
-\tf@lot=\write6
-\openout6 = `main-texto.lot'.
-
- [4]
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 17.
+] (./main-texto.lot
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 2.
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 17.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 2.
  (/usr/share/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 17.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 2.
  (/usr/share/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 17.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 2.
  (/usr/share/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 17.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2.
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
- [5] (./main-texto.toc)
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 2.
+)
+\tf@lot=\write6
+\openout6 = `main-texto.lot'.
+
+ [4] [5] (./main-texto.toc)
 \tf@toc=\write7
 \openout7 = `main-texto.toc'.
 
- [6]) (./introducao.tex) [7] (./main-texto.bbl)
+ [6]) (./introducao.tex) [7] (./trabalho.tex (./seguranca_cloud.tex
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+
+Underfull \hbox (badness 1210) in paragraph at lines 4--5
+\T1/ptm/m/n/12 má-qui-nas vir-tu-ais ba-se-a-das em hi-per-vi-so-res[][][] para a vir-tu-a-li-za-ção em ní-vel de sis-tema
+ []
+
+
+Package natbib Warning: Citation `sultan2019container' on page 8 undefined on input line 6.
+
+
+Package natbib Warning: Citation `souppaya2017nist' on page 8 undefined on input line 6.
+
+
+Package natbib Warning: Citation `rice2020container' on page 8 undefined on input line 8.
+
+
+Package natbib Warning: Citation `rice2020container' on page 8 undefined on input line 10.
+
+
+Underfull \hbox (badness 1540) in paragraph at lines 10--11
+\T1/ptm/m/n/12 me-di-ante a frag-men-ta-ção de \T1/ptm/m/it/12 Li-nux Ca-pa-bi-li-ties \T1/ptm/m/n/12 (des-car-tando per-mis-sões crí-ti-cas como
+ []
+
+
+Package natbib Warning: Citation `combe2016docker' on page 8 undefined on input line 12.
+
+
+Package natbib Warning: Citation `souppaya2017nist' on page 8 undefined on input line 12.
+
+[8]
+
+Package natbib Warning: Citation `martin2021hacking' on page 9 undefined on input line 15.
+
+
+Package natbib Warning: Citation `martin2021hacking' on page 9 undefined on input line 15.
+
+
+Underfull \hbox (badness 1297) in paragraph at lines 14--16
+[]\T1/ptm/m/n/12 Como abor-dado an-te-ri-or-mente, atu-al-mente a maior parte dos sis-te-mas
+ []
+
+
+Underfull \hbox (badness 2277) in paragraph at lines 14--16
+\T1/ptm/m/n/12 de grande e mé-dio porte opta por uma ar-qui-te-tura de mi-cros-ser-vi-ços, que ex-pande
+ []
+
+
+Underfull \hbox (badness 2027) in paragraph at lines 14--16
+\T1/ptm/m/n/12 ex-po-nen-ci-al-mente o vo-lume de trá-fego in-terno en-tre con-têi-ne-res, de-no-mi-nado trá-fego
+ []
+
+
+Package natbib Warning: Citation `cisa2025tjactions' on page 9 undefined on input line 17.
+
+
+Package natbib Warning: Citation `gitguardian2026ghostaction' on page 9 undefined on input line 17.
+
+
+Package natbib Warning: Citation `githubstatus2026' on page 9 undefined on input line 17.
+
+) (./eficiencia_energetica.tex
+
+Package natbib Warning: Citation `iso30134pue' on page 9 undefined on input line 4.
+
+[9]
+
+Package natbib Warning: Citation `dayarathna2016data' on page 10 undefined on input line 14.
+
+
+Package natbib Warning: Citation `beloglazov2012energy' on page 10 undefined on input line 16.
+
+
+Underfull \hbox (badness 7151) in paragraph at lines 16--17
+[]\T1/ptm/m/n/12 Essa dis-tin-ção torna-se evi-dente ao ana-li-sar o fe-nô-meno da não
+ []
+
+
+Package natbib Warning: Citation `ashrae2021thermal' on page 10 undefined on input line 19.
+
+
+Package natbib Warning: Citation `ashrae2021thermal' on page 10 undefined on input line 20.
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 18--21
+[]\T1/ptm/m/n/12 Consequentemente, a ges-tão tér-mica atua como o pi-lar com-ple-men-tar
+ []
+
+[10]
+
+./eficiencia_energetica.tex:28: LaTeX Error: Environment tabularx undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.28 	\begin{tabularx}
+                      {\textwidth}{@{} l X X X @{}}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./eficiencia_energetica.tex:28: Missing number, treated as zero.
+<to be read again> 
+                   }
+l.28 	\begin{tabularx}{\textwidth}
+                                  {@{} l X X X @{}}
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./eficiencia_energetica.tex:28: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   }
+l.28 	\begin{tabularx}{\textwidth}
+                                  {@{} l X X X @{}}
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+./eficiencia_energetica.tex:29: Misplaced \noalign.
+\toprule ->\noalign 
+                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
+l.29 		\toprule
+               
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./eficiencia_energetica.tex:30: Misplaced alignment tab character &.
+l.30 		\textbf{DimensÃ£o} &
+                            \textbf{Desafio TÃ©cnico} & \textbf{Mecanismo / ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:30: Misplaced alignment tab character &.
+l.30 ...f{DimensÃ£o} & \textbf{Desafio TÃ©cnico} &
+                                                   \textbf{Mecanismo / SoluÃ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:30: Misplaced alignment tab character &.
+l.30 ...©cnico} & \textbf{Mecanismo / SoluÃ§Ã£o} &
+                                                   \textbf{Impacto Cruzado (...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:31: Misplaced \noalign.
+\midrule ->\noalign 
+                    {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global \@...
+l.31 		\midrule
+               
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+./eficiencia_energetica.tex:32: Misplaced alignment tab character &.
+l.32 		Isolamento de Kernel &
+                              SuperfÃ­cie de ataque e escalada de privilÃ©gi...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:32: Misplaced alignment tab character &.
+l.32 ...cie de ataque e escalada de privilÃ©gios &
+                                                   \textit{Namespaces}, \tex...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:32: Misplaced alignment tab character &.
+l.32 ...s}, \textit{Seccomp} e \textit{Rootless} &
+                                                   Viabiliza alta densidade ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:33: Misplaced alignment tab character &.
+l.33 		Imagens e Rede &
+                        CVEs em camadas base e trÃ¡fego \textit{East-West} &...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:33: Misplaced alignment tab character &.
+l.33 ...madas base e trÃ¡fego \textit{East-West} &
+                                                   Imagens \textit{Distroles...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:33: Misplaced alignment tab character &.
+l.33 ...textit{Network Policies} e \textit{eBPF} &
+                                                   BinÃ¡rios enxutos e filtr...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:34: Misplaced alignment tab character &.
+l.34 		AlocaÃ§Ã£o de NÃ³s &
+                            DesperdÃ­cio por potÃªncia ociosa (\textit{Idle ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:34: Misplaced alignment tab character &.
+l.34 ...r potÃªncia ociosa (\textit{Idle Power}) &
+                                                   ConsolidaÃ§Ã£o dinÃ¢mica ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:34: Misplaced alignment tab character &.
+l.34 ...nÃ¢mica (\textit{Bin Packing}) de cargas &
+                                                   Reduz a potÃªncia total d...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:35: Misplaced alignment tab character &.
+l.35 		GestÃ£o TÃ©rmica &
+                          DissipaÃ§Ã£o de calor em \textit{racks} densos e P...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:35: Misplaced alignment tab character &.
+l.35 ...alor em \textit{racks} densos e PUE alto &
+                                                   ContenÃ§Ã£o de corredores...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:35: Misplaced alignment tab character &.
+l.35 ... \textit{Free} e \textit{Liquid Cooling} &
+                                                   Reduz a potÃªncia de refr...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+./eficiencia_energetica.tex:36: Misplaced \noalign.
+\bottomrule ->\noalign 
+                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
+l.36 		\bottomrule
+                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+./eficiencia_energetica.tex:37: LaTeX Error: \begin{table} on input line 22 ended by \end{tabularx}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.37 	\end{tabularx}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Package natbib Warning: Citation `iea2025energy' on page 11 undefined on input line 40.
+
+
+Package natbib Warning: Citation `cso2025ireland' on page 11 undefined on input line 40.
+
+
+Package natbib Warning: Citation `shehabi2026lbnl' on page 11 undefined on input line 40.
+
+
+Package natbib Warning: Citation `ons2026datacenters' on page 11 undefined on input line 40.
+
+)) [11] [12] (./main-texto.bbl
+Underfull \hbox (badness 1881) in paragraph at lines 19--22
+[]\T1/ptm/m/n/12 Liz Rice.  \T1/ptm/m/it/12 Con-tai-ner Se-cu-rity: Fun-da-men-tal Te-ch-no-logy Con-cepts that Pro-tect
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 34--38
+[]\T1/ptm/m/n/12 CISA.  Sup-ply chain com-pro-mise of third-party GitHub Ac-tion
+ []
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 50--53
+[]\T1/ptm/m/n/12 ISO/IEC.  ISO/IEC 30134-2:2016 in-for-ma-tion te-ch-no-logy -- data cen-tres -- key
+ []
+
+[13{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}])
 
 Package caption Warning: Unused \captionsetup[figure] on input line 125.
 See the caption package documentation for explanation.
 
 
-Package caption Warning: Unused \captionsetup[table] on input line 131.
-See the caption package documentation for explanation.
+Package natbib Warning: There were undefined citations.
 
-[8{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] (./main-texto.aux)
+[14] (./main-texto.aux
+
+Package natbib Warning: Citation(s) may have changed.
+(natbib)                Rerun to get citations correct.
+
+)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main-texto.out' has not changed.
-(rerunfilecheck)             Checksum: A93BA30F3A8B1CE847E95CACC7484E56;200.
+(rerunfilecheck)             Checksum: 638419C4488503B1195311425F66784F;650.
  ) 
 Here is how much of TeX's memory you used:
- 26841 strings out of 468336
- 492716 string characters out of 5442630
- 1003265 words of memory out of 5000000
- 55216 multiletter control sequences out of 15000+600000
- 646823 words of font info for 73 fonts, out of 8000000 for 9000
+ 26964 strings out of 468336
+ 495102 string characters out of 5442630
+ 1008063 words of memory out of 5000000
+ 55300 multiletter control sequences out of 15000+600000
+ 674874 words of font info for 114 fonts, out of 8000000 for 9000
  624 hyphenation exceptions out of 8191
- 89i,11n,109p,711b,548s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main-texto.pdf (9 pages, 85493 bytes).
+ 89i,11n,109p,2132b,657s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main-texto.pdf (15 pages, 122058 bytes).
 PDF statistics:
- 95 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 34 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 130 compressed objects within 2 object streams
+ 38 named destinations out of 1000 (max. 500000)
+ 50 words of extra memory for PDF output out of 10000 (max. 10000000)
 
