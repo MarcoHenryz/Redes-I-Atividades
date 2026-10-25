@@ -1,0 +1,82 @@
+
+\section{Computação em Nuvem}
+
+A computação em nuvem é definida pelo Instituto Nacional de Padrões e Tecnologia dos Estados Unidos (NIST) como um modelo que habilita acesso ubíquo, conveniente e sob demanda, por meio da rede, a um conjunto compartilhado de recursos computacionais configuráveis, redes, servidores, armazenamento, aplicações e serviços, que podem ser rapidamente provisionados e liberados com esforço mínimo de gerenciamento ou de interação com o provedor de serviço \cite{mell2011nist}. A definição propõe permitir comparações amplas entre serviços e estratégias de implantação, sem restringir métodos particulares de implantação, entrega de serviço ou operação de negócio. O modelo é composto por cinco características essenciais, três modelos de serviço e quatro modelos de implantação.
+
+As cinco características essenciais delimitam o que caracteriza um sistema como nuvem e devem ser satisfeitas conjuntamente. O \emph{autoatendimento sob demanda} estabelece que o consumidor provisione capacidades computacionais, como tempo de servidor e armazenamento em rede, unilateral e automaticamente, sem requerer interação humana. O \emph{amplo acesso à rede} exige que as capacidades estejam disponíveis pela rede e sejam acessadas por mecanismos padronizados, utilizáveis por diferentes tipos de plataformas clientes. O \emph{agrupamento de recursos} determina que os recursos do provedor sejam agrupados para servir múltiplos consumidores em um modelo de múltiplos inquilinos, com recursos físicos e virtuais atribuídos e reatribuídos dinamicamente conforme a demanda, havendo independência de localização no sentido de que o consumidor geralmente desconhece a localização exata dos recursos, podendo especificá-la apenas em nível mais alto de abstração, como país, estado ou \emph{data center}. A \emph{elasticidade rápida} consiste na capacidade de liberar recursos elasticamente, em alguns casos de forma automática, escalando horizontalmente ou verticalmente de acordo com à demanda, de modo que as capacidades disponíveis aparentem ser ilimitadas ao consumidor. O \emph{serviço medido} requer que o sistema controle e otimize automaticamente o uso de recursos por meio de uma capacidade de medição apropriada ao tipo de serviço, com uso monitorado, controlado e reportado, tipicamente em base de pagamento por uso \cite{mell2011nist}.
+
+A distinção entre elasticidade e escalabilidade é relevante para a correta classificação dos sistemas. Escalabilidade designa a manutenção do atendimento adequado conforme a carga aumenta, enquanto elasticidade designa a variação rápida da capacidade alocada, para mais e para menos, com liberação dos recursos que não estão sendo utilizados.
+\subsection{Modelos de serviço}
+
+Os três modelos de serviço são definidos pela capacidade fornecida ao consumidor. Em \emph{Infrastructure as a Service} (IaaS), a capacidade consiste em provisionar processamento, armazenamento, redes e outros recursos computacionais fundamentais, nos quais o consumidor implanta e executa software arbitrário, incluindo sistemas operacionais e aplicações. Com outras palavras, o consumidor não gerencia a infraestrutura subjacente, mas controla sistemas operacionais, armazenamento e aplicações implantadas, além de possivelmente dispor de controle limitado sobre componentes de rede selecionados. Em \emph{Platform as a Service} (PaaS), a capacidade consiste em implantar sobre a infraestrutura de nuvem aplicações criadas ou adquiridas pelo consumidor, construídas com linguagens de programação, bibliotecas, serviços e ferramentas suportadas pelo provedor. O consumidor controla as aplicações implantadas e, possivelmente, configurações do ambiente de hospedagem, sem controle sobre rede, servidores, sistemas operacionais ou armazenamento. Em \emph{Software as a Service} (SaaS), a capacidade consiste em utilizar as aplicações do provedor executando em uma infraestrutura de nuvem, acessíveis por interface de cliente leve, como um navegador, ou por interface de programa, restando ao consumidor, no máximo, configurações limitadas da aplicação específicas do usuário \cite{mell2011nist}.
+
+O critério que separa os três modelos é a fronteira de controle sobre o software. A arquitetura de referência do NIST formaliza essa delimitação por meio das camadas de aplicação, de \emph{middleware} e de sistema operacional, atribuindo a cada modelo de serviço a parte que cabe ao consumidor e a que cabe ao provedor \cite{liu2011nist}. A camada de aplicação é utilizada pelos consumidores de SaaS e instalada, gerenciada e mantida pelos consumidores de PaaS e de IaaS e pelos provedores de SaaS. A camada de \emph{middleware}, que fornece os blocos de construção de software como bibliotecas e bancos de dados, é utilizada pelos consumidores de PaaS, mantida pelos consumidores de IaaS ou pelos provedores de PaaS, e oculta dos consumidores de SaaS. A camada de sistema operacional é oculta dos consumidores de SaaS e de PaaS; em IaaS, o consumidor assume responsabilidade integral pelos sistemas operacionais hóspedes, enquanto o provedor controla o sistema operacional anfitrião e os hipervisores de virtualização. A Tabela \ref{tab:escopo-controle} sintetiza essa distribuição.
+
+\begin{table}[H]
+	\centering
+	\caption{Escopo de controle entre provedor e consumidor por modelo de serviço.}
+	\label{tab:escopo-controle}
+	\footnotesize
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabularx}{\textwidth}{@{} l X X X @{}}
+		\toprule
+		\textbf{Camada} & \textbf{SaaS} & \textbf{PaaS} & \textbf{IaaS} \\
+		\midrule
+		Aplicação & Utilizada pelo consumidor; mantida pelo provedor & Instalada e mantida pelo consumidor & Instalada e mantida pelo consumidor \\
+		\emph{Middleware} & Oculta do consumidor & Utilizada pelo consumidor; mantida pelo provedor & Instalada e mantida pelo consumidor \\
+		Sistema operacional & Oculta do consumidor & Oculta do consumidor & Hóspede sob responsabilidade do consumidor; anfitrião sob controle do provedor \\
+		Hardware e hipervisor & Provedor & Provedor & Provedor \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+A delimitação de controles tem consequência direta sobre a atribuição de responsabilidades de segurança, uma vez que cada parte responde pela camada que efetivamente controla \cite{liu2011nist}. Em IaaS, a correção de vulnerabilidades do sistema operacional hóspede permanece com o consumidor. Já em arquiteturas PaaS e SaaS, essa atribuição transfere-se ao provedor, ao mesmo tempo que o consumidor perde a possibilidade de inspecionar e configurar as camadas inferiores. Em IaaS, máquinas virtuais distintas compartilham o hardware por meio de um hipervisor. Em PaaS, processos distintos compartilham o sistema operacional e os serviços de suporte. Já em SaaS, consumidores distintos podem compartilhar a mesma aplicação ou o mesmo banco de dados \cite{badger2012cloud}. Como os mecanismos de compartilhamento dependem de utilitários complexos para manter isoladas as cargas de trabalho, existe o risco de falha de isolamento, que pode ser diminuido pela cifragem dos dados antes da inserção na nuvem, pela limitação dos tipos de dados processados ou pela contratação de mecanismos de isolamento especializados, como o aluguel de sistemas computacionais inteiros em lugar de máquinas virtuais, redes privadas virtuais e redes segmentadas \cite{badger2012cloud}.
+
+\subsection{Modelos de implantação}
+
+Os quatro modelos de implantação especificam para quem a infraestrutura é liberada, e suas diferenças baseiam-se no grau de exclusividade com que os recursos são disponibilizados a um consumidor \cite{liu2011nist}. A \emph{nuvem privada} é provisionada para uso exclusivo de uma única organização composta por múltiplos consumidores, podendo ser possuída, gerenciada e operada pela organização, por um terceiro ou por combinação de ambos, e podendo existir dentro ou fora de suas instalações. A \emph{nuvem comunitária} é provisionada para uso exclusivo de uma comunidade específica de consumidores, pertencentes a organizações com preocupações compartilhadas, tais como missão, requisitos de segurança, política e conformidade. A \emph{nuvem pública} é provisionada para uso aberto ao público em geral e existe nas instalações do provedor. A \emph{nuvem híbrida} é a composição de duas ou mais infraestruturas distintas que permanecem entidades únicas, ligadas por tecnologia padronizada ou proprietária que habilita a portabilidade de dados e de aplicações, tendo como exemplo o \emph{cloud bursting} para balanceamento de carga entre nuvens \cite{mell2011nist}.
+
+Cabe observar que o critério dos modelos é a exclusividade de uso, e não a localização física da infraestrutura. A definição de nuvem privada admite expressamente a operação por terceiro e a existência fora das instalações da organização, razão pela qual a arquitetura de referência distingue as variantes privada \emph{on-site} e privada terceirizada, com variantes análogas para a nuvem comunitária, apenas a nuvem pública tem a localização fixada pela definição \cite{liu2011nist}. A escolha do modelo condiciona simultaneamente os riscos de múltiplos inquilinos e o teto de elasticidade, a restrição do conjunto de inquilinos possíveis, nas variantes \emph{on-site}, mitiga parte dos riscos de isolamento, ao custo de uma capacidade fixa em cada instante, limitada pelos recursos do próprio \emph{data center}. A nuvem pública, não restrita quanto a localização ou tamanho e capaz de empregar múltiplos inquilinos sem limitação por perímetros de segurança estáticos, apresenta vantagem na obtenção de elasticidade, ou da aparência de disponibilidade ilimitada de recursos \cite{badger2012cloud}.
+
+\subsection{Arquitetura de referência e camadas de orquestração}
+
+A arquitetura de referência do NIST define cinco atores, descritos a seguir. 
+
+\begin{itemize}
+  \item \emph{cloud consumer}, responsável por manter a relação de negócio com o provedor e por utilizar o serviço.
+  \item \emph{cloud provider}, responsável por tornar o serviço disponível.
+  \item \emph{cloud carrier}, intermediário que fornece conectividade e transporte do serviço.
+  \item \emph{cloud auditor}, responsável pela avaliação independente de desempenho, segurança e conformidade.
+  \item \emph{cloud broker}, entidade que gerencia uso, desempenho e entrega de serviços e negocia as relações entre provedores e consumidores \cite{liu2011nist}.
+\end{itemize}
+
+Os acordos de nível de serviço (SLAs) firmados entre consumidor e provedor especificam os requisitos técnicos de desempenho a serem cumpridos, podendo também relacionar as promessas explicitamente não oferecidas e as obrigações atribuídas ao consumidor. Quando há intermediação de transporte, o provedor estabelece acordos distintos com o \emph{carrier} e com o consumidor, podendo exigir do primeiro conexões dedicadas e cifradas para atender às obrigações assumidas perante o segundo.
+
+As atividades do provedor relativas à composição dos recursos são modeladas em três camadas de orquestração de serviço, nas quais o empilhamento representa dependência \cite{liu2011nist}. A \emph{camada de serviço} contém as interfaces de acesso dos consumidores, nela se situando as interfaces dos três modelos de serviço. A \emph{camada de abstração e controle de recursos} contém os componentes que fornecem e gerenciam o acesso aos recursos físicos por meio de abstração de software, tais como hipervisores, máquinas virtuais e armazenamento virtual de dados, bem como os componentes de controle responsáveis pela alocação de recursos, pelo controle de acesso e pelo monitoramento de uso; é esse conjunto de software que habilita o agrupamento de recursos, a alocação dinâmica e o serviço medido. A \emph{camada de recursos físicos} compreende os recursos de hardware, como computadores, redes e armazenamento, e os recursos de instalação, tais como climatização, energia e comunicações. Os consumidores acessam a camada de serviço e não dispõem de acesso direto aos recursos físicos.
+
+É nessa camada intermediária que se insere a virtualização completa, na qual um ou mais sistemas operacionais e suas aplicações executam sobre hardware virtual, cada instância em uma máquina virtual gerenciada por um hipervisor que controla o fluxo de instruções entre os hóspedes e o hardware físico, particionando os recursos e isolando os hóspedes \cite{scarfone2011guide}. O NIST registra, ainda, que a virtualização de máquina é a tecnologia comumente empregada nessa camada, mas que outros meios de fornecer as abstrações de software necessárias também são possíveis \cite{liu2011nist}, posição que acomoda a virtualização em nível de sistema operacional por contêineres discutida nas seções seguintes. Cabe notar que a dependência entre os modelos de serviço é opcional, pois é possível, porém não necessário, que aplicações SaaS sejam construídas sobre componentes PaaS e que estes sejam construídos sobre componentes IaaS, podendo cada componente de serviço existir isoladamente \cite{liu2011nist}.
+
+A taxonomia estabelecida em 2011 não contempla, por fim, modelos de serviço posteriores. Serviços de função como serviço (\emph{Function as a Service}) e computação \emph{serverless} não dispõem de modelo próprio na definição e, pelos critérios nela adotados, classificam-se como PaaS, dado que o consumidor implanta código enquanto o provedor fornece o ambiente de execução sem expor sistema operacional ou servidores. Os contêineres, igualmente, não constituem modelo de serviço, situando-se como mecanismo da camada de abstração e controle de recursos, condição que fundamenta o tratamento dado a eles nas seções subsequentes, dedicadas à segurança do isolamento e à eficiência energética da consolidação de cargas.
+
+% FIGURAS (Excalidraw), descomentar quando os arquivos existirem em Texto/
+%
+% \begin{figure}[h!]
+% 	\centering
+% 	\includegraphics[width=0.9\textwidth]{fig-taxonomia-nist.png}
+% 	\caption{Estrutura da definição NIST de computação em nuvem, com cinco características essenciais, três modelos de serviço e quatro modelos de implantação.}
+% 	\label{fig:taxonomia-nist}
+% \end{figure}
+%
+% \begin{figure}[h!]
+% 	\centering
+% 	\includegraphics[width=0.85\textwidth]{fig-escopo-controle.png}
+% 	\caption{Fronteira de controle entre consumidor e provedor nas camadas de aplicação, \emph{middleware} e sistema operacional.}
+% 	\label{fig:escopo-controle}
+% \end{figure}
+%
+% \begin{figure}[h!]
+% 	\centering
+% 	\includegraphics[width=0.9\textwidth]{fig-camadas-orquestracao.png}
+% 	\caption{Camadas de orquestração de serviço e posição do hipervisor e dos contêineres na camada de abstração e controle de recursos.}
+% 	\label{fig:camadas-orquestracao}
+% \end{figure}

@@ -1,0 +1,47 @@
+
+\section{Arquitetura Modular do OpenStack e Gerenciamento de IaaS}
+
+OpenStack é uma plataforma de código aberto para a construção de nuvens de infraestrutura, composta por um conjunto de serviços independentes que cooperam. Na arquitetura de referência discutida anteriormente, ocupa a camada de abstração e controle de recursos, na qual fornece as abstrações de software sobre os recursos físicos, como máquinas virtuais, redes virtuais, imagens e volumes, bem como os componentes de controle responsáveis pela alocação de recursos, pelo controle de acesso e pelo monitoramento de uso, expondo na camada de serviço as interfaces pelas quais o consumidor provisiona processamento, armazenamento e redes \cite{liu2011nist}. Constitui, portanto, implementação concreta do modelo de serviço \emph{Infrastructure as a Service} \cite{mell2011nist}.
+
+A documentação oficial estabelece um padrão interno comum a todos os serviços da plataforma \cite{openstackdocs2026}. Cada serviço possui ao menos um processo de API, que "escuta requisições de API, pré-processa-as e as repassa a outras partes do serviço"; com exceção do serviço de identidade, "o trabalho efetivo é realizado por processos distintos". O estado de cada serviço reside em banco de dados próprio, e para a comunicação entre os processos de um mesmo serviço "um \emph{broker} de mensagens AMQP é utilizado", sendo o RabbitMQ a escolha corrente. Já a comunicação entre serviços distintos obedece a outro regime, pois "serviços individuais interagem entre si por meio de APIs públicas, exceto onde comandos administrativos privilegiados são necessários". Dessa separação decorre o acoplamento fraco entre serviços, que podem ser substituídos, escalados ou atualizados de forma independente desde que preservem o contrato de suas APIs. A autenticação, por sua vez, é centralizada, pois "todos os serviços autenticam-se por meio de um serviço de identidade comum". O acesso à plataforma admite o painel web Horizon, clientes de linha de comando, requisições diretas de API e bibliotecas de desenvolvimento, mas a documentação ressalva que "todos esses métodos de acesso emitem chamadas de API REST aos diversos serviços do OpenStack", de modo que painel e linha de comando são clientes da mesma interface, e não caminhos administrativos alternativos.
+
+Os quatro serviços principais possuem atribuições declaradas de forma precisa, sintetizadas na Tabela \ref{tab:openstack-servicos} \cite{openstackdocs2026}. Cabe destacar dois pontos. O primeiro é que a autorização do Keystone se estrutura sobre projetos, usuários, papéis e domínios, e é a atribuição de papéis a usuários dentro de projetos que delimita quais recursos de quais inquilinos cada credencial alcança. O segundo é que o Nova, implementado como "um conjunto de \emph{daemons} sobre servidores Linux existentes", admite não apenas máquinas virtuais, mas também servidores em \emph{baremetal} e contêineres de sistema, mantendo arquitetura unificada entre múltiplos \emph{drivers} de computação.
+
+\begin{table}[h!]
+	\centering
+	\caption{Serviços do OpenStack e atribuições declaradas na documentação oficial.}
+	\label{tab:openstack-servicos}
+	\footnotesize
+	\renewcommand{\arraystretch}{1.15}
+	\begin{tabularx}{\textwidth}{@{} l l X @{}}
+		\toprule
+		\textbf{Serviço} & \textbf{Função} & \textbf{Atribuição} \\
+		\midrule
+		Keystone & Identidade & Autenticação de clientes de API, descoberta de serviços e autorização multi-inquilino sobre projetos, usuários, papéis e domínios \\
+		Glance & Imagem & Descoberta, registro e recuperação de imagens de máquina virtual, com metadados por API REST \\
+		Nova & Computação & Provisionamento de instâncias de computação como conjunto de \emph{daemons} sobre servidores Linux \\
+		Neutron & Rede & Conectividade de rede como serviço entre dispositivos de interface gerenciados por outros serviços \\
+		Placement & Inventário & Rastreamento do inventário de recursos e escolha do provedor que atenderá à criação da instância \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+A articulação desses serviços é o que converte servidores físicos em infraestrutura provisionável sob demanda. A documentação do Nova declara quatro dependências obrigatórias, das quais decorre a sequência de criação de uma instância, na qual a requisição é autenticada pelo Keystone, que "fornece identidade e autenticação para todos os serviços OpenStack"; a imagem de origem é obtida do Glance, pois "todas as instâncias de computação são iniciadas a partir de imagens do glance"; o Placement, "responsável por rastrear o inventário de recursos disponíveis em uma nuvem", auxilia "na escolha de qual provedor desses recursos será usado"; e o Neutron provisiona "as redes virtuais ou físicas às quais as instâncias de computação se conectam na inicialização". Cada serviço indisponível produz, assim, uma falha identificável, pois sem Keystone a requisição é recusada antes de qualquer alocação; sem Glance não há sistema de arquivos inicial; sem Placement não há informação para escolher o nó; sem Neutron a instância existe sem conectividade.
+
+A correspondência com o modelo IaaS é direta. O operador controla o hardware, os hipervisores e os próprios serviços da plataforma, enquanto o consumidor controla o sistema operacional hóspede, o armazenamento atribuído e as aplicações que implanta, dispondo ainda do controle limitado de componentes de rede que a definição do modelo prevê, exercido pelas abstrações do Neutron \cite{liu2011nist, mell2011nist}. As características essenciais da nuvem encontram implementação identificável, uma vez que o autoatendimento sob demanda corresponde às APIs REST dos serviços; o agrupamento de recursos e a alocação dinâmica, ao inventário do Placement e à atribuição de recursos pelos \emph{drivers} do Nova; a autorização multi-inquilino, ao modelo de projetos e papéis do Keystone. A plataforma não substitui a camada de virtualização, mas a coordena, uma vez que o Nova delega a execução das instâncias a \emph{drivers} de computação, entre os quais hipervisores. Situa-se, assim, acima da virtualização e abaixo das interfaces consumidas pelo usuário, o que a distingue da conteinerização tratada na seção seguinte, uma vez que o OpenStack gerencia a oferta de recursos, enquanto os contêineres empacotam e isolam as cargas que executam sobre eles.
+
+% FIGURAS (Excalidraw), descomentar quando os arquivos existirem em Texto/
+%
+% \begin{figure}[h!]
+% 	\centering
+% 	\includegraphics[width=0.9\textwidth]{fig-openstack-modular.png}
+% 	\caption{Padrão interno comum aos serviços do OpenStack, com processo de API, processos de trabalho, banco de dados próprio e \emph{broker} AMQP.}
+% 	\label{fig:openstack-modular}
+% \end{figure}
+%
+% \begin{figure}[h!]
+% 	\centering
+% 	\includegraphics[width=0.9\textwidth]{fig-openstack-instancia.png}
+% 	\caption{Sequência de criação de uma instância e participação de Keystone, Glance, Placement, Nova e Neutron.}
+% 	\label{fig:openstack-instancia}
+% \end{figure}

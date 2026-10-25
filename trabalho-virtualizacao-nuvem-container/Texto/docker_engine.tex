@@ -1,0 +1,31 @@
+
+\section{Engine, Isolamento e Redes Locais no Docker}
+
+O Docker é a plataforma de conteinerização mais difundida para a virtualização em nível de sistema operacional. Diferentemente da virtualização completa, os contêineres compartilham o \emph{kernel} do hospedeiro e se distinguem entre si apenas pelos mecanismos de isolamento que esse \emph{kernel} oferece \cite{souppaya2017nist}.
+
+A arquitetura é do tipo cliente-servidor, no qual o cliente traduz comandos em requisições a uma API REST, transmitidas por \emph{socket} UNIX local ou por interface de rede, e o daemon \texttt{dockerd} as atende, gerenciando imagens, contêineres, redes e volumes; todo o estado reside no daemon \cite{dockerdocs2026}. A \emph{engine}, porém, não é monolítica. O \texttt{dockerd} responde pela API de alto nível, o \texttt{containerd} pelo ciclo de vida dos contêineres e pelo armazenamento em camadas, e o \emph{runtime} \texttt{runc} cria o processo isolado, configurando \emph{namespaces}, aplicando limites de recursos e substituindo a si mesmo pelo processo da aplicação \cite{rice2020container}. Entre o \texttt{containerd} e cada contêiner interpõe-se um \emph{shim}, que permanece como processo pai e reporta o código de término, razão pela qual o daemon pode ser reiniciado sem derrubar os contêineres em execução \cite{dockerdocs2026}. Especificações abertas da \emph{Open Container Initiative} sustentam essa decomposição, separando o formato da imagem da forma de executar um pacote já extraído, do que decorre a interoperabilidade entre \emph{runtimes} compatíveis \cite{rice2020container}. No armazenamento, a \emph{engine} empilha as camadas imutáveis da imagem por um sistema de arquivos de união, tipicamente o \emph{OverlayFS}, e acrescenta no topo uma camada de leitura e escrita exclusiva do contêiner, com semântica de cópia em escrita; daí decorrem o compartilhamento de camadas base entre imagens e o descarte das alterações não persistidas em volumes \cite{dockerdocs2026}.
+
+O isolamento não é produzido pelo Docker, e sim por duas famílias de primitivas do \emph{kernel} Linux que a \emph{engine} combina. Os \emph{namespaces} determinam o que um processo enxerga, e os grupos de controle, ou \emph{cgroups}, determinam quanto de recurso físico ele consome. Cada \emph{namespace} particiona um recurso global, de modo que os processos nele contidos observem uma instância própria desse recurso. O de identificadores de processos atribui ao processo inicial o identificador 1 e impede a sinalização de processos do hospedeiro; o de montagem dá ao contêiner árvore própria de pontos de montagem, condição para que a raiz observada seja a visão unificada das camadas da imagem; o de rede fornece pilha de rede independente, base de todos os modelos discutidos adiante; os demais isolam a comunicação entre processos, o nome de máquina e o mapeamento de identificadores de usuário. Os \emph{cgroups} contabilizam e limitam o consumo por grupo de processos mediante controladores de processador, memória, entrada e saída em disco e número de processos, contendo a exaustão de recursos do nó \cite{souppaya2017nist}. O \emph{kernel}, contudo, permanece compartilhado e a interface de chamadas de sistema continua sendo superfície comum a todos os contêineres, razão pela qual são necessárias camadas adicionais de contenção, tratadas na seção seguinte. \emph{Namespaces} e \emph{cgroups} constituem mecanismo de isolamento, não fronteira de segurança equivalente à de uma máquina virtual \cite{souppaya2017nist}.
+
+A conectividade decorre do \emph{namespace} de rede, e os modelos disponíveis, sintetizados na Tabela \ref{tab:redes-docker}, correspondem aos tratamentos possíveis desse espaço \cite{dockerdocs2026}. No modelo \emph{bridge}, que é o padrão, a \emph{engine} cria no hospedeiro uma ponte em software e, para cada contêiner, um par de interfaces virtuais com uma extremidade no \emph{namespace} do contêiner e a outra subordinada à ponte. O tráfego destinado a redes externas é submetido a mascaramento, de forma que dispositivos externos observem apenas o endereço do hospedeiro, enquanto a exposição no sentido inverso exige publicação explícita de porta; essa assimetria explica por que um contêiner alcança a Internet sem configuração, mas não é alcançável de fora sem publicação. Na rede \emph{bridge} padrão os contêineres se comunicam apenas por endereço IP, ao passo que nas redes definidas pelo usuário um servidor de nomes interno resolve os nomes dos contêineres conectados, prática indispensável quando a aplicação é composta por múltiplos contêineres cujos endereços variam a cada reinício. Todos os modelos operam em um único hospedeiro, pois a comunicação entre contêineres distribuídos por múltiplos nós requer redes de sobreposição, pertencentes ao domínio da orquestração em \emph{cluster}.
+
+\begin{table}[h!]
+	\centering
+	\caption{Modelos de rede local do Docker.}
+	\label{tab:redes-docker}
+	\footnotesize
+	\renewcommand{\arraystretch}{1.1}
+	\begin{tabularx}{\textwidth}{@{} l X X X @{}}
+		\toprule
+		\textbf{Modelo} & \textbf{\emph{Namespace} de rede} & \textbf{Resolução de nomes} & \textbf{Exposição ao exterior} \\
+		\midrule
+		\emph{Bridge} padrão & Próprio, ligado à ponte \texttt{docker0} & Apenas por endereço IP & Mascaramento; publicação de porta \\
+		\emph{Bridge} do usuário & Próprio, ligado a ponte dedicada & Servidor de nomes interno & Mascaramento; publicação de porta \\
+		\emph{Host} & Compartilhado com o hospedeiro & Do próprio hospedeiro & Direta, na porta real do hospedeiro \\
+		\emph{None} & Próprio, apenas \emph{loopback} & Inexistente & Nenhuma \\
+		\emph{Macvlan} e \emph{ipvlan} & Próprio, exposto à rede física & Conforme a infraestrutura & Direta, como dispositivo na rede local \\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+O isolamento sobre \emph{kernel} compartilhado é o ponto de partida da análise de segurança apresentada a seguir, e a densidade de consolidação que os contêineres permitem é a premissa da análise de eficiência energética.

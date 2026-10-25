@@ -1,24 +1,56 @@
-\begin{thebibliography}{16}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Sultan et~al.(2019)Sultan, Ahmad, and Dimitrova]{sultan2019container}
-Sari Sultan, Imtiaz Ahmad, and Tassos Dimitrova.
-\newblock Container security: Issues, challenges, and the road ahead.
-\newblock \emph{IEEE Access}, 7:\penalty0 52976--52996, 2019.
+\bibitem[Mell and Grance(2011)]{mell2011nist}
+Peter Mell and Timothy Grance.
+\newblock The {NIST} definition of cloud computing.
+\newblock Technical Report NIST Special Publication 800-145, National Institute of Standards and Technology, Gaithersburg, MD, 2011.
+
+\bibitem[Liu et~al.(2011)Liu, Tong, Mao, Bohn, Messina, Badger, and Leaf]{liu2011nist}
+Fang Liu, Jin Tong, Jian Mao, Robert Bohn, John Messina, Lee Badger, and Dawn Leaf.
+\newblock {NIST} cloud computing reference architecture.
+\newblock Technical Report NIST Special Publication 500-292, National Institute of Standards and Technology, Gaithersburg, MD, 2011.
+
+\bibitem[Badger et~al.(2012)Badger, Grance, Patt-Corner, and Voas]{badger2012cloud}
+Lee Badger, Timothy Grance, Robert Patt-Corner, and Jeff Voas.
+\newblock Cloud computing synopsis and recommendations.
+\newblock Technical Report NIST Special Publication 800-146, National Institute of Standards and Technology, Gaithersburg, MD, 2012.
+
+\bibitem[Scarfone et~al.(2011)Scarfone, Souppaya, and Hoffman]{scarfone2011guide}
+Karen Scarfone, Murugiah Souppaya, and Paul Hoffman.
+\newblock Guide to security for full virtualization technologies.
+\newblock Technical Report NIST Special Publication 800-125, National Institute of Standards and Technology, Gaithersburg, MD, 2011.
+
+\bibitem[{OpenStack Foundation}(2026)]{openstackdocs2026}
+{OpenStack Foundation}.
+\newblock Openstack documentation: Logical architecture, compute ({Nova}), networking ({Neutron}), identity ({Keystone}) and image ({Glance}) services.
+\newblock Documenta{\c{c}}{\~a}o oficial, 2026.
+\newblock Dispon{\'\i}vel em: \url{https://docs.openstack.org/}.
 
 \bibitem[Souppaya et~al.(2017)Souppaya, Morello, and Scarfone]{souppaya2017nist}
 Murugiah Souppaya, John Morello, and Karen Scarfone.
 \newblock Application container security guide.
 \newblock Technical Report NIST Special Publication 800-190, National Institute of Standards and Technology, Gaithersburg, MD, 2017.
 
+\bibitem[{Docker, Inc.}(2026)]{dockerdocs2026}
+{Docker, Inc.}
+\newblock Docker engine documentation: Architecture, storage drivers and networking.
+\newblock Documenta{\c{c}}{\~a}o oficial, 2026.
+\newblock Dispon{\'\i}vel em: \url{https://docs.docker.com/engine/}.
+
 \bibitem[Rice(2020)]{rice2020container}
 Liz Rice.
 \newblock \emph{Container Security: Fundamental Technology Concepts that Protect Containerized Applications}.
 \newblock O'Reilly Media, Sebastopol, CA, 2020.
+
+\bibitem[Sultan et~al.(2019)Sultan, Ahmad, and Dimitrova]{sultan2019container}
+Sari Sultan, Imtiaz Ahmad, and Tassos Dimitrova.
+\newblock Container security: Issues, challenges, and the road ahead.
+\newblock \emph{IEEE Access}, 7:\penalty0 52976--52996, 2019.
 
 \bibitem[Combe et~al.(2016)Combe, Martin, and Di~Pietro]{combe2016docker}
 Theo Combe, Antony Martin, and Roberto Di~Pietro.

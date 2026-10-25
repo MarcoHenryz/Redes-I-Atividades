@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.30)  23 OCT 2026 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Arch Linux) (preloaded format=pdflatex 2026.6.30)  25 OCT 2026 15:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -168,12 +168,21 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count290
 \@lastruleclass=\count291
 \@thisrulewidth=\dimen174
+) (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
+\TX@col@width=\dimen175
+\TX@old@table=\dimen176
+\TX@old@col=\dimen177
+\TX@target=\dimen178
+\TX@delta=\dimen179
+\TX@cols=\count292
+\TX@ftn=\toks22
 ) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count292
-\float@exts=\toks22
+\c@float@type=\count293
+\float@exts=\toks23
 \float@box=\box55
-\@float@everytoks=\toks23
+\@float@everytoks=\toks24
 \@floatcapt=\box56
 ) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
@@ -184,22 +193,22 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2024/11/17 v2.01 AMS text
  (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks24
-\ex@=\dimen175
+\@emptytoks=\toks25
+\ex@=\dimen180
 )) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen176
+\pmbraise@=\dimen181
 ) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count293
+\inf@bad=\count294
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count294
-\leftroot@=\count295
+\uproot@=\count295
+\leftroot@=\count296
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count296
-\DOTSCASE@=\count297
+\classnum@=\count297
+\DOTSCASE@=\count298
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -209,34 +218,34 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen177
+\big@size=\dimen182
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count298
+\macc@depth=\count299
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count299
+\c@MaxMatrixCols=\count300
 \dotsspace@=\muskip17
-\c@parentequation=\count300
-\dspbrk@lvl=\count301
-\tag@help=\toks25
-\row@=\count302
-\column@=\count303
-\maxfields@=\count304
-\andhelp@=\toks26
-\eqnshift@=\dimen178
-\alignsep@=\dimen179
-\tagshift@=\dimen180
-\tagwidth@=\dimen181
-\totwidth@=\dimen182
-\lineht@=\dimen183
-\@envbody=\toks27
+\c@parentequation=\count301
+\dspbrk@lvl=\count302
+\tag@help=\toks26
+\row@=\count303
+\column@=\count304
+\maxfields@=\count305
+\andhelp@=\toks27
+\eqnshift@=\dimen183
+\alignsep@=\dimen184
+\tagshift@=\dimen185
+\tagwidth@=\dimen186
+\totwidth@=\dimen187
+\lineht@=\dimen188
+\@envbody=\toks28
 \multlinegap=\skip54
 \multlinetaggap=\skip55
-\mathdisplay@stack=\toks28
+\mathdisplay@stack=\toks29
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 ) (/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -279,16 +288,16 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
  (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
-\c@section@level=\count305
+\c@section@level=\count306
 ) (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count306
+\etb@tempcnta=\count307
 ) (/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
 )
-\@linkdim=\dimen184
-\Hy@linkcounter=\count307
-\Hy@pagecounter=\count308
+\@linkdim=\dimen189
+\Hy@linkcounter=\count308
+\Hy@pagecounter=\count309
  (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
@@ -296,7 +305,7 @@ Now handling font encoding PD1 ...
 ) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count309
+\Hy@SavedSpaceFactor=\count310
  (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
@@ -309,17 +318,17 @@ Package hyperref Info: Plain pages OFF on input line 4216.
 Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4468.
-\c@Hy@tempcnt=\count310
+\c@Hy@tempcnt=\count311
 LaTeX Info: Redefining \url on input line 4807.
-\XeTeXLinkMargin=\dimen185
+\XeTeXLinkMargin=\dimen190
  (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
  (/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
-\Fld@menulength=\count311
-\Field@Width=\dimen186
-\Fld@charsize=\dimen187
+\Fld@menulength=\count312
+\Field@Width=\dimen191
+\Fld@charsize=\dimen192
 Package hyperref Info: Hyper figures OFF on input line 6084.
 Package hyperref Info: Link nesting OFF on input line 6089.
 Package hyperref Info: Hyper index ON on input line 6092.
@@ -327,15 +336,15 @@ Package hyperref Info: backreferencing OFF on input line 6099.
 Package hyperref Info: Link coloring OFF on input line 6104.
 Package hyperref Info: Link coloring with OCG OFF on input line 6109.
 Package hyperref Info: PDF/A mode OFF on input line 6114.
-\Hy@abspage=\count312
-\c@Item=\count313
-\c@Hfootnote=\count314
+\Hy@abspage=\count313
+\c@Item=\count314
+\c@Hfootnote=\count315
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
  (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
-\Fld@listcount=\count315
-\c@bookmark@seq@number=\count316
+\Fld@listcount=\count316
+\c@bookmark@seq@number=\count317
  (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
  (/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
@@ -353,12 +362,12 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box59
 \beforetitleunit=\skip57
 \aftertitleunit=\skip58
-\ttl@plus=\dimen188
-\ttl@minus=\dimen189
-\ttl@toksa=\toks29
-\titlewidth=\dimen190
-\titlewidthlast=\dimen191
-\titlewidthfirst=\dimen192
+\ttl@plus=\dimen193
+\ttl@minus=\dimen194
+\ttl@toksa=\toks30
+\titlewidth=\dimen195
+\titlewidthlast=\dimen196
+\titlewidthfirst=\dimen197
 ) (/usr/share/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
@@ -388,8 +397,8 @@ Package tocloft Info: The document has section divisions on input line 51.
 \cftbeforefigskip=\skip82
 \cftfigindent=\skip83
 \cftfignumwidth=\skip84
-\c@lofdepth=\count317
-\c@lotdepth=\count318
+\c@lofdepth=\count318
+\c@lotdepth=\count319
 \cftbeforelottitleskip=\skip85
 \cftafterlottitleskip=\skip86
 \cftbeforetabskip=\skip87
@@ -399,18 +408,18 @@ Package tocloft Info: The document has section divisions on input line 51.
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
  (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen193
-\captionmargin=\dimen194
-\caption@leftmargin=\dimen195
-\caption@rightmargin=\dimen196
-\caption@width=\dimen197
-\caption@indent=\dimen198
-\caption@parindent=\dimen199
-\caption@hangindent=\dimen256
+\caption@tempdima=\dimen198
+\captionmargin=\dimen199
+\caption@leftmargin=\dimen256
+\caption@rightmargin=\dimen257
+\caption@width=\dimen258
+\caption@indent=\dimen259
+\caption@parindent=\dimen260
+\caption@hangindent=\dimen261
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count319
-\c@continuedfloat=\count320
+\c@caption@flags=\count320
+\c@continuedfloat=\count321
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
@@ -419,16 +428,16 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip90
 \bibsep=\skip91
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count321
+\c@NAT@ctr=\count322
 ) (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count322
-\csq@gtype=\count323
-\csq@glevel=\count324
-\csq@qlevel=\count325
-\csq@maxlvl=\count326
-\csq@tshold=\count327
-\csq@ltx@everypar=\toks30
+\csq@reset=\count323
+\csq@gtype=\count324
+\csq@glevel=\count325
+\csq@qlevel=\count326
+\csq@maxlvl=\count327
+\csq@tshold=\count328
+\csq@ltx@everypar=\toks31
  (/usr/share/texmf-dist/tex/latex/csquotes/csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
 )
@@ -452,23 +461,23 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip103
 \f@nch@widthC=\skip104
 \f@nch@widthR=\skip105
-\@temptokenb=\toks31
+\@temptokenb=\toks32
 ) (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/share/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2026-01-19 L3 programming layer (loader) 
  (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count328
+\l__color_backend_stack_int=\count329
 ))
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count329
-\l__lipsum_a_int=\count330
-\l__lipsum_b_int=\count331
+\g__lipsum_par_int=\count330
+\l__lipsum_a_int=\count331
+\l__lipsum_b_int=\count332
  (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex)) (/usr/share/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
-\pgfutil@everybye=\toks32
-\pgfutil@tempdima=\dimen257
-\pgfutil@tempdimb=\dimen258
+\pgfutil@everybye=\toks33
+\pgfutil@tempdima=\dimen262
+\pgfutil@tempdimb=\dimen263
 ) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
 \pgfutil@abb=\box60
 ) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/share/texmf-dist/tex/generic/pgf/pgf.revision.tex)
@@ -478,31 +487,31 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/share/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks33
-\pgfkeys@temptoks=\toks34
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
  (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks35
+\pgfkeys@tmptoks=\toks36
 ))
-\pgf@x=\dimen259
-\pgf@y=\dimen260
-\pgf@xa=\dimen261
-\pgf@ya=\dimen262
-\pgf@xb=\dimen263
-\pgf@yb=\dimen264
-\pgf@xc=\dimen265
-\pgf@yc=\dimen266
-\pgf@xd=\dimen267
-\pgf@yd=\dimen268
+\pgf@x=\dimen264
+\pgf@y=\dimen265
+\pgf@xa=\dimen266
+\pgf@ya=\dimen267
+\pgf@xb=\dimen268
+\pgf@yb=\dimen269
+\pgf@xc=\dimen270
+\pgf@yc=\dimen271
+\pgf@xd=\dimen272
+\pgf@yd=\dimen273
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count332
-\c@pgf@countb=\count333
-\c@pgf@countc=\count334
-\c@pgf@countd=\count335
-\t@pgf@toka=\toks36
-\t@pgf@tokb=\toks37
-\t@pgf@tokc=\toks38
-\pgf@sys@id@count=\count336
+\c@pgf@counta=\count333
+\c@pgf@countb=\count334
+\c@pgf@countc=\count335
+\c@pgf@countd=\count336
+\t@pgf@toka=\toks37
+\t@pgf@tokb=\toks38
+\t@pgf@tokc=\toks39
+\pgf@sys@id@count=\count337
  (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -513,60 +522,60 @@ File: pgfsys-pdftex.def 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 ))) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count337
-\pgfsyssoftpath@bigbuffer@items=\count338
+\pgfsyssoftpath@smallbuffer@items=\count338
+\pgfsyssoftpath@bigbuffer@items=\count339
 ) (/usr/share/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
 Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen269
-\pgfmath@count=\count339
+\pgfmath@dimen=\dimen274
+\pgfmath@count=\count340
 \pgfmath@box=\box61
-\pgfmath@toks=\toks39
-\pgfmath@stack@operand=\toks40
-\pgfmath@stack@operation=\toks41
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
 )
 (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count340
+\c@pgfmathroundto@lastzeros=\count341
 )) (/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen270
-\pgf@picmaxx=\dimen271
-\pgf@picminy=\dimen272
-\pgf@picmaxy=\dimen273
-\pgf@pathminx=\dimen274
-\pgf@pathmaxx=\dimen275
-\pgf@pathminy=\dimen276
-\pgf@pathmaxy=\dimen277
-\pgf@xx=\dimen278
-\pgf@xy=\dimen279
-\pgf@yx=\dimen280
-\pgf@yy=\dimen281
-\pgf@zx=\dimen282
-\pgf@zy=\dimen283
+\pgf@picminx=\dimen275
+\pgf@picmaxx=\dimen276
+\pgf@picminy=\dimen277
+\pgf@picmaxy=\dimen278
+\pgf@pathminx=\dimen279
+\pgf@pathmaxx=\dimen280
+\pgf@pathminy=\dimen281
+\pgf@pathmaxy=\dimen282
+\pgf@xx=\dimen283
+\pgf@xy=\dimen284
+\pgf@yx=\dimen285
+\pgf@yy=\dimen286
+\pgf@zx=\dimen287
+\pgf@zy=\dimen288
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen284
-\pgf@path@lasty=\dimen285
+\pgf@path@lastx=\dimen289
+\pgf@path@lasty=\dimen290
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen286
-\pgf@shorten@start@additional=\dimen287
+\pgf@shorten@end@additional=\dimen291
+\pgf@shorten@start@additional=\dimen292
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgfpic=\box62
 \pgf@hbox=\box63
 \pgf@layerbox@main=\box64
-\pgf@picture@serial@count=\count341
+\pgf@picture@serial@count=\count342
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen288
+\pgflinewidth=\dimen293
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen289
-\pgf@pt@y=\dimen290
-\pgf@pt@temp=\dimen291
+\pgf@pt@x=\dimen294
+\pgf@pt@y=\dimen295
+\pgf@pt@temp=\dimen296
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
@@ -575,12 +584,12 @@ File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen292
+\pgfarrowsep=\dimen297
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen293
-\pgf@sys@shading@range@num=\count342
-\pgf@shadingcount=\count343
+\pgf@max=\dimen298
+\pgf@sys@shading@range@num=\count343
+\pgf@shadingcount=\count344
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
@@ -602,46 +611,46 @@ File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen294
-\pgf@nodesepend=\dimen295
+\pgf@nodesepstart=\dimen299
+\pgf@nodesepend=\dimen300
 ) (/usr/share/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 )) (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/share/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/share/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/share/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen296
-\pgffor@skip=\dimen297
-\pgffor@stack=\toks42
-\pgffor@toks=\toks43
+\pgffor@iter=\dimen301
+\pgffor@skip=\dimen302
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
 )) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
  (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count344
-\pgfplotmarksize=\dimen298
+\pgf@plot@mark@count=\count345
+\pgfplotmarksize=\dimen303
 )
-\tikz@lastx=\dimen299
-\tikz@lasty=\dimen300
-\tikz@lastxsaved=\dimen301
-\tikz@lastysaved=\dimen302
-\tikz@lastmovetox=\dimen303
-\tikz@lastmovetoy=\dimen304
-\tikzleveldistance=\dimen305
-\tikzsiblingdistance=\dimen306
+\tikz@lastx=\dimen304
+\tikz@lasty=\dimen305
+\tikz@lastxsaved=\dimen306
+\tikz@lastysaved=\dimen307
+\tikz@lastmovetox=\dimen308
+\tikz@lastmovetoy=\dimen309
+\tikzleveldistance=\dimen310
+\tikzsiblingdistance=\dimen311
 \tikz@figbox=\box67
 \tikz@figbox@bg=\box68
 \tikz@tempbox=\box69
 \tikz@tempbox@bg=\box70
-\tikztreelevel=\count345
-\tikznumberofchildren=\count346
-\tikznumberofcurrentchild=\count347
-\tikz@fig@count=\count348
+\tikztreelevel=\count346
+\tikznumberofchildren=\count347
+\tikznumberofcurrentchild=\count348
+\tikz@fig@count=\count349
  (/usr/share/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count349
-\pgfmatrixcurrentcolumn=\count350
-\pgf@matrix@numberofcolumns=\count351
+\pgfmatrixcurrentrow=\count350
+\pgfmatrixcurrentcolumn=\count351
+\pgf@matrix@numberofcolumns=\count352
 )
-\tikz@expandcount=\count352
+\tikz@expandcount=\count353
  (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
@@ -652,10 +661,10 @@ File: tikzlibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 File: pgflibraryshapes.geometric.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )) (/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen307
-\pgfarrowlength=\dimen308
-\pgfarrowwidth=\dimen309
-\pgfarrowlinewidth=\dimen310
+\pgfarrowinset=\dimen312
+\pgfarrowlength=\dimen313
+\pgfarrowwidth=\dimen314
+\pgfarrowlinewidth=\dimen315
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -725,17 +734,17 @@ LaTeX Font Info:    ... okay on input line 4.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count353
-\scratchdimen=\dimen311
+\scratchcounter=\count354
+\scratchdimen=\dimen316
 \scratchbox=\box71
-\nofMPsegments=\count354
-\nofMParguments=\count355
-\everyMPshowfont=\toks44
-\MPscratchCnt=\count356
-\MPscratchDim=\dimen312
-\MPnumerator=\count357
-\makeMPintoPDFobject=\count358
-\everyMPtoPDFconversion=\toks45
+\nofMPsegments=\count355
+\nofMParguments=\count356
+\everyMPshowfont=\toks45
+\MPscratchCnt=\count357
+\MPscratchDim=\dimen317
+\MPnumerator=\count358
+\makeMPintoPDFobject=\count359
+\everyMPtoPDFconversion=\toks46
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -750,31 +759,21 @@ Package hyperref Info: Link coloring OFF on input line 4.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
  (./title.tex
-<image1.png, id=23, 419.31656pt x 106.89937pt>
+<image1.png, id=47, 419.31656pt x 106.89937pt>
 File: image1.png Graphic file (type png)
 <use image1.png>
 Package pdftex.def Info: image1.png  used on input line 5.
 (pdftex.def)             Requested size: 264.0424pt x 67.31432pt.
  [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc} <./image1.png>]) (./resumo.tex
-Underfull \hbox (badness 2189) in paragraph at lines 1--6
-\T1/ptm/m/n/12 HENRY, Marco An-tô-nio Cot-to-rello. NE-VES, Mu-rilo de Souza. \T1/ptm/b/n/12 COM-PU-TA-ÇÃO
- []
-
-)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc} <./image1.png>]) (./resumo.tex)
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.15 \clearpage
                 [1
 
-] (./abstract-en.tex
-Underfull \hbox (badness 6944) in paragraph at lines 1--5
-\T1/ptm/m/n/12 HENRY, Marco An-tô-nio Cot-to-rello. NE-VES, Mu-rilo de Souza \T1/ptm/b/n/12 AU-TO-NO-MIC
- []
-
-) [2
+] (./abstract-en.tex) [2
 
 ] (./listas.tex (./main-texto.lof)
 \tf@lof=\write5
@@ -813,53 +812,132 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 \tf@lot=\write6
 \openout6 = `main-texto.lot'.
 
- [4] [5] (./main-texto.toc)
-\tf@toc=\write7
-\openout7 = `main-texto.toc'.
-
- [6]) (./introducao.tex) [7] (./trabalho.tex (./seguranca_cloud.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+ [4]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 4.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 17.
 
-Underfull \hbox (badness 1210) in paragraph at lines 4--5
-\T1/ptm/m/n/12 má-qui-nas vir-tu-ais ba-se-a-das em hi-per-vi-so-res[][][] para a vir-tu-a-li-za-ção em ní-vel de sis-tema
+Underfull \hbox (badness 3713) in paragraph at lines 19--19
+[]|\T1/ptm/m/it/10.95 Application Pro-gram-ming In-ter-face \T1/ptm/m/n/10.95 (In-ter-face de Pro-gra-ma-ção de
  []
 
 
-Package natbib Warning: Citation `sultan2019container' on page 8 undefined on input line 6.
+Underfull \hbox (badness 3657) in paragraph at lines 20--20
+[]|\T1/ptm/m/it/10.95 American So-ci-ety of He-a-ting, Re-fri-ge-ra-ting and Air-Conditioning
+ []
+
+[5] (./main-texto.toc)
+\tf@toc=\write7
+\openout7 = `main-texto.toc'.
+
+ [6]) (./introducao.tex) [7] (./trabalho.tex (./cloud_computing.tex
+Underfull \hbox (badness 1127) in paragraph at lines 11--12
+\T1/ptm/m/n/12 mas con-trola sis-te-mas ope-ra-ci-o-nais, ar-ma-ze-na-mento e apli-ca-ções im-plan-ta-das, além de
+ []
 
 
-Package natbib Warning: Citation `souppaya2017nist' on page 8 undefined on input line 6.
+Underfull \hbox (badness 3590) in paragraph at lines 11--12
+\T1/ptm/m/n/12 de pro-gra-ma-ção, bi-bli-o-te-cas, ser-vi-ços e fer-ra-men-tas su-por-ta-das pelo pro-ve-dor. O
+ []
+
+[8]
+Underfull \hbox (badness 2134) in paragraph at lines 30--30
+[]|\T1/ptm/m/n/10 Instalada e man-tida pelo
+ []
 
 
-Package natbib Warning: Citation `rice2020container' on page 8 undefined on input line 8.
+Underfull \hbox (badness 2134) in paragraph at lines 30--30
+[]|\T1/ptm/m/n/10 Instalada e man-tida pelo
+ []
 
 
-Package natbib Warning: Citation `rice2020container' on page 8 undefined on input line 10.
+Underfull \hbox (badness 2134) in paragraph at lines 30--30
+[]|\T1/ptm/m/n/10 Instalada e man-tida pelo
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+[]|\T1/ptm/m/n/10 Hóspede sob
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+\T1/ptm/m/n/10 res-pon-sa-bi-li-dade do
+ []
+
+[9] [10]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 46.
+ (/usr/share/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [11]) [12] (./openstack.tex
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Underfull \hbox (badness 1454) in paragraph at lines 29--30
+[]\T1/ptm/m/n/12 A ar-ti-cu-la-ção des-ses ser-vi-ços é o que con-verte ser-vi-do-res fí-si-cos em
+ []
+
+
+Underfull \hbox (badness 2042) in paragraph at lines 29--30
+\T1/ptm/m/n/12 in-fra-es-tru-tura pro-vi-si-o-ná-vel sob de-manda. A do-cu-men-ta-ção do Nova de-clara qua-tro
+ []
+
+[13
+
+]) [14] (./docker_engine.tex
+Underfull \hbox (badness 2426) in paragraph at lines 4--5
+[]\T1/ptm/m/n/12 O Doc-ker é a pla-ta-forma de con-tei-ne-ri-za-ção mais di-fun-dida para a
+ []
+
+[15
+
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T1/ptm/m/n/10 Próprio, li-gado à ponte
+ []
+
+
+Underfull \hbox (badness 5245) in paragraph at lines 28--28
+[]|\T1/ptm/m/n/10 Mascaramento; pu-bli-ca-ção
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T1/ptm/m/n/10 Próprio, li-gado a ponte
+ []
+
+
+Underfull \hbox (badness 5245) in paragraph at lines 28--28
+[]|\T1/ptm/m/n/10 Mascaramento; pu-bli-ca-ção
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 28--28
+[]|\T1/ptm/m/n/10 Compartilhado com o
+ []
+
+
+Underfull \hbox (badness 4954) in paragraph at lines 28--28
+[]|\T1/ptm/m/n/10 Direta, na porta real do
+ []
+
+) [16] (./seguranca_cloud.tex
+Underfull \hbox (badness 1210) in paragraph at lines 4--5
+\T1/ptm/m/n/12 má-qui-nas vir-tu-ais ba-se-a-das em hi-per-vi-so-res[][][] para a vir-tu-a-li-za-ção em ní-vel de sis-tema
+ []
 
 
 Underfull \hbox (badness 1540) in paragraph at lines 10--11
 \T1/ptm/m/n/12 me-di-ante a frag-men-ta-ção de \T1/ptm/m/it/12 Li-nux Ca-pa-bi-li-ties \T1/ptm/m/n/12 (des-car-tando per-mis-sões crí-ti-cas como
  []
 
+[17
 
-Package natbib Warning: Citation `combe2016docker' on page 8 undefined on input line 12.
-
-
-Package natbib Warning: Citation `souppaya2017nist' on page 8 undefined on input line 12.
-
-[8]
-
-Package natbib Warning: Citation `martin2021hacking' on page 9 undefined on input line 15.
-
-
-Package natbib Warning: Citation `martin2021hacking' on page 9 undefined on input line 15.
-
-
+]
 Underfull \hbox (badness 1297) in paragraph at lines 14--16
 []\T1/ptm/m/n/12 Como abor-dado an-te-ri-or-mente, atu-al-mente a maior parte dos sis-te-mas
  []
@@ -874,331 +952,155 @@ Underfull \hbox (badness 2027) in paragraph at lines 14--16
 \T1/ptm/m/n/12 ex-po-nen-ci-al-mente o vo-lume de trá-fego in-terno en-tre con-têi-ne-res, de-no-mi-nado trá-fego
  []
 
-
-Package natbib Warning: Citation `cisa2025tjactions' on page 9 undefined on input line 17.
-
-
-Package natbib Warning: Citation `gitguardian2026ghostaction' on page 9 undefined on input line 17.
-
-
-Package natbib Warning: Citation `githubstatus2026' on page 9 undefined on input line 17.
-
-) (./eficiencia_energetica.tex
-
-Package natbib Warning: Citation `iso30134pue' on page 9 undefined on input line 4.
-
-[9]
-
-Package natbib Warning: Citation `dayarathna2016data' on page 10 undefined on input line 14.
-
-
-Package natbib Warning: Citation `beloglazov2012energy' on page 10 undefined on input line 16.
-
-
+) [18] (./eficiencia_energetica.tex
 Underfull \hbox (badness 7151) in paragraph at lines 16--17
 []\T1/ptm/m/n/12 Essa dis-tin-ção torna-se evi-dente ao ana-li-sar o fe-nô-meno da não
  []
-
-
-Package natbib Warning: Citation `ashrae2021thermal' on page 10 undefined on input line 19.
-
-
-Package natbib Warning: Citation `ashrae2021thermal' on page 10 undefined on input line 20.
 
 
 Underfull \hbox (badness 1454) in paragraph at lines 18--21
 []\T1/ptm/m/n/12 Consequentemente, a ges-tão tér-mica atua como o pi-lar com-ple-men-tar
  []
 
-[10]
+[19
 
-./eficiencia_energetica.tex:28: LaTeX Error: Environment tabularx undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.28 	\begin{tabularx}
-                      {\textwidth}{@{} l X X X @{}}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./eficiencia_energetica.tex:28: Missing number, treated as zero.
-<to be read again> 
-                   }
-l.28 	\begin{tabularx}{\textwidth}
-                                  {@{} l X X X @{}}
-A number should have been here; I inserted `0'.
-(If you can't figure out why I needed to see a number,
-look up `weird error' in the index to The TeXbook.)
-
-./eficiencia_energetica.tex:28: Illegal unit of measure (pt inserted).
-<to be read again> 
-                   }
-l.28 	\begin{tabularx}{\textwidth}
-                                  {@{} l X X X @{}}
-Dimensions can be in units of em, ex, in, pt, pc,
-cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
-I'll assume that you meant to say pt, for printer's points.
-To recover gracefully from this error, it's best to
-delete the erroneous units; e.g., type `2' to delete
-two letters. (See Chapter 27 of The TeXbook.)
-
-./eficiencia_energetica.tex:29: Misplaced \noalign.
-\toprule ->\noalign 
-                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
-l.29 		\toprule
-               
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./eficiencia_energetica.tex:30: Misplaced alignment tab character &.
-l.30 		\textbf{DimensÃ£o} &
-                            \textbf{Desafio TÃ©cnico} & \textbf{Mecanismo / ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:30: Misplaced alignment tab character &.
-l.30 ...f{DimensÃ£o} & \textbf{Desafio TÃ©cnico} &
-                                                   \textbf{Mecanismo / SoluÃ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:30: Misplaced alignment tab character &.
-l.30 ...©cnico} & \textbf{Mecanismo / SoluÃ§Ã£o} &
-                                                   \textbf{Impacto Cruzado (...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:31: Misplaced \noalign.
-\midrule ->\noalign 
-                    {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global \@...
-l.31 		\midrule
-               
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
-
-./eficiencia_energetica.tex:32: Misplaced alignment tab character &.
-l.32 		Isolamento de Kernel &
-                              SuperfÃ­cie de ataque e escalada de privilÃ©gi...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:32: Misplaced alignment tab character &.
-l.32 ...cie de ataque e escalada de privilÃ©gios &
-                                                   \textit{Namespaces}, \tex...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:32: Misplaced alignment tab character &.
-l.32 ...s}, \textit{Seccomp} e \textit{Rootless} &
-                                                   Viabiliza alta densidade ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:33: Misplaced alignment tab character &.
-l.33 		Imagens e Rede &
-                        CVEs em camadas base e trÃ¡fego \textit{East-West} &...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:33: Misplaced alignment tab character &.
-l.33 ...madas base e trÃ¡fego \textit{East-West} &
-                                                   Imagens \textit{Distroles...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:33: Misplaced alignment tab character &.
-l.33 ...textit{Network Policies} e \textit{eBPF} &
-                                                   BinÃ¡rios enxutos e filtr...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:34: Misplaced alignment tab character &.
-l.34 		AlocaÃ§Ã£o de NÃ³s &
-                            DesperdÃ­cio por potÃªncia ociosa (\textit{Idle ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:34: Misplaced alignment tab character &.
-l.34 ...r potÃªncia ociosa (\textit{Idle Power}) &
-                                                   ConsolidaÃ§Ã£o dinÃ¢mica ...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:34: Misplaced alignment tab character &.
-l.34 ...nÃ¢mica (\textit{Bin Packing}) de cargas &
-                                                   Reduz a potÃªncia total d...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:35: Misplaced alignment tab character &.
-l.35 		GestÃ£o TÃ©rmica &
-                          DissipaÃ§Ã£o de calor em \textit{racks} densos e P...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:35: Misplaced alignment tab character &.
-l.35 ...alor em \textit{racks} densos e PUE alto &
-                                                   ContenÃ§Ã£o de corredores...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:35: Misplaced alignment tab character &.
-l.35 ... \textit{Free} e \textit{Liquid Cooling} &
-                                                   Reduz a potÃªncia de refr...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-./eficiencia_energetica.tex:36: Misplaced \noalign.
-\bottomrule ->\noalign 
-                       {\ifnum 0=`}\fi \@aboverulesep =\aboverulesep \global...
-l.36 		\bottomrule
-                  
-I expect to see \noalign only after the \cr of
-an alignment. Proceed, and I'll ignore this case.
+]
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/ptm/b/n/10 Impacto Cru-zado
+ []
 
 
-./eficiencia_energetica.tex:37: LaTeX Error: \begin{table} on input line 22 ended by \end{tabularx}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.37 	\end{tabularx}
-                    
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/ptm/m/n/10 Superfície de ata-que e
+ []
 
 
-Package natbib Warning: Citation `iea2025energy' on page 11 undefined on input line 40.
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/ptm/m/it/10 Namespaces\T1/ptm/m/n/10 , \T1/ptm/m/it/10 cgroups\T1/ptm/m/n/10 ,
+ []
 
 
-Package natbib Warning: Citation `cso2025ireland' on page 11 undefined on input line 40.
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/ptm/m/n/10 Viabiliza alta den-si-dade
+ []
 
 
-Package natbib Warning: Citation `shehabi2026lbnl' on page 11 undefined on input line 40.
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\T1/ptm/m/n/10 de con-so-li-da-ção sem o
+ []
 
 
-Package natbib Warning: Citation `ons2026datacenters' on page 11 undefined on input line 40.
+Underfull \hbox (badness 1735) in paragraph at lines 37--37
+\T1/ptm/m/n/10 gasto ener-gé-tico de VMs
+ []
 
-)) [11] [12] (./main-texto.bbl
-Underfull \hbox (badness 1881) in paragraph at lines 19--22
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/ptm/m/n/10 Imagens \T1/ptm/m/it/10 Dis-tro-less\T1/ptm/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/ptm/m/n/10 Binários en-xu-tos e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\T1/ptm/m/n/10 fil-tra-gem no \T1/ptm/m/it/10 ker-nel \T1/ptm/m/n/10 via
+ []
+
+
+Underfull \hbox (badness 2591) in paragraph at lines 37--37
+\T1/ptm/m/it/10 eBPF \T1/ptm/m/n/10 re-du-zem ci-clos de
+ []
+
+
+Underfull \hbox (badness 4416) in paragraph at lines 37--37
+[]|\T1/ptm/m/n/10 Desperdício por po-tên-cia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/ptm/m/n/10 Consolidação di-nâ-mica
+ []
+
+
+Underfull \hbox (badness 2050) in paragraph at lines 37--37
+\T1/ptm/m/n/10 ($\OML/ztmcm/m/it/10 P[]$\T1/ptm/m/n/10 ), exi-gindo con-ten-ção
+ []
+
+
+Underfull \hbox (badness 6510) in paragraph at lines 37--37
+[]|\T1/ptm/m/n/10 Dissipação de ca-lor em
+ []
+
+
+Underfull \hbox (badness 2903) in paragraph at lines 37--37
+[]|\T1/ptm/m/n/10 Contenção de cor-re-do-res,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+[]|\T1/ptm/m/n/10 Reduz a po-tên-cia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--37
+\T1/ptm/m/n/10 de re-fri-ge-ra-ção no
+ []
+
+
+Underfull \hbox (badness 5908) in paragraph at lines 37--37
+\T1/ptm/m/n/10 nu-me-ra-dor do PUE sob
+ []
+
+)) [20] [21] (./main-texto.bbl
+Underfull \hbox (badness 1881) in paragraph at lines 46--49
 []\T1/ptm/m/n/12 Liz Rice.  \T1/ptm/m/it/12 Con-tai-ner Se-cu-rity: Fun-da-men-tal Te-ch-no-logy Con-cepts that Pro-tect
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 34--38
+Underfull \hbox (badness 10000) in paragraph at lines 66--70
 []\T1/ptm/m/n/12 CISA.  Sup-ply chain com-pro-mise of third-party GitHub Ac-tion
  []
 
-
-Underfull \hbox (badness 1888) in paragraph at lines 50--53
+[22]
+Underfull \hbox (badness 1888) in paragraph at lines 82--85
 []\T1/ptm/m/n/12 ISO/IEC.  ISO/IEC 30134-2:2016 in-for-ma-tion te-ch-no-logy -- data cen-tres -- key
  []
 
-[13{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}])
+)
 
-Package caption Warning: Unused \captionsetup[figure] on input line 125.
+Package caption Warning: Unused \captionsetup[figure] on input line 126.
 See the caption package documentation for explanation.
 
-
-Package natbib Warning: There were undefined citations.
-
-[14] (./main-texto.aux
-
-Package natbib Warning: Citation(s) may have changed.
-(natbib)                Rerun to get citations correct.
-
-)
+[23] (./main-texto.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 Package rerunfilecheck Info: File `main-texto.out' has not changed.
-(rerunfilecheck)             Checksum: 638419C4488503B1195311425F66784F;650.
+(rerunfilecheck)             Checksum: 7D2F337B9426526A433DBCE3CE91386A;2095.
  ) 
 Here is how much of TeX's memory you used:
- 26964 strings out of 468336
- 495102 string characters out of 5442630
- 1008063 words of memory out of 5000000
- 55300 multiletter control sequences out of 15000+600000
- 674874 words of font info for 114 fonts, out of 8000000 for 9000
+ 27170 strings out of 468336
+ 498346 string characters out of 5442630
+ 1013677 words of memory out of 5000000
+ 55459 multiletter control sequences out of 15000+600000
+ 695291 words of font info for 140 fonts, out of 8000000 for 9000
  624 hyphenation exceptions out of 8191
- 89i,11n,109p,2132b,657s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,15n,109p,2125b,653s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main-texto.pdf (15 pages, 122058 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main-texto.pdf (24 pages, 182066 bytes).
 PDF statistics:
- 162 PDF objects out of 1000 (max. 8388607)
- 130 compressed objects within 2 object streams
- 38 named destinations out of 1000 (max. 500000)
- 50 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 312 PDF objects out of 1000 (max. 8388607)
+ 266 compressed objects within 3 object streams
+ 62 named destinations out of 1000 (max. 500000)
+ 98 words of extra memory for PDF output out of 10000 (max. 10000000)
 
