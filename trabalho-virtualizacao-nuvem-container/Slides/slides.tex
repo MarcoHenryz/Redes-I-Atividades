@@ -38,45 +38,9 @@
     \end{center}
 \end{frame}
 
-\begin{frame}{A Transição da Virtualização}
-    \textbf{De Máquinas Virtuais para Contêineres:}
-    \vspace{0.2cm}
-    \begin{columns}[T]
-        \begin{column}{0.48\textwidth}
-            \textbf{Máquinas Virtuais}
-            \begin{itemize}
-                \item Sistema convidado completo.
-                \item Alto \textit{overhead} de hardware.
-                \item Isolamento robusto via hipervisor.
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.48\textwidth}
-            \textbf{Contêineres}
-            \begin{itemize}
-                \item Compartilham o kernel hospedeiro.
-                \item Alta densidade de consolidação.
-                \item Risco elevado de ataques de escape em ambientes \textit{multitenant}.
-            \end{itemize}
-        \end{column}
-    \end{columns}
-\end{frame}
-
-\begin{frame}{De Máquinas Virtuais para Contêineres:}
-    \begin{figure}
-        \centering
-        \includegraphics[width=0.8\linewidth]{vmxcont.png}
-        \label{fig:placeholder}
-    \end{figure} 
-\end{frame}
-
 \begin{frame}{Problemas do uso de contêineres}
-    \begin{itemize}
-        \item Kerner Compartilhado: Ausência de hipervisor dedicado. Interação direta com o SO hospedeiro.
-        \item Cadeia de Ferramentas: Múltiplos vetores de ataque. Desde a construção da imagem até a execução.
-    \end{itemize}
-
     \begin{columns}[T]
-        \begin{column}{0.48\textwidth}
+        \begin{column}{0.45\textwidth}
             \textbf{Máquinas Virtuais}
             \begin{itemize}
                 \item Kernel dedicado isolado.
@@ -84,11 +48,11 @@
                 \item Menor superfície de ataque.
             \end{itemize}
         \end{column}
-        \begin{column}{0.48\textwidth}
+        \begin{column}{0.45\textwidth}
             \textbf{Contêineres}
             \begin{itemize}
                 \item Compartilhamento do kernel hospedeiro.
-                \item Isolamento apenas lógico (nível SO).
+                \item Maior superfície de ataque.
                 \item Maior exposição em caso de fuga (breakout).
             \end{itemize}
         \end{column}
@@ -147,10 +111,10 @@
 \end{frame}
 
 \begin{frame}{O Desafio do Desperdício Energético}
-    O indicador \textbf{PUE} (Power Usage Effectiveness):
-    \begin{equation*}
-        PUE = \frac{P_{\text{Total da Instalação}}}{P_{\text{Equipamentos de TI}}}
-    \end{equation*}
+    O indicador \textbf{PUE} (Power Usage Effectiveness, ISO/IEC 30134-2 via The Green Grid):
+    \begin{equation}
+\text{PUE} = \frac{P_{\text{Total da Instalação}}}{P_{\text{Equipamentos de TI}}} = \frac{P_{\text{TI}} + P_{\text{Refrigeração}} + P_{\text{Perdas Elétricas}} + P_{\text{Iluminação/Auxiliares}}}{P_{\text{TI}}}
+\end{equation}  
     
     \vspace{0.5cm}
     \textbf{A limitação do PUE:}
@@ -169,21 +133,6 @@
         \item \textbf{Liquid Cooling:} Resfriamento líquido direto no componente ou por imersão
     \end{enumerate}
     
-\end{frame}
-
-\begin{frame}{Síntese Integradora: Segurança $\times$ Energia}
-    \small
-    \renewcommand{\arraystretch}{1.3}
-    \begin{tabularx}{\textwidth}{@{}l X X@{}}
-        \toprule
-        \textbf{Dimensão} & \textbf{Solução Técnica} & \textbf{Impacto Cruzado} \\
-        \midrule
-        Kernel & \textit{Namespaces, cgroups, Rootless} & Consolidação alta sem gasto de VMs. \\
-        Rede & Imagens \textit{Distroless}, \textit{eBPF} & Menos uso de CPU/Rede. \\
-        Alocação & Consolidação (\textit{Bin Packing}) & Reduz $P_{\text{TI}}$, exige contenção lógica forte. \\
-        Térmica & \textit{Liquid Cooling}, Contenção & Reduz refrigeração sob consolidação. \\
-        \bottomrule
-    \end{tabularx}
 \end{frame}
 
 \begin{frame}{O Cenário Global e Brasileiro}
