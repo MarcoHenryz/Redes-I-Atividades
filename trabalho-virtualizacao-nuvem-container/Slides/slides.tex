@@ -41,7 +41,7 @@
     \titlepage
 \end{frame}
 
-\begin{frame}{O que a apresentação cobre}
+\begin{frame}{Temas}
   \begin{enumerate}
     \setcounter{enumi}{0}
     \item \textbf{Computação em nuvem}. O que define uma nuvem e o que separa IaaS, PaaS e SaaS.
@@ -53,18 +53,14 @@
     \item \textbf{Eficiência energética} em data centers.
   \end{enumerate}
   \vspace{0.3cm}
-  \begin{tcolorbox}[colback=structure.fg!10, colframe=structure.fg!60, arc=2mm]
-    Os temas formam uma pilha. A nuvem define o modelo de serviço, o OpenStack implementa a oferta de infraestrutura, o Docker empacota as cargas, e as duas últimas partes analisam as consequências dessa escolha.
-  \end{tcolorbox}
 \end{frame}
 
 % =====================================================================
 \divisor{1. Computação em Nuvem}
 
-\begin{frame}{A definição do NIST}
+\begin{frame}{A definição de computação em nuvem}
   \begin{tcolorbox}[colback=structure.fg!10, colframe=structure.fg!60, arc=2mm]
     Modelo que habilita acesso ubíquo, conveniente e sob demanda, via rede, a um conjunto compartilhado de recursos computacionais configuráveis, rapidamente provisionados e liberados com esforço mínimo de gerenciamento ou de interação com o provedor.
-    \hfill {\footnotesize NIST SP 800-145}
   \end{tcolorbox}
   \vspace{0.3cm}
   \textbf{Cinco características essenciais, todas obrigatórias}
@@ -84,7 +80,6 @@
     \end{column}
   \end{columns}
   \vspace{0.2cm}
-  {\footnotesize Falta uma delas e o sistema não é nuvem pela definição. Hospedagem com capacidade fixa e sem medição é hospedagem.}
 \end{frame}
 
 \begin{frame}{Modelos de serviço e a fronteira de controle}
@@ -93,11 +88,11 @@
     \includegraphics[height=0.68\textheight]{modelosdeservico.png}
   \end{figure}
   \vspace{-0.3cm}
-  {\footnotesize A fronteira de controle sobre a pilha é o que separa os três modelos, e não a quantidade de infraestrutura pronta. \hfill NIST SP 500-292, Fig. 8}
+  {\footnotesize A fronteira de controle dos recursos é o que separa os três modelos.}
 \end{frame}
 
 \begin{frame}{Modelos de implantação}
-  O critério é o \textbf{grau de exclusividade} do recurso, e não a localização física.
+  O critério é o \textbf{grau de exclusividade} do recurso.
   \vspace{0.25cm}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
@@ -125,27 +120,26 @@
     \end{column}
   \end{columns}
   \vspace{0.15cm}
-  {\footnotesize Privada não significa dentro de casa. Híbrida não é usar um pouco de cada, exige portabilidade entre as nuvens.}
+
 \end{frame}
 
-\begin{frame}{Onde entram OpenStack e Docker}
+\begin{frame}{Distribuição das camadas}
   \begin{figure}
     \centering
     \includegraphics[height=0.74\textheight]{camadasabstracao.png}
   \end{figure}
   \vspace{-0.15cm}
-  {\footnotesize Os dois próximos temas moram na camada do meio. O consumidor acessa a camada de serviço e nunca os recursos físicos.}
 \end{frame}
 
 % =====================================================================
 \divisor{2. OpenStack}
 
-\begin{frame}{O problema e a solução}
+\begin{frame}{Cenário do OpenStack}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
       \textbf{Cinquenta servidores sem plataforma}
       \begin{itemize}
-        \item Pedido abre uma solicitação
+        \item Cliente abre uma solicitação a um administrador
         \item Um administrador escolhe o servidor, instala o sistema e configura a rede
         \item Horas ou dias, com dependência de pessoas
         \item Consumo não medido
@@ -154,7 +148,7 @@
     \begin{column}{0.48\textwidth}
       \textbf{Os mesmos servidores com OpenStack}
       \begin{itemize}
-        \item Pedido vira requisição de API
+        \item Pedido vira requisição de API, sem passar por admnistrador
         \item A plataforma escolhe o nó, cria a instância a partir de uma imagem e conecta a rede
         \item Segundos, sem intermediação
         \item Consumo atribuído ao projeto
@@ -194,7 +188,7 @@
     \end{column}
   \end{columns}
   \vspace{0.2cm}
-  {\footnotesize Consequência prática. Cada serviço é atualizado ou escalado de forma independente, desde que a API continue a mesma.}
+  {\footnotesize Cada serviço é atualizado ou escalado de forma independente, desde que a API continue a mesma.}
 \end{frame}
 
 \begin{frame}{Os serviços e a criação de uma instância}
@@ -220,13 +214,12 @@
     \item Neutron provisiona a rede da interface
     \item O hipervisor do nó escolhido executa a máquina virtual
   \end{enumerate}
-  {\footnotesize O OpenStack coordena e delega. A execução continua sendo do hipervisor.}
 \end{frame}
 
 % =====================================================================
 \divisor{4. Docker}
 
-\begin{frame}{A engine não é um processo único}
+\begin{frame}{A engine docker}
   \begin{columns}[T]
     \begin{column}{0.54\textwidth}
       \begin{itemize}
@@ -234,7 +227,7 @@
         \item \texttt{dockerd}, daemon que gerencia imagens, contêineres, redes e volumes
         \item \texttt{containerd}, ciclo de vida e armazenamento em camadas
         \item \texttt{containerd-shim}, processo pai de cada contêiner
-        \item \texttt{runc}, cria o processo isolado e sai de cena
+        \item \texttt{runc}, cria o processo isolado
       \end{itemize}
     \end{column}
     \begin{column}{0.42\textwidth}
@@ -245,11 +238,9 @@
         \ 39649 \ \ \ \ \ 1 containerd-shim \\
         \ 39673 \ 39649 nginx
       \end{tcolorbox}
-      {\scriptsize O \textit{shim} tem PPID 1, não 1147. Por isso o daemon reinicia sem derrubar contêineres.}
     \end{column}
   \end{columns}
   \vspace{0.2cm}
-  {\footnotesize Especificações da OCI separam o formato da imagem da forma de executá-la, o que dá interoperabilidade entre \textit{runtimes}.}
 \end{frame}
 
 \begin{frame}{Isolamento. Namespaces e cgroups}
