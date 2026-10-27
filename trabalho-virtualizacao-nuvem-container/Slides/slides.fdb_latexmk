@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1793006297.98311 "slides.tex" "slides.pdf" "slides" 1793006300.95627 0
+["pdflatex"] 1793050345.33454 "slides.tex" "slides.pdf" "slides" 1793050347.23629 0
   "../Figuras/camadasabstracao.png" 1792790197.87884 235575 c1b4e3c3575971973cfed4525b5fa83d ""
   "../Figuras/modelosdeservico.png" 1792788456.92678 148233 be672d72f6ba07f7fba20678be8324a5 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1775415801 2900 1537cc8184ad1792082cd229ecc269f4 ""
@@ -88,10 +88,14 @@
   "/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex" 1775415801 22012 81b34a0aa8fa1a6158cc6220b00e4f10 ""
   "/usr/share/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex" 1775415801 8893 e851de2175338fdf7c17f3e091d94618 ""
   "/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex" 1775415801 1179 5483d86c1582c569e665c74efab6281f ""
+  "/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex" 1775415801 3937 3f208572dd82c71103831da976d74f1a ""
+  "/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex" 1775415801 339 be0fe46d92a80e3385dd6a83511a46f2 ""
   "/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex" 1775415801 11518 738408f795261b70ce8dd47459171309 ""
   "/usr/share/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex" 1775415801 186859 0445d9a41a87648b4723e04765409541 ""
+  "/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex" 1775415801 58801 1e750fb0692eb99aaac45698bbec96b1 ""
   "/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex" 1775415801 2563 d5b174eb7709fd6bdcc2f70953dbdf8e ""
   "/usr/share/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex" 1775415801 32995 ac577023e12c0e4bd8aa420b2e852d1a ""
+  "/usr/share/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex" 1775415801 161011 ba5eb2ff24ee291c22417ed4ca9ed62f ""
   "/usr/share/texmf-dist/tex/generic/pgf/math/pgfint.code.tex" 1775415801 3063 8c415c68a0f3394e45cfeca0b65f6ee6 ""
   "/usr/share/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex" 1775415801 949 cea70942e7b7eddabfb3186befada2e6 ""
   "/usr/share/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex" 1775415801 13272 7777a64fbd07131a37d276b131c17ee2 ""
@@ -267,10 +271,10 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1782819808 5421951 f5cff4300feb7af4ec74ea9357f3dc1a ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1782819802 3115833 ab00984d6b1dd25e7c3ef6bc1ee45a7a ""
   "ghostaction.png" 1792972389.30502 826712 1a2701f2abf4187ec4f53a67e4f4add9 ""
-  "slides.aux" 1793006300.84755 4409 4e8aa2c69dabf2030f66c0ee98fe5450 "pdflatex"
-  "slides.nav" 1793006300.84955 2783 f8b0d1eaf383f71e4268670ac899f7e1 "pdflatex"
-  "slides.out" 1793006298.9914 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "slides.tex" 1793006296.07232 19149 a58e6554223b4541c394815b49bf229c ""
+  "slides.aux" 1793050347.17047 4538 b2cfa70bd2fe2070645cb557bfd210a7 "pdflatex"
+  "slides.nav" 1793050347.17178 2876 537f74995c35c6a2ad0a2421b28a59b3 "pdflatex"
+  "slides.out" 1793050345.99023 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "slides.tex" 1793050343.58674 21217 9338863007d39368a8a3654b226d106b ""
   "vmxcont.png" 1792972389.30602 168054 03f88be929928ac1adaa5d5278b5e637 ""
   (generated)
   "slides.aux"

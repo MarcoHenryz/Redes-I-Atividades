@@ -7,6 +7,8 @@
 \usepackage{booktabs}
 \usepackage[most]{tcolorbox}
 \usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes.geometric}
 \graphicspath{{.}{../Figuras/}}
 
 \title[Virtualização, Nuvem e Contêineres]{Virtualização, Nuvem e Contêineres}
@@ -63,7 +65,7 @@
     Modelo que habilita acesso ubíquo, conveniente e sob demanda, via rede, a um conjunto compartilhado de recursos computacionais configuráveis, rapidamente provisionados e liberados com esforço mínimo de gerenciamento ou de interação com o provedor.
   \end{tcolorbox}
   \vspace{0.3cm}
-  \textbf{Cinco características essenciais, todas obrigatórias}
+  \textbf{Cinco características essenciais}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
       \begin{itemize}
@@ -92,7 +94,7 @@
 \end{frame}
 
 \begin{frame}{Modelos de implantação}
-  O critério é o \textbf{grau de exclusividade} do recurso.
+  O critério é o \textbf{grau de exclusividade} do recurso ao consumidor.
   \vspace{0.25cm}
   \begin{columns}[T]
     \begin{column}{0.48\textwidth}
@@ -134,31 +136,32 @@
 % =====================================================================
 \divisor{2. OpenStack}
 
-\begin{frame}{Cenário do OpenStack}
+\begin{frame}{O que é o OpenStack}
+  \begin{tcolorbox}[colback=structure.fg!10, colframe=structure.fg!60, arc=2mm]
+    Conjunto de programas de código aberto que, instalados sobre servidores comuns, transformam esses servidores em uma \textbf{nuvem de infraestrutura}.
+  \end{tcolorbox}
+  \vspace{0.15cm}
   \begin{columns}[T]
-    \begin{column}{0.48\textwidth}
-      \textbf{Cinquenta servidores sem plataforma}
+    \begin{column}{0.52\textwidth}
+      \textbf{O que muda depois da instalação}
       \begin{itemize}
-        \item Cliente abre uma solicitação a um administrador
-        \item Um administrador escolhe o servidor, instala o sistema e configura a rede
-        \item Horas ou dias, com dependência de pessoas
-        \item Consumo não medido
+        \item Quem usa a nuvem deixa de pedir máquinas a um administrador
+        \item Passa a criá-las por conta própria, por painel web ou por chamadas de API
+        \item Recebe em segundos uma máquina virtual com sistema operacional, endereço de rede e disco
       \end{itemize}
     \end{column}
-    \begin{column}{0.48\textwidth}
-      \textbf{Os mesmos servidores com OpenStack}
-      \begin{itemize}
-        \item Pedido vira requisição de API, sem passar por admnistrador
-        \item A plataforma escolhe o nó, cria a instância a partir de uma imagem e conecta a rede
-        \item Segundos, sem intermediação
-        \item Consumo atribuído ao projeto
-      \end{itemize}
+    \begin{column}{0.44\textwidth}
+      \begin{tcolorbox}[colback=structure.fg!10, colframe=structure.fg!60, arc=2mm, fontupper=\footnotesize]
+        \textbf{A comparação mais direta}
+        \vspace{0.15cm}
+
+        Provedores públicos, como o serviço de máquinas virtuais da AWS, entregam essa mesma experiência no data center deles.
+        \vspace{0.15cm}
+
+        O OpenStack permite construir a mesma experiência no data center da própria organização, com o hardware dela.
+      \end{tcolorbox}
     \end{column}
   \end{columns}
-  \vspace{0.3cm}
-  \begin{tcolorbox}[colback=structure.fg!10, colframe=structure.fg!60, arc=2mm]
-    Conjunto de programas de código aberto que transforma servidores comuns em uma nuvem de infraestrutura. É o que a AWS oferece como serviço, construído no data center próprio.
-  \end{tcolorbox}
 \end{frame}
 
 \begin{frame}{Arquitetura modular}
@@ -191,7 +194,7 @@
   {\footnotesize Cada serviço é atualizado ou escalado de forma independente, desde que a API continue a mesma.}
 \end{frame}
 
-\begin{frame}{Os serviços e a criação de uma instância}
+\begin{frame}{Os serviços principais}
   \footnotesize
   \begin{tabularx}{\textwidth}{@{} l X @{}}
     \toprule
@@ -204,17 +207,48 @@
     Placement & Inventário de recursos livres de cada nó \\
     \bottomrule
   \end{tabularx}
-  \vspace{0.3cm}
+  \vspace{0.4cm}
   \normalsize
-  \textbf{Sequência de uma criação}
-  \begin{enumerate}
-    \item Keystone confirma identidade e papel no projeto
-    \item Placement indica o nó com recursos livres
-    \item Glance entrega a imagem de origem
-    \item Neutron provisiona a rede da interface
-    \item O hipervisor do nó escolhido executa a máquina virtual
-  \end{enumerate}
+  \begin{tcolorbox}[colback=structure.fg!10, colframe=structure.fg!60, arc=2mm]
+    Cada serviço tem API, processos de trabalho e banco próprios. Nenhum deles mantém base de usuários, porque todos autenticam no Keystone.
+  \end{tcolorbox}
 \end{frame}
+
+\begin{frame}{Criação de uma instância}
+    \centering
+  \begin{tikzpicture}[
+      font=\scriptsize,
+      cons/.style={draw, rounded corners=2pt, minimum width=1.9cm, minimum height=0.95cm, align=center},
+      srv/.style={draw, rounded corners=2pt, fill=structure.fg!18, minimum width=2.5cm, minimum height=0.95cm, align=center},
+      nova/.style={draw, very thick, rounded corners=2pt, fill=structure.fg!35, minimum width=2.6cm, minimum height=1.15cm, align=center},
+      exec/.style={draw, rounded corners=2pt, fill=black!8, minimum width=5.4cm, minimum height=0.95cm, align=center},
+      fl/.style={-{Stealth[length=2mm]}},
+      fld/.style={-{Stealth[length=2mm]}, dashed}
+    ]
+    \node[cons] (c) {Consumidor\\{\tiny painel ou API}};
+    \node[srv, right=0.7cm of c] (ks) {\textbf{1. Keystone}\\{\tiny identidade e papel}};
+    \node[nova, right=0.7cm of ks] (nv) {\textbf{Nova}\\{\tiny registra e coordena}};
+
+    \node[srv, right=1.5cm of nv, yshift=1.25cm] (pl) {\textbf{2. Placement}\\{\tiny nó com recursos livres}};
+    \node[srv, right=1.5cm of nv] (gl) {\textbf{3. Glance}\\{\tiny imagem de origem}};
+    \node[srv, right=1.5cm of nv, yshift=-1.25cm] (nt) {\textbf{4. Neutron}\\{\tiny rede da interface}};
+
+    \node[exec, below=1.15cm of nv] (hv) {\textbf{5. Hipervisor do nó escolhido}\\{\tiny executa a máquina virtual}};
+    \node[cons, below=0.55cm of hv, minimum width=5.4cm] (inst) {Instância ativa, entregue ao consumidor};
+
+    \draw[fl] (c) -- (ks);
+    \draw[fl] (ks) -- (nv);
+    \draw[fld] (nv) -- node[above, sloped, font=\tiny] {consulta} (pl);
+    \draw[fld] (nv) -- (gl);
+    \draw[fld] (nv) -- (nt);
+    \draw[fl] (nv) -- node[right, font=\tiny] {aciona} (hv);
+    \draw[fl] (hv) -- (inst);
+  \end{tikzpicture}
+  \vspace{0.25cm}
+
+  {\footnotesize Sem Keystone a requisição é recusada antes de alocar nada. Sem Placement não se sabe em qual nó criar. Sem Glance não há sistema de arquivos inicial. Sem Neutron a instância sobe sem rede.}
+\end{frame}
+
 
 % =====================================================================
 \divisor{4. Docker}
